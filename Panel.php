@@ -298,7 +298,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
       
       editor = new $.fn.dataTable.Editor({
         ajax: "controllers/producs.php",
-        table: "#Tablaproductos",
+        table: "Tablaproductos",
         fields: [{
           label: "Nombre:",
           name: "Nombre"
@@ -311,7 +311,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
         }]
       });
 
-      $('#Tablaproductos').DataTable({
+      $('Tablaproductos').DataTable({
         dom: "Bfrtip",
         ajax: "controllers/producs.php",
         columns: [
