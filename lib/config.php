@@ -33,4 +33,4 @@ if ( is_file($_SERVER['DOCUMENT_ROOT']."/datatables/pdo.php") ) {
 	include( $_SERVER['DOCUMENT_ROOT']."/datatables/pdo.php" );
 }
 // /End development include
-
+<?
