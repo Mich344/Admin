@@ -316,13 +316,13 @@ $modulo = $_REQUEST['modulo'] ?? '';
         ajax: "controllers/producs.php",
         columns: [
           {
-            data: "nombre"
+            data: "Nombre"
           },
           {
-            data: "precio", render: $.fn.dataTable.render.number(',', '.', 0, '$')
+            data: "Precio", render: $.fn.dataTable.render.number(',', '.', 0, '$')
           },
           {
-            data: "cantidad" 
+            data: "Cantidad" 
           },
         ],
         select: true,
