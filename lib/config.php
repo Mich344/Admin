@@ -7,12 +7,12 @@ ini_set('display_errors', '1');
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Database user / pass */
- <?php
+
    	include_once "Basedata.php";
    	// Llamar la base de datos desde el include_once.
    	$con = mysqli_connect($host, $user, $pasword, $db);
 	$res = mysqli_query($con, $query);
- ?>
+
 
 $sql_details = array(
 	"type" => "Mysql",     // Database type: "Mysql", "Postgres", "Sqlserver", "Sqlite" or "Oracle"
