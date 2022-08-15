@@ -10,8 +10,6 @@ ini_set('display_errors', '1');
 
    	include_once "Basedata.php";
    	// Llamar la base de datos desde el include_once.
-   	$con = mysqli_connect($host, $user, $pasword, $db);
-	$res = mysqli_query($con, $query);
 
 
 $sql_details = array(
