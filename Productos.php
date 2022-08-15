@@ -24,6 +24,11 @@ $con = mysqli_connect($host, $user, $pasword, $db);
       <div class="row">
         <div class="col-12">
           <div class="card">
+            <?php
+              include_once "Basedata.php";
+               // Llamar la base de datos desde el include_once.
+              $con = mysqli_connect($host, $user, $pasword, $db);
+            ?>
 
             <!-- /.card-header -->
             <div class="card-body">
