@@ -37,3 +37,4 @@ Editor::inst( $db, 'productos' )
 	)
 	->process( $_POST )
 	->json();
+?>
