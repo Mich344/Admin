@@ -35,7 +35,6 @@ $con = mysqli_connect($host, $user, $pasword, $db);
               <table Id="Tablaproductos" class="table table-bordered table-hover">
                 <thead>
                   <tr>
-                    <th>Id</th>
                     <th>Nombre</th>
                     <th>Precio</th>
                     <th>Cantidad</th>
