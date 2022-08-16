@@ -49,7 +49,6 @@ $con = mysqli_connect($host, $user, $pasword, $db);
                   while ($row = mysqli_fetch_assoc($res)) {
                   ?>
                     <tr>
-                      <td><?php echo $row['Id'] ?></td>
                       <td><?php echo $row['Nombre'] ?></td>
                       <td><?php echo $row['Precio'] ?></td>
                       <td><?php echo $row['Cantidad'] ?></td>
@@ -74,3 +73,5 @@ $con = mysqli_connect($host, $user, $pasword, $db);
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+producs
+<?php
