@@ -8,7 +8,7 @@ ini_set('display_errors', '1');
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Database user / pass */
 
-   	include_once "Basedata.php";
+   	include_once "../Basedata.php";
    	// Llamar la base de datos desde el include_once.
 
 
