@@ -32,7 +32,7 @@ $con = mysqli_connect($host, $user, $pasword, $db);
 
             <!-- /.card-header -->
             <div class="card-body">
-              <table Id="Tablaproductos" class="table table-bordered table-hover">
+              <table Id="Tabla: productos" class="table table-bordered table-hover">
                 <thead>
                   <tr>
                     <th>Nombre</th>
