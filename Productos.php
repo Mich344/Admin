@@ -42,7 +42,7 @@ $con = mysqli_connect($host, $user, $pasword, $db);
                 </thead>
 
                 <tbody>
-                  <?php $query = "SELECT Id, Nombre, Precio, Cantidad from productos; ";
+                  <?php $query = "SELECT Id, Nombre, Precio, Cantidad FROM productos; ";
                   //Restultados 
                   $res = mysqli_query($con, $query);
                   while ($row = mysqli_fetch_assoc($res)) {
