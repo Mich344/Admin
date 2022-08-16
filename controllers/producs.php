@@ -19,6 +19,7 @@ use
 	DataTables\Editor\Validate,
 	DataTables\Editor\ValidateOptions;
 
+          $db->sql( 'set names utf8' ); 
 // Build our Editor instance and process the data coming from _POST
 include_once("../Basedata.php");
 	Editor::inst( $db, 'productos' )
