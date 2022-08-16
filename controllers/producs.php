@@ -23,18 +23,15 @@ use
 include_once("../Basedata.php");
 	Editor::inst( $db, 'productos' )
 		->fields(
-			Field::inst('Id')
-				->validator( Validate::numeric() )
-				->setFormatter( Format::ifEmpty(null) ),
-			Field::inst('Nombre')
+			Field::inst( 'Nombre' )
 			// validar 
 				->validator( Validate::notEmpty( ValidateOptions::inst()
 					->message( 'Por favor ingresa el nombre del producto' )	
 				) ),
-			Field::inst('Precio')
+			Field::inst( 'Precio' )
 				->validator( Validate::numeric() )
 				->setFormatter( Format::ifEmpty(null) ),
-			Field::inst('Cantidad')
+			Field::inst( 'Cantidad' )
 				->validator( Validate::numeric() )
 				->setFormatter( Format::ifEmpty(null) )
 		)
