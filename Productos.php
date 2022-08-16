@@ -3,8 +3,6 @@ include_once "Basedata.php";
 // Llamar la base de datos desde el include_once.
 $con = mysqli_connect($host, $user, $pasword, $db);
 ?>
-
-
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
@@ -24,15 +22,10 @@ $con = mysqli_connect($host, $user, $pasword, $db);
       <div class="row">
         <div class="col-12">
           <div class="card">
-            <?php
-              include_once "Basedata.php";
-               // Llamar la base de datos desde el include_once.
-              $con = mysqli_connect($host, $user, $pasword, $db);
-            ?>
 
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="Tablaproductos" class="table table-bordered table-hover">
+              <table id="tablaProductos" class="table table-bordered table-hover">
                 <thead>
                   <tr>
                     <th>Nombre</th>
@@ -42,7 +35,12 @@ $con = mysqli_connect($host, $user, $pasword, $db);
                 </thead>
 
                 <tbody>
-                  <?php $query = "SELECT Id, Nombre, Precio, Cantidad FROM productos; ";
+                  <?php
+                  include_once "Basedata.php";
+                  // Llamar la base de datos desde el include_once.
+                  $con = mysqli_connect($host, $user, $pasword, $db);
+                  //Iniciar conexion poner datos desde la Basedata.
+                  $query = "SELECT Id,Nombre,Precio,Cantidad from productos; ";
                   //Restultados 
                   $res = mysqli_query($con, $query);
                   while ($row = mysqli_fetch_assoc($res)) {
@@ -72,5 +70,3 @@ $con = mysqli_connect($host, $user, $pasword, $db);
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-producs
-<?php
