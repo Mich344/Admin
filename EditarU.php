@@ -1,7 +1,7 @@
 <?php
 
 include_once "Basedata.php";
-  // Llamar la base de datos desde el include_once.
+  // Llamar la base de datos desde el include_once
   $con = mysqli_connect($host, $user, $pasword, $db);
 
  if (isset($_REQUEST['guardar'])){
