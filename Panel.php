@@ -308,7 +308,17 @@ $modulo = $_REQUEST['modulo'] ?? '';
         }, {
           label: "Cantidad:",
           name: "Cantidad"
-        }]
+        }, {
+                label: "Imagenes:",
+                name: "files[].id",
+                // subir varias imagenes con las caracteristicas.
+                type: "uploadMany",
+                display: function ( fileId, counter ) {
+                    return '<img src="'+editor.file( 'files', fileId ).web_path+'"/>';
+                },
+                // especificar que no hay imagenes
+                noFileText: 'No hay imagenes.'
+            }]
       });
 
       $('#tablaProductos').DataTable({
@@ -324,6 +334,16 @@ $modulo = $_REQUEST['modulo'] ?? '';
           {
             data: "Cantidad" 
           },
+            {
+              //Vinculo con el data files, para hacer un rendereo y muestre la cantidad de imagenes.
+                data: "files",
+                render: function ( d ) {
+                    return d.length ?
+                        d.length+' imagn(es)' :
+                        'No hay imagenes';
+                },
+                title: "Imagen"
+            },
         ],
         select: true,
         buttons: [{
