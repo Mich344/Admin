@@ -44,7 +44,7 @@ include_once("../Basedata.php");
             ->fields(
 		    //Llamar la extancia Id que tenemos en nuestro panel [files].
                 Field::inst( 'id' )
-                    ->upload( Upload::inst( $_SERVER['DOCUMENT_ROOT'].'/htdocs/Admin/upload/__ID__.__EXTN__' )
+                    ->upload( Upload::inst( $_SERVER['DOCUMENT_ROOT'].'/Admin/upload/__ID__.__EXTN__' )
                         ->db( 'files', 'id', array(
                             'filename'    => Upload::DB_FILE_NAME,
                             'filesize'    => Upload::DB_FILE_SIZE,
