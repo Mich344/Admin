@@ -31,29 +31,9 @@ $con = mysqli_connect($host, $user, $pasword, $db);
                     <th>Nombre</th>
                     <th>Precio</th>
                     <th>Cantidad</th>
+                    <th>Imagen(es)</th>
                   </tr>
                 </thead>
-
-                <tbody>
-                  <?php
-                  include_once "Basedata.php";
-                  // Llamar la base de datos desde el include_once.
-                  $con = mysqli_connect($host, $user, $pasword, $db);
-                  //Iniciar conexion poner datos desde la Basedata.
-                  $query = "SELECT Id,Nombre,Precio,Cantidad from productos; ";
-                  //Restultados 
-                  $res = mysqli_query($con, $query);
-                  while ($row = mysqli_fetch_assoc($res)) {
-                  ?>
-                    <tr>
-                      <td><?php echo $row['Nombre'] ?></td>
-                      <td><?php echo $row['Precio'] ?></td>
-                      <td><?php echo $row['Cantidad'] ?></td>
-                    </tr>
-                  <?php
-                  }
-                  ?>
-                </tbody>
               </table>
             </div>
             <!-- /.card-body -->
