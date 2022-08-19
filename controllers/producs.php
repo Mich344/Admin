@@ -1,8 +1,6 @@
 <?php
 
-/*
- * Example PHP implementation used for the index.html example
- */
+//Implementacion a nuesra tabla productos, conectantado los dataTABLES editables en nuestro admin.
 
 // DataTables PHP library
 include( "../lib/DataTables.php" );
