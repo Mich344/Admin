@@ -69,12 +69,29 @@ $row = mysqli_fetch_assoc($res);
                 </div>
                   <div class="for-group">
                     <label>Password</label>
-                    <input type="password" name="pass" class="form-control" >
+                    <input type="password" name="pass" class="form-control">
                   </div>
                   <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombre"  class="form-control" value="<?php echo $row['nombre']?>" >
+                  <input type="text" name="nombre"  class="form-control" value="<?php echo $row['nombre']?>">
                 </div>
+                 /*<div class="for-group">
+                  <label>Apellido</label>
+                  <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
+                </div>
+                 <div class="for-group">
+                  <label>Direccion</label>
+                  <input type="" name="direccion"  class="form-control" value="<?php echo $row['direccion']?>">
+                </div>
+                 <div class="for-group">
+                  <label>Email</label>
+                  <input type="text" name="ciudad"  class="form-control" value="<?php echo $row['ciudad']?>">
+                </div>
+                 <div class="for-group">
+                  <label>Email</label>
+                  <input type="number" name="telefono"  class="form-control" value="<?php echo $row['telefono']?>">
+                </div>*/ //elegible.
+                
                 <div class="for-group">
                     <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
                   <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
