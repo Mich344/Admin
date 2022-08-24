@@ -11,9 +11,10 @@ include_once "Basedata.php";
   $pasword = mysqli_real_escape_string($con, $_REQUEST['pass']?? '');
   $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
   $Id = mysqli_real_escape_string($con, $_REQUEST['Id']?? '');
+   $apellido = mysqli_real_escape_string($con, $REQUEST['apellido']?? '');
 
   $query = "UPDATE usuario SET 
-  email = '" . $email . "' ,pasword=  '" . $pasword . "' ,nombre = '" . $nombre . "' where  Id= '" . $Id . "';
+  email = '" . $email . "' ,'" . $apellido . "', pasword=  '" . $pasword . "' ,nombre = '" . $nombre . "' where  Id= '" . $Id . "';
 
   ";
   //Restultados 
@@ -75,7 +76,7 @@ $row = mysqli_fetch_assoc($res);
                   <label>Nombre</label>
                   <input type="text" name="nombre"  class="form-control" value="<?php echo $row['nombre']?>">
                 </div>
-                 /*<div class="for-group">
+                 <div class="for-group">
                   <label>Apellido</label>
                   <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
                 </div>
@@ -90,7 +91,7 @@ $row = mysqli_fetch_assoc($res);
                  <div class="for-group">
                   <label>Email</label>
                   <input type="number" name="telefono"  class="form-control" value="<?php echo $row['telefono']?>">
-                </div>*/ //elegible.
+                </div>
                 
                 <div class="for-group">
                     <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
