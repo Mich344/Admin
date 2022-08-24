@@ -14,7 +14,7 @@ include_once "Basedata.php";
    $apellido = mysqli_real_escape_string($con, $REQUEST['apellido']?? '');
 
   $query = "UPDATE usuario SET 
-  email = '" . $email . "' ,'" . $apellido . "', pasword=  '" . $pasword . "' ,nombre = '" . $nombre . "' where  Id= '" . $Id . "';
+  email = '" . $email . "' , apellido = '" . $apellido . "', pasword=  '" . $pasword . "' ,nombre = '" . $nombre . "' where  Id= '" . $Id . "';
 
   ";
   //Restultados 
