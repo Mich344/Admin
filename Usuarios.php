@@ -64,27 +64,19 @@ if (isset($_REQUEST['IdBorrar'])){
                   // Llamar la base de datos desde el include_once.
                   $con = mysqli_connect($host, $user, $pasword, $db);
                   //Iniciar conexion poner datos desde la Basedata.
-                  $query = "SELECT Id, email, nombre, apellido, direccion, ciudad, telefono, tip_doc, num_doc, fech_nac  from usuario; "; // Actualizar base de datos 
+                  $query = "SELECT Id, email, nombre  from usuario; ";
                   //Restultados 
                   $res = mysqli_query($con, $query);
                   while ($row = mysqli_fetch_assoc($res)) {
                   ?>
                     <tr>
                       <td><?php echo $row['Id'] ?></td>
-                      <td><?php echo $row['email']?></td>
-                      <td><?php echo $row['nombre']?></td>
-                      <td><?php echo $row['apellido']?></td>
-                      <td><?php echo $row['direccion']?></td>
-                      <td><?php echo $row['ciudad']?></td>
-                      <td><?php echo $row['telefono']?></td>
-                      <td><?php echo $row['tip_doc']?></td>
-                      <td><?php echo $row['num_doc']?></td>
-                      <td><?php echo $row['fech_nac']?></td>
-
-                       <td>
-                         <a href="Panel.php?modulo=EditarU&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
-                         <a href="Panel.php?modulo=Usuarios&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
-                       </td>
+                      <td><?php echo $row['email'] ?></td>
+                      <td><?php echo $row['nombre'] ?></td>
+                      <td>
+                        <a href="Panel.php?modulo=EditarU&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
+                        <a href="Panel.php?modulo=Usuarios&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
+                      </td>
                     </tr>
                   <?php
                   }
