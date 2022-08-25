@@ -73,8 +73,8 @@ if (isset($_REQUEST['IdBorrar'])){
                       <td><?php echo $row['Id'] ?></td>
                       <td><?php echo $row['email']?></td>
                       <td><?php echo $row['nombre']?></td>
-                      /*<td><?php echo $row['apellido']?></td>
-                      <td><?php echo $row['direccion']?></td>
+                      <td><?php echo $row['apellido']?></td>
+                      */<td><?php echo $row['direccion']?></td>
                       <td><?php echo $row['ciudad']?></td>
                       <td><?php echo $row['telefono']?></td>
                       <td><?php echo $row['tip_doc']?></td>
