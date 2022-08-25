@@ -74,12 +74,12 @@ if (isset($_REQUEST['IdBorrar'])){
                       <td><?php echo $row['email']?></td>
                       <td><?php echo $row['nombre']?></td>
                       <td><?php echo $row['apellido']?></td>
-                      */<td><?php echo $row['direccion']?></td>
+                      <td><?php echo $row['direccion']?></td>
                       <td><?php echo $row['ciudad']?></td>
                       <td><?php echo $row['telefono']?></td>
                       <td><?php echo $row['tip_doc']?></td>
                       <td><?php echo $row['num_doc']?></td>
-                      <td><?php echo $row['fech_nac']?></td>*/
+                      <td><?php echo $row['fech_nac']?></td>
 
                        <td>
                          <a href="Panel.php?modulo=EditarU&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
