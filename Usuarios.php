@@ -54,7 +54,14 @@ if (isset($_REQUEST['IdBorrar'])){
                     <th>Id</th>
                     <th>Correo</th>
                     <th>Nombre</th>
-                    <th>Acciones <a href="Panel.php?modulo=CrearU"> <i class="fa fa-plus" aria-hidden="true"></i></a></th>
+                    <th>Apellido</th>
+                    <th>Ciudad</th>
+                    <th>Telefono</th>
+                    <th>Tipo Documento</th>
+                    <th>Numero Documento</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>
+                     Acciones <a href="Panel.php?modulo=CrearU"> <i class="fa fa-plus" aria-hidden="true"></i></a></th>
                   </tr>
                 </thead>
 
