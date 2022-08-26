@@ -2,7 +2,7 @@
 include_once "Basedata.php";
 $con = mysqli_connect($host, $user, $pasword, $db);
 if(isset($_REQUEST['IdBorrar'])){
-$Id = mysqli_real_escape_string($con, $_REQUEST['IdBorrar']??''); }
+$Id = mysqli_real_escape_string($con, $_REQUEST['IdBorrar']??''); 
 $query = "DELETE from usuario where Id= '".$Id."';";
 $res = mysqli_query($con, $query);
 if ($res){
