@@ -89,12 +89,12 @@ if (isset($_REQUEST['IdBorrar'])){
                      <td><?php echo $row['fech_nac'] ?></td>
 
                     
-                     
+                      </tr>
                       <td>
                         <a href="Panel.php?modulo=EditarU&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
                         <a href="Panel.php?modulo=Usuarios&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
                       </td>
-                    </tr>
+                   
                   <?php
                   }
                   ?>
