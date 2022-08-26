@@ -7,9 +7,17 @@
   $email = mysqli_real_escape_string($con, $_REQUEST['email']?? '');
   $pasword = mysqli_real_escape_string($con, $_REQUEST['pass']?? '');
   $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
-
-  $query = "INSERT INTO usuario (email,pasword,nombre) VALUES ('".$email."' , '".$pasword."' , '".$nombre."'); ";
+   $apellido = mysqli_real_escape_string($con, $_REQUEST['apellido']?? '');
+   $ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudad']?? '');
+   $telefono = mysqli_real_escape_string($con, $_REQUEST['telefono']?? '');
+   $tip_doc = mysqli_real_escape_string($con, $_REQUEST['tip_doc']?? '');
+   $num_doc = mysqli_real_escape_string($con, $_REQUEST['num_doc']?? '');
+   $fech_nac = mysqli_real_escape_string($con, $_REQUEST['fech_nac']?? '');
+  
+  $query = "INSERT INTO usuario (email,pasword,nombre,apellido,ciudad,telefono,tip_doc,num_doc,fech_nac) VALUES ('".$email."' , '".$pasword."' , '".$nombre."' , '".$apellido."'
+  , '".$ciudad."' , '".$telefono."' , '".$tip_doc."', '".$num_doc."' , '".$fech_nac."'); ";
   //Restultados 
+  
   $res = mysqli_query($con, $query);
   if($res){
     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mensaje=Usuario creado correctamente" />';
@@ -51,16 +59,28 @@
               <form action="Panel.php?modulo=CrearU" method="post">
                 <div class="for-group">
                   <label>Email</label>
-                  <input type="email" name="email"  class="form-control" required = "Completa tu correo" >
+                  <input type="email" name="email"  class="form-control" required = "" >
                 </div>
                   <div class="for-group">
                     <label>Password</label>
-                    <input type="password" name="pass" class="form-control" required = "Completa tu Contraseña" >
+                    <input type="password" name="pass" class="form-control" required = "" >
                   </div>
                   <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombre"  class="form-control" required = "Completa tu Nombre" >
+                  <input type="text" name="nombre"  class="form-control" required = "" >
                 </div>
+               <div class="for-group">
+                  <label>Apellido</label>
+                  <input type="text" name="email"  class="form-control" required = "" >
+                </div>
+               <div class="for-group">
+                  <label>Ciudad</label>
+                  <input type="text" name="email"  class="form-control" required = "" >
+                </div>
+               <div class="for-group">
+                  <label>Telefono</label>
+                  <input type="number" name="email"  class="form-control" required = "" >
+               </div>
                 <div class="for-group">
                   <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
                 </div>
