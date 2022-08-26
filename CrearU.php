@@ -79,7 +79,7 @@
                 </div>
                <div class="for-group">
                   <label>Telefono</label>
-                  <input type="number" name="email"  class="form-control" required = "" >
+                  <input type="tel" name="email"  class="form-control" required = "" >
                </div>
                 <div class="for-group">
                   <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
