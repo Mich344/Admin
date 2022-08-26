@@ -85,6 +85,7 @@ if (isset($_REQUEST['IdBorrar'])){
                      <td><?php echo $row['telefono'] ?></td>
                      <td><?php echo $row['tip_doc'] ?></td>
                      <td><?php echo $row['fech_nac'] ?></td>
+                      <td><?php echo $row[''] ?></td>
                     
                      
                       <td>
