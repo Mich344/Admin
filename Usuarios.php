@@ -62,7 +62,8 @@ if (isset($_REQUEST['IdBorrar'])){
                     <th>Fecha Nacimiento</th>
                     
                     <th>
-                     Acciones <a href="Panel.php?modulo=CrearU"> <i class="fa fa-plus" aria-hidden="true"></i></a></th>
+                     Acciones <a href="Panel.php?modulo=CrearU"> <i class="fa fa-plus" aria-hidden="true"></i></a>
+                   </th>
                   </tr>
                 </thead>
 
@@ -86,7 +87,7 @@ if (isset($_REQUEST['IdBorrar'])){
                      <td><?php echo $row['telefono'] ?></td>
                      <td><?php echo $row['tip_doc'] ?></td>
                      <td><?php echo $row['fech_nac'] ?></td>
-                     <td><?php echo $row[''] ?></td> ?></td>
+
                     
                      
                       <td>
