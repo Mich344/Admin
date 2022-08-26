@@ -25,7 +25,7 @@ $con = mysqli_connect($host, $user, $pasword, $db);
 
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="productos" class="table table-bordered table-hover">
+              <table Id="productos" class="table table-bordered table-hover">
                 <thead>
                   <tr>
                     <th>Nombre</th>
