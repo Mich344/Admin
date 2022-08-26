@@ -68,7 +68,7 @@ else {
                   include_once "Basedata.php";
                    $con = mysqli_connect($host, $user, $pasword, $db);
                     $query = "SELECT Id, email, nombre, apellido, ciudad, telefono, tip_doc, num_doc, fech_nac from usuario;";
-                    $res = mysqli_query($con $query);
+                    $res = mysqli_query($con, $query);
                     while ($row = mysqli_fetch_assoc($res)){
                    
                   ?>
