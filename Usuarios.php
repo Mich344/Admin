@@ -57,7 +57,9 @@ if (isset($_REQUEST['IdBorrar'])){
                    <th>Apellido</th>
                    <th>Cuiudad</th>
                    <th>Telefono</th>
-                   <th>Tip_doc</th>
+                   <th>T documento</th>
+                   <th>N documneto</th>
+                   <th>F nacimiento</th>
                    
                     <th>
                      Acciones <a href="Panel.php?modulo=CrearU"> <i class="fa fa-plus" aria-hidden="true"></i></a></th>
@@ -83,7 +85,8 @@ if (isset($_REQUEST['IdBorrar'])){
                       <td><?php echo $row['ciudad'] ?></td>
                       <td><?php echo $row['telefono'] ?></td>
                       <td><?php echo $row['tip_doc'] ?></td>
-                    
+                      <td><?php echo $row['num_doc'] ?></td>
+                      <td><?php echo $row['fech_nac'] ?></td>
                      
                       <td>
                         <a href="Panel.php?modulo=EditarU&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
