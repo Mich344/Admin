@@ -71,15 +71,15 @@
                 </div>
                <div class="for-group">
                   <label>Apellido</label>
-                  <input type="text" name="email"  class="form-control" required = "" >
+                  <input type="text" name="apellido"  class="form-control" required = "" >
                 </div>
                <div class="for-group">
                   <label>Ciudad</label>
-                  <input type="text" name="email"  class="form-control" required = "" >
+                  <input type="text" name="ciudad"  class="form-control" required = "" >
                 </div>
                <div class="for-group">
                   <label>Telefono</label>
-                  <input type="tel" name="email"  class="form-control" required = "" >
+                  <input type="tel" name="telefono"  class="form-control" required = "" >
                </div>
                 <div class="for-group">
                   <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
