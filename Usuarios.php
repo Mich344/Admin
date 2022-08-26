@@ -54,16 +54,8 @@ if (isset($_REQUEST['IdBorrar'])){
                     <th>Id</th>
                     <th>Correo</th>
                     <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Ciudad</th>
-                    <th>Telefono</th>
-                    <th>Tipo Documento</th>
-                    <th>Numero Documento</th>
-                    <th>Fecha Nacimiento</th>
-                    
                     <th>
-                     Acciones <a href="Panel.php?modulo=CrearU"> <i class="fa fa-plus" aria-hidden="true"></i></a>
-                   </th>
+                     Acciones <a href="Panel.php?modulo=CrearU"> <i class="fa fa-plus" aria-hidden="true"></i></a></th>
                   </tr>
                 </thead>
 
@@ -81,20 +73,14 @@ if (isset($_REQUEST['IdBorrar'])){
                     <tr>
                       <td><?php echo $row['Id'] ?></td>
                       <td><?php echo $row['email'] ?></td>
-                      <td><?php echo $row['nombre'] ?></td>
-                     <td><?php echo $row['apellido'] ?></td>
-                     <td><?php echo $row['ciudad'] ?></td>
-                     <td><?php echo $row['telefono'] ?></td>
-                     <td><?php echo $row['tip_doc'] ?></td>
-                     <td><?php echo $row['fech_nac'] ?></td>
-
+                      <td><?php echo $row['nombre'] ?></td> 
                     
-                 
+                     
                       <td>
                         <a href="Panel.php?modulo=EditarU&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
                         <a href="Panel.php?modulo=Usuarios&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
                       </td>
-                     </tr>
+                    </tr>
                   <?php
                   }
                   ?>
