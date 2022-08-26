@@ -73,7 +73,7 @@ if (isset($_REQUEST['IdBorrar'])){
                   // Llamar la base de datos desde el include_once.
                   $con = mysqli_connect($host, $user, $pasword, $db);
                   //Iniciar conexion poner datos desde la Basedata.
-                  $query = "SELECT Id, email, nombre, apellido, ciudad, telefono, tip_doc, num_doc, fech_nac from usuario; "; // completar los datos. TAREA
+                  $query = "SELECT Id, email, nombre, apellido, ciudad, telefono, tip_doc, num_doc, fech_nac from usuario; ";
                   //Restultados 
                   $res = mysqli_query($con, $query);
                   while ($row = mysqli_fetch_assoc($res)) {
@@ -81,7 +81,7 @@ if (isset($_REQUEST['IdBorrar'])){
                     <tr>
                       <td><?php echo $row['Id'] ?></td>
                       <td><?php echo $row['email'] ?></td>
-                      <td><?php echo $row['nombre'] ?></td> // entonces completar el formulario llamando los siguientes datos. TAREA
+                      <td><?php echo $row['nombre'] ?></td>
                      <td><?php echo $row['apellido'] ?></td>
                      <td><?php echo $row['ciudad'] ?></td>
                      <td><?php echo $row['telefono'] ?></td>
@@ -89,12 +89,12 @@ if (isset($_REQUEST['IdBorrar'])){
                      <td><?php echo $row['fech_nac'] ?></td>
 
                     
-                      </tr>
+                 
                       <td>
                         <a href="Panel.php?modulo=EditarU&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
                         <a href="Panel.php?modulo=Usuarios&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
                       </td>
-                   
+                     </tr>
                   <?php
                   }
                   ?>
