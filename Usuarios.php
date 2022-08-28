@@ -54,9 +54,9 @@ else {
                      <th>Apellido</th>
                     <th>Cuiudad</th>
                     <th>Telefono</th>
-                    <th>Tipo Documento</th>
-                    <th>Numero Documneto</th>
-                    <th>Fecha Nacimiento</th>
+                    <th>Tip documento</th>
+                    <th>Num documneto</th>
+                    <th>Fech nacimiento</th>
                    
                     <th>
                      Acciones <a href="Panel.php?modulo=CrearU"> <i class="fa fa-plus" aria-hidden="true"></i></a></th>
