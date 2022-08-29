@@ -117,20 +117,9 @@
                       <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
                     </div>
                   </div>
-                </div><!-- /.card-body -->
-              </div>
-             <!--qui quede -->
-        </div>
-                <!-- /.card-body -->
-                <div class="card-footer clearfix">
-                  <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Add item</button>
                 </div>
               </div>
-              <!-- /.card -->
-            </section>
-            <!-- /.Left col -->
-            <!-- right col (We are only adding the ID to make the widgets sortable)-->
-            <section class="col-lg-5 connectedSortable">
+        </div>
 
               <!-- Map card -->
               <div class="card bg-gradient-primary">
