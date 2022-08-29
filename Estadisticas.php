@@ -374,7 +374,7 @@
                         <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
                         <label for="todoCheck2"></label>
                       </div>
-                      <span class="text">Make the theme responsive</span>
+                      <span class="text">Hacer que el tema responda</span>
                       <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
                       <div class="tools">
                         <i class="fas fa-edit"></i>
@@ -390,7 +390,7 @@
                         <input type="checkbox" value="" name="todo3" id="todoCheck3">
                         <label for="todoCheck3"></label>
                       </div>
-                      <span class="text">Let theme shine like a star</span>
+                      <span class="text">Hacer que el tema responda</span>
                       <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
                       <div class="tools">
                         <i class="fas fa-edit"></i>
@@ -406,7 +406,7 @@
                         <input type="checkbox" value="" name="todo4" id="todoCheck4">
                         <label for="todoCheck4"></label>
                       </div>
-                      <span class="text">Let theme shine like a star</span>
+                      <span class="text">Deja que el tema brille </span>
                       <small class="badge badge-success"><i class="far fa-clock"></i> 3 days</small>
                       <div class="tools">
                         <i class="fas fa-edit"></i>
@@ -422,7 +422,7 @@
                         <input type="checkbox" value="" name="todo5" id="todoCheck5">
                         <label for="todoCheck5"></label>
                       </div>
-                      <span class="text">Check your messages and notifications</span>
+                      <span class="text">Revisa tus mensajes y notificaciones</span>
                       <small class="badge badge-primary"><i class="far fa-clock"></i> 1 week</small>
                       <div class="tools">
                         <i class="fas fa-edit"></i>
@@ -557,7 +557,7 @@
 
                   <h3 class="card-title">
                     <i class="far fa-calendar-alt"></i>
-                    Calendar
+                    Calendario
                   </h3>
                   <!-- tools card -->
                   <div class="card-tools">
