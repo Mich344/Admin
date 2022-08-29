@@ -18,7 +18,7 @@ include_once "Basedata.php";
   //Restultados 
   $res = mysqli_query($con, $query);
   if($res){
-    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mensaje=Usuario '.$nombre.' Editado correctamente" />';
+    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=Producto '.$nombre.' Editado correctamente" />';
   }
   else {
 ?>
