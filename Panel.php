@@ -135,7 +135,6 @@ $modulo = $_REQUEST['modulo'] ?? '';
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
                   <a href="Panel.php?modulo=Estadisticas" class="nav-link <?php echo ($modulo == "Estadisticas" || $modulo == "") ? "" : " "; ?>">
-                    <i class="far fa-circle nav-icon"></i>
                     <i class="fas fa-chart-bar  nav-icon  "></i>
                     <p>Estadisticas</p>
                   </a>
