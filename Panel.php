@@ -48,15 +48,6 @@ $modulo = $_REQUEST['modulo'] ?? '';
    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css"> 
-
-
-
-
-
-
-
-
-
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -78,6 +69,10 @@ $modulo = $_REQUEST['modulo'] ?? '';
       </ul>
       <!--  Menu -->
       <ul class="navbar-nav ml-auto">
+        // Regresar 
+        <a class="nav-link" href="Panel.php?modulo=&Regresar=Usuarios " title="Regresar">
+        <i class="fa fa-backward" aria-hidden="true"></i> </a>
+        
         <!-- Editar el usuario de ADMIN desde su  caratula llamando la siguiente funcion. -->
         <a class="nav-link" title="Editar perfil" href="Panel.php?modulo=EditarU&Id= <?php echo $_SESSION['Id'] ?>">
           <i class="far fa-user"></i>
@@ -85,7 +80,6 @@ $modulo = $_REQUEST['modulo'] ?? '';
         </a>
         <a class="nav-link text-danger" href="Panel.php?modulo=&sesion=cerrar " title="Cerrar sesion">
           <i class="fas fa-door-closed"></i>
-
         </a>
 
       </ul>
