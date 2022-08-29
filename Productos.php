@@ -25,15 +25,45 @@ $con = mysqli_connect($host, $user, $pasword, $db);
 
             <!-- /.card-header -->
             <div class="card-body">
-              <table Id="productos" class="table table-bordered table-hover">
-                <thead>
+              <table id="tablaProductos" class="table table-bordered table-hover">
+              <thead>
                   <tr>
+                    <th>Id</th>
                     <th>Nombre</th>
                     <th>Precio</th>
                     <th>Cantidad</th>
-                    <th>Imagen(es)</th>
+                    <th>Talla</th>
+                    <th>Descripción</th>
+                    <th>Acciones </th>
                   </tr>
                 </thead>
+
+                <tbody>
+                <?php
+                  include_once "Basedata.php";
+                   $con = mysqli_connect($host, $user, $pasword, $db);
+                    $query = "SELECT Id, nombre, precio, cantidad, talla, descripcion from productos;";
+                    $res = mysqli_query($con, $query);
+                    while ($row = mysqli_fetch_assoc($res)){
+                   
+                  ?>
+                  <tr>
+                      <td><?php echo $row['Id'] ?></td>
+                      <td><?php echo $row['nombre'] ?></td>
+                      <td><?php echo $row['precio'] ?></td>
+                      <td><?php echo $row['cantidad'] ?></td>
+                      <td><?php echo $row['talla'] ?></td>
+                      <td><?php echo $row['descripcion'] ?></td>
+                      <td>
+                        <a href="Panel.php?modulo=CrearP"> <i class="fa fa-plus" aria-hidden="true"></i></a>
+                        <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
+                        <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
+                      </td>
+                    </tr>
+                  <?php
+                  }
+                    ?>
+                </tbody>
               </table>
             </div>
             <!-- /.card-body -->
