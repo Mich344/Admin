@@ -1,15 +1,51 @@
 <?php
+
 include_once "Basedata.php";
-// Llamar la base de datos desde el include_once.
-$con = mysqli_connect($host, $user, $pasword, $db);
+  // Llamar la base de datos desde el include_once.
+  $con = mysqli_connect($host, $user, $pasword, $db);
+
+ if (isset($_REQUEST['guardar'])){
+  
+  $Id = mysqli_real_escape_string($con, $_REQUEST['Id']?? '');
+  $Nombre = mysqli_real_escape_string($con, $_REQUEST['Nombre']?? '');
+  $Precio = mysqli_real_escape_string($con, $_REQUEST['Precio']?? '');
+  $Cantidad = mysqli_real_escape_string($con, $_REQUEST['Cantidad']?? '');
+  $talla = mysqli_real_escape_string($con, $REQUEST['talla']?? '');
+  $descripcion = mysqli_real_escape_string($con, $REQUEST['descripcion']?? '');
+
+  $query = "UPDATE productos SET 
+  Nombre = '" . $Nombre . "', Precio=  '" . $Precio . "',Cantidad= '" . $Cantidad . "',talla = '" . $talla . "',descripcion = '" . $descripcion . "' where  Id= '" . $Id . "';";
+  //Restultados 
+  $res = mysqli_query($con, $query);
+  if($res){
+    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mensaje=Usuario '.$nombre.' Editado correctamente" />';
+  }
+  else {
 ?>
+ <div class="alert alert-danger" role="alert">
+   Error al editar producto <?php echo mysqli_error($con)?>
+ </div>
+<?php
+  }
+ }
+ // Leer los usuarios 
+ // ((mysqli_real_escape_string)) Significado llama consultas preparadas 
+$Id= mysqli_real_escape_string ($con, $_REQUEST['Id']??'');
+// Seleccionar los datos //
+$query = "SELECT Id, Nombre, Precio, Cantidad, talla, descripcion from productos WHERE  Id = '".$Id."';";
+// Pasar la conexion $con, $query y almacenar en la variable $res. //
+$res = mysqli_query($con , $query);
+// (mysqli_fetch_assoc) Entregar un registro con el almacenamiento de la variable $res
+$row = mysqli_fetch_assoc($res);
+
+?> 
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1><strong>Productos</strong></h1>
+          <h1><strong>Editar Productos</strong></h1>
         </div>
 
       </div>
@@ -25,57 +61,42 @@ $con = mysqli_connect($host, $user, $pasword, $db);
 
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="tablaProductos" class="table table-bordered table-hover">
-              <thead>
-                  <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Talla</th>
-                    <th>Descripción</th>
-                    <th>Acciones </th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                <?php
-                  include_once "Basedata.php";
-                   $con = mysqli_connect($host, $user, $pasword, $db);
-                    $query = "SELECT Id, Nombre, Precio, Cantidad, talla, descripcion from productos;";
-                    $res = mysqli_query($con, $query);
-                    while ($row = mysqli_fetch_assoc($res)){
-                   
-                  ?>
-                  <tr>
-                      <td><?php echo $row['Id'] ?></td>
-                      <td><?php echo $row['Nombre'] ?></td>
-                      <td><?php echo $row['Precio'] ?></td>
-                      <td><?php echo $row['Cantidad'] ?></td>
-                      <td><?php echo $row['talla'] ?></td>
-                      <td><?php echo $row['descripcion'] ?></td>
-                      <td>
-                        <a href="Panel.php?modulo=CrearP"> <i class="fa fa-plus" aria-hidden="true"></i></a>
-                        <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
-                        <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
-                      </td>
-                    </tr>
-                  <?php
-                  }
-                    ?>
-                </tbody>
-              </table>
+              <form action="Panel.php?modulo=EditarP" method="post">
+                <div class="for-group">
+                  <label>Nombre</label>
+                  <input type="text" name="nombre"  class="form-control" value="<?php echo $row['Nombre']?>">
+                </div>
+                  <div class="for-group">
+                  <label>Precio</label>
+                  <input type="number" name="precio"  class="form-control" value="<?php echo $row['Precio']?>">
+                </div>
+                 <div class="for-group">
+                  <label>Cantidad</label>
+                  <input type="number" name="Cantidad"  class="form-control" value="<?php echo $row['Cantidad']?>">
+                </div>
+                 <div class="for-group">
+                  <label>talla</label>
+                  <input type="text" name="talla"  class="form-control" value="<?php echo $row['talla']?>">
+                </div>
+                 <div class="for-group">
+                  <label>descripcion</label>
+                  <input type="text" name="descripcion"  class="form-control" value="<?php echo $row['descripcion']?>">
+                </div>
+                <div class="for-group">
+                    <br>
+                    <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
+                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
+                </div>
+              </form>
             </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
+            <!-- /.card -->
 
+          </div>
+          <!-- /.col -->
         </div>
-        <!-- /.col -->
+        <!-- /.row -->
       </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container-fluid -->
+      <!-- /.container-fluid -->
   </section>
   <!-- /.content -->
 </div>
