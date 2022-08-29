@@ -69,7 +69,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
       </ul>
       <!--  Menu -->
       <ul class="navbar-nav ml-auto">
-        // Regresar 
+        <!-- Regresar -->
         <a class="nav-link" href="Panel.php?modulo=&Regresar=Usuarios " title="Regresar">
         <i class="fa fa-backward" aria-hidden="true"></i> </a>
         
