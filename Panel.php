@@ -285,7 +285,9 @@ $modulo = $_REQUEST['modulo'] ?? '';
         "info": true,
         "autoWidth": false,
         "responsive": true,
-      });
+      })
+    });
+    </script>
   <script>
     $(document).ready(function() {
       $(".borrar").click(function(e) {
