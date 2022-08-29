@@ -11,12 +11,16 @@ include_once "Basedata.php";
   $pasword = mysqli_real_escape_string($con, $_REQUEST['pass']?? '');
   $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
   $Id = mysqli_real_escape_string($con, $_REQUEST['Id']?? '');
-   $apellido = mysqli_real_escape_string($con, $REQUEST['apellido']?? '');
+  $apellido = mysqli_real_escape_string($con, $REQUEST['apellido']?? '');
+  $ciudad = mysqli_real_escape_string($con, $REQUEST['ciudad']?? '');
+  $telefono = mysqli_real_escape_string($con, $REQUEST['telefono']?? '');
+  $tip_doc = mysqli_real_escape_string($con, $REQUEST['tip_doc']?? '');
+  $num_doc = mysqli_real_escape_string($con, $REQUEST['num_doc']?? '');
+  $fech_nac = mysqli_real_escape_string($con, $REQUEST['fech_nac']?? '');
 
   $query = "UPDATE usuario SET 
-  email = '" . $email . "', pasword=  '" . $pasword . "',nombre = '" . $nombre . "',apellido = '" . $apellido . "' where  Id= '" . $Id . "';
-
-  ";
+  email = '" . $email . "', pasword=  '" . $pasword . "',nombre = '" . $nombre . "',apellido = '" . $apellido . "',ciudad = '" . $ciudad . "',telefono = '" . $telefono . "'
+  ,tip_doc = '" . $tip_doc . "' ,num_doc = '" . $num_doc . "' ,fech_nac = '" . $fech_nac . "' where  Id= '" . $Id . "';";
   //Restultados 
   $res = mysqli_query($con, $query);
   if($res){
@@ -47,7 +51,7 @@ $row = mysqli_fetch_assoc($res);
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1><strong>Crear Usuarios</strong></h1>
+          <h1><strong>Editar Usuarios</strong></h1>
         </div>
 
       </div>
@@ -85,14 +89,13 @@ $row = mysqli_fetch_assoc($res);
                   <input type="text" name="direccion"  class="form-control" value="<?php echo $row['direccion']?>">
                 </div>
                  <div class="for-group">
-                  <label>Email</label>
+                  <label>Ciudad</label>
                   <input type="text" name="ciudad"  class="form-control" value="<?php echo $row['ciudad']?>">
                 </div>
                  <div class="for-group">
-                  <label>Email</label>
+                  <label>Telefono</label>
                   <input type="number" name="telefono"  class="form-control" value="<?php echo $row['telefono']?>">
                 </div>
-                
                 <div class="for-group">
                     <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
                   <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
