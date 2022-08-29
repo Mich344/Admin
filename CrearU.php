@@ -5,7 +5,7 @@
   $con = mysqli_connect($host, $user, $pasword, $db);
   
   $email = mysqli_real_escape_string($con, $_REQUEST['email']?? '');
-  $pasword = mysqli_real_escape_string($con, $_REQUEST['pass']?? '');
+  $pasword = mysqli_real_escape_string($con, $_REQUEST['pasword']?? '');
   $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
    $apellido = mysqli_real_escape_string($con, $_REQUEST['apellido']?? '');
    $ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudad']?? '');
