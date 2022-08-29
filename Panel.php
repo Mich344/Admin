@@ -70,7 +70,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
       <!--  Menu -->
       <ul class="navbar-nav ml-auto">
         <!-- Regresar -->
-        <a class="nav-link" href="Panel.php?modulo=Panel" title="Inicio">
+        <a class="nav-link" href="Panel.php?modulo=&Panel" title="Inicio">
         <i class="fa fa-home" aria-hidden="true"></i>
         
         <!-- Editar el usuario de ADMIN desde su  caratula llamando la siguiente funcion. -->
