@@ -7,14 +7,14 @@ include_once "Basedata.php";
  if (isset($_REQUEST['guardar'])){
   
   $Id = mysqli_real_escape_string($con, $_REQUEST['Id']?? '');
-  $Nombre = mysqli_real_escape_string($con, $_REQUEST['Nombre']?? '');
-  $Precio = mysqli_real_escape_string($con, $_REQUEST['Precio']?? '');
-  $Cantidad = mysqli_real_escape_string($con, $_REQUEST['Cantidad']?? '');
+  $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
+  $precio = mysqli_real_escape_string($con, $_REQUEST['precio']?? '');
+  $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
   $talla = mysqli_real_escape_string($con, $REQUEST['talla']?? '');
   $descripcion = mysqli_real_escape_string($con, $REQUEST['descripcion']?? '');
 
   $query = "UPDATE productos SET 
-  Nombre = '" . $Nombre . "', Precio=  '" . $Precio . "',Cantidad= '" . $Cantidad . "',talla = '" . $talla . "',descripcion = '" . $descripcion . "' where  Id= '" . $Id . "';";
+  nombre = '" . $nombre . "', precio=  '" . $precio . "',cantidad= '" . $cantidad . "',talla = '" . $talla . "',descripcion = '" . $descripcion . "' where  Id= '" . $Id . "';";
   //Restultados 
   $res = mysqli_query($con, $query);
   if($res){
@@ -64,15 +64,15 @@ $row = mysqli_fetch_assoc($res);
               <form action="Panel.php?modulo=EditarP" method="post">
                 <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombre"  class="form-control" value="<?php echo $row['Nombre']?>">
+                  <input type="text" name="nombre"  class="form-control" value="<?php echo $row['nombre']?>">
                 </div>
                   <div class="for-group">
                   <label>Precio</label>
-                  <input type="number" name="precio"  class="form-control" value="<?php echo $row['Precio']?>">
+                  <input type="number" name="precio"  class="form-control" value="<?php echo $row['precio']?>">
                 </div>
                  <div class="for-group">
                   <label>Cantidad</label>
-                  <input type="number" name="Cantidad"  class="form-control" value="<?php echo $row['Cantidad']?>">
+                  <input type="number" name="cantidad"  class="form-control" value="<?php echo $row['cantidad']?>">
                 </div>
                  <div class="for-group">
                   <label>talla</label>
