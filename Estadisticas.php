@@ -356,7 +356,7 @@
                         <label for="todoCheck1"></label>
                       </div>
                       <!-- todo text -->
-                      <span class="text">Design a nice theme</span>
+                      <span class="text">Diseña un buen tema</span>
                       <!-- Emphasis label -->
                       <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
                       <!-- General tools such as edit or delete-->
