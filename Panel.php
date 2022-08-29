@@ -79,7 +79,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
 
         </a>
         <a class="nav-link text-danger" href="Panel.php?modulo=&sesion=cerrar " title="Cerrar sesion">
-          <i class="fas fa-door-closed"></i>
+         <i class="fa fa-power-off" aria-hidden="true"></i>
         </a>
 
       </ul>
