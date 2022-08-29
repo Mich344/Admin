@@ -208,6 +208,12 @@ $modulo = $_REQUEST['modulo'] ?? '';
     if ($modulo == "EditarU") {
       include_once "EditarU.php";
     }
+    if ($modulo == "CrearP") {
+      include_once "CrearP.php";
+    }
+    if ($modulo == "EditarP") {
+      include_once "EditarP.php";
+    }
 
     ?>
     <!-- /.content-wrapper -->
