@@ -81,8 +81,14 @@
                   <label>Telefono</label>
                   <input type="tel" name="telefono"  class="form-control" required = "" >
                </div>
-                <div class="for-group">
+               <hr>
+               <center> <div class="for-group">
                   <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
+                </div></center>
+                
+                <div>
+                <a class="nav-link" href="Panel.php?modulo=Usuarios " title="Regresar" style="color: black">
+        <i class="fa fa-backward" aria-hidden="true"></i></a>
                 </div>
               </form>
             </div>
