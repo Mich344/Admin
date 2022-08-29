@@ -568,7 +568,7 @@
                       </button>
                       <div class="dropdown-menu" role="menu">
                         <a href="#" class="dropdown-item">Añadir evento</a>
-                        <a href="#" class="dropdown-item">Clear events</a>
+                        <a href="#" class="dropdown-item">Eliminar Evento</a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">View calendar</a>
                       </div>
