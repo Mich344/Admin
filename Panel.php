@@ -45,14 +45,9 @@ $modulo = $_REQUEST['modulo'] ?? '';
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
     <!-- DataTables -->
-  <!-- <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+   <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css"> -->
-
-  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.4.0/css/select.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="css/editor.dataTables.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css"> 
 
 
 
@@ -268,7 +263,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="dist/js/pages/dashboard.js"></script>
     <!-- DataTables  & Plugins -->
-  <!-- script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  script src="plugins/datatables/jquery.dataTables.min.js"></script>
   <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
   <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
   <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
@@ -279,14 +274,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
   <script src="plugins/pdfmake/vfs_fonts.js"></script>
   <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
   <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
-  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script> -->
-
-  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
-  <script src="https://cdn.datatables.net/select/1.4.0/js/dataTables.select.min.js"></script>
-  <script src="js/dataTables.editor.min.js"></script>
-
- 
+  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script> 
   <script>
     $(function() {
       $('#example2').DataTable({
@@ -298,74 +286,6 @@ $modulo = $_REQUEST['modulo'] ?? '';
         "autoWidth": false,
         "responsive": true,
       });
-      
-      editor = new $.fn.dataTable.Editor({
-        ajax: "controllers/producs.php",
-        table: "productos",
-        fields: [{
-          label: "Nombre:",
-          name: "Nombre"
-        }, {
-          label: "Precio:",
-          name: "Precio"
-        }, {
-          label: "Cantidad:",
-          name: "Cantidad"
-        }, {
-                label: "Imagenes:",
-                name: "files[].id",
-                // subir varias imagenes con las caracteristicas.
-                type: "uploadMany",
-                display: function ( fileId, counter ) {
-                    return '<img src="'+editor.file( 'files', fileId ).web_path+'"/>';
-                },
-                // especificar que no hay imagenes
-                noFileText: 'No hay imagenes.'
-            }]
-      });
-
-      $('productos').DataTable({
-        dom: "Bfrtip",
-        ajax: "controllers/producs.php",
-        columns: [
-          {
-            data: "Nombre"
-          },
-          {
-            data: "Precio", render: $.fn.dataTable.render.number(',', '.', 0, '$')
-          },
-          {
-            data: "Cantidad" 
-          },
-            {
-              //Vinculo con el data files, para hacer un rendereo y muestre la cantidad de imagenes.
-                data: "files",
-                render: function ( d ) {
-                    return d.length ?
-                        d.length+' imagn(es)' :
-                        'No hay imagenes';
-                },
-                title: "Imagen"
-            },
-        ],
-        select: true,
-        buttons: [{
-            extend: "create",
-            editor: editor
-          },
-          {
-            extend: "edit",
-            editor: editor
-          },
-          {
-            extend: "remove",
-            editor: editor
-          }
-        ]
-      });
-    });
-  </script>
-
   <script>
     $(document).ready(function() {
       $(".borrar").click(function(e) {
