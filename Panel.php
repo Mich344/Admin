@@ -140,7 +140,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
-                  <a href="Panel.php?modulo=Estadisticas" class="nav-link <?php echo ($modulo == "Estadisticas" || $modulo == "") ? "active" : " "; ?>">
+                  <a href="Panel.php?modulo=Estadisticas" class="nav-link <?php echo ($modulo == "Estadisticas" || $modulo == "") ? "" : " "; ?>">
                     <i class="far fa-circle nav-icon"></i>
                     <i class="fas fa-chart-bar  nav-icon  "></i>
                     <p>Estadisticas</p>
@@ -159,7 +159,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
-                  <a href="Panel.php?modulo=Productos" class="nav-link <?php echo ($modulo == "Productos" || $modulo == "") ? "active" : " "; ?> ">
+                  <a href="Panel.php?modulo=Productos" class="nav-link <?php echo ($modulo == "Productos" || $modulo == "") ? "" : " "; ?> ">
 
                     <i class="fa fa-shopping-bag nav-icon" aria-hidden="true"></i>
                     <p>Productos</p>
@@ -169,7 +169,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
-                  <a href="Panel.php?modulo=Ventas" class="nav-link <?php echo ($modulo == "Ventas" || $modulo == "") ? "active" : " "; ?> ">
+                  <a href="Panel.php?modulo=Ventas" class="nav-link <?php echo ($modulo == "Ventas" || $modulo == "") ? "" : " "; ?> ">
 
                     <i class="fa fa-table nav-icon" aria-hidden="true"></i>
                     <p>Ventas</p>
