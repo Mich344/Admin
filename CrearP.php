@@ -4,9 +4,9 @@
   // Llamar la base de datos desde el include_once.
   $con = mysqli_connect($host, $user, $pasword, $db);
   
-  $Nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
-  $Precio = mysqli_real_escape_string($con, $_REQUEST['precio']?? '');
-  $Cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
+  $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
+  $precio = mysqli_real_escape_string($con, $_REQUEST['precio']?? '');
+  $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
   $talla = mysqli_real_escape_string($con, $REQUEST['talla']?? '');
   $descripcion = mysqli_real_escape_string($con, $REQUEST['descripcion']?? '');
   
