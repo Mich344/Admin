@@ -3,15 +3,12 @@
   include_once "Basedata.php";
   // Llamar la base de datos desde el include_once.
   $con = mysqli_connect($host, $user, $pasword, $db);
-  
   $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
   $precio = mysqli_real_escape_string($con, $_REQUEST['precio']?? '');
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
-  $talla = mysqli_real_escape_string($con, $REQUEST['talla']?? '');
-  $descripcion = mysqli_real_escape_string($con, $REQUEST['descripcion']?? '');
-  
-  $query = "INSERT INTO productos (nombre,precio,cantidad,talla,descripcion) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."'
-  , '".$descripcion."'); ";
+  $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
+  $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? '');
+  $query = "UPDATE productos SET nombre = '".$nombre."' ,precio = '".$precio."' ,cantidad = '".$cantidad."' ,talla = '".$talla."' ,descripcion = '".$descripcion."';";
   //Restultados 
   
   $res = mysqli_query($con, $query);
