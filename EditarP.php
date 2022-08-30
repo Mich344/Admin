@@ -1,20 +1,15 @@
 <?php
 
 include_once "Basedata.php";
-  // Llamar la base de datos desde el include_once.
-  $con = mysqli_connect($host, $user, $pasword, $db);
-
+$con =mysqli_connect($host,$user,$pasword,$db);
  if (isset($_REQUEST['guardar'])){
-  
   $Id = mysqli_real_escape_string($con, $_REQUEST['Id']?? '');
   $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
   $precio = mysqli_real_escape_string($con, $_REQUEST['precio']?? '');
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
-  $talla = mysqli_real_escape_string($con, $REQUEST['talla']?? '');
-  $descripcion = mysqli_real_escape_string($con, $REQUEST['descripcion']?? '');
-
-  $query = "UPDATE productos SET 
-  nombre = '" . $nombre . "', precio=  '" . $precio . "',cantidad= '" . $cantidad . "',talla = '" . $talla . "',descripcion = '" . $descripcion . "' where  Id= '" . $Id . "';";
+  $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
+  $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? '');
+  $query = "UPDATE productos SET nombre = '".$nombre."' ,precio = '".$precio."' ,cantidad = '".$cantidad."' ,talla = '".$talla."' ,descripcion = '".$descripcion."' WHERE Id = '".$Id."';";
   //Restultados 
   $res = mysqli_query($con, $query);
   if($res){
