@@ -2,6 +2,26 @@
 include_once "Basedata.php";
 // Llamar la base de datos desde el include_once.
 $con = mysqli_connect($host, $user, $pasword, $db);
+if(isset($_REQUEST['IdBorrar'])){
+$Id = mysqli_real_escape_string($con, $_REQUEST['IdBorrar']??''); 
+$query = "DELETE from productos where Id= '".$Id."';";
+$res = mysqli_query($con, $query);
+if ($res){
+  ?>
+
+<div class="alert alert-warning float-right" role="alert">
+     El producto ha sido borrado con exito.
+    </div>
+<?php
+  }
+else {
+?>
+    <div class="alert alert-danger float-right" role="alert">
+      Error, no se pudo borrar el producto <?php echo $row['nombre'] ?><?php echo mysqli_error ($con); ?> 
+    </div>
+    <?php
+  }
+}
 ?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
