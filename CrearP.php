@@ -64,7 +64,7 @@
                 </div>
                <div class="for-group">
                   <label>Talla</label>
-                  <input type="text" name="talla"  class="form-control" required = "" >
+                  <input type="text" name="talla"  class="form-control">
                 </div>
                <div class="for-group">
                   <label>Descripción</label>
