@@ -10,6 +10,7 @@ include_once "Basedata.php";
   $email = mysqli_real_escape_string($con, $_REQUEST['email']?? '');
   $pasword = mysqli_real_escape_string($con, $_REQUEST['pass']?? '');
   $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
+  $nombre = mysqli_real_escape_string($con, $_REQUEST['direccion']?? '');
   $Id = mysqli_real_escape_string($con, $_REQUEST['Id']?? '');
   $apellido = mysqli_real_escape_string($con, $REQUEST['apellido']?? '');
   $ciudad = mysqli_real_escape_string($con, $REQUEST['ciudad']?? '');
@@ -19,12 +20,12 @@ include_once "Basedata.php";
   $fech_nac = mysqli_real_escape_string($con, $REQUEST['fech_nac']?? '');
 
   $query = "UPDATE usuario SET 
-  email = '" . $email . "', pasword=  '" . $pasword . "',nombre = '" . $nombre . "',apellido = '" . $apellido . "',ciudad = '" . $ciudad . "',telefono = '" . $telefono . "'
+  email = '" . $email . "', pasword=  '" . $pasword . "',nombre = '" . $nombre . "' ,direccion = '".$direecion."' ,apellido = '" . $apellido . "',ciudad = '" . $ciudad . "',telefono = '" . $telefono . "'
   ,tip_doc = '" . $tip_doc . "' ,num_doc = '" . $num_doc . "' ,fech_nac = '" . $fech_nac . "' where  Id= '" . $Id . "';";
   //Restultados 
   $res = mysqli_query($con, $query);
   if($res){
-    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mensaje=Usuario '.$nombre.' Editado correctamente" />';
+    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mensaje=Usuario '.$nombre.' Editado correctamente"/>';
   }
   else {
 ?>
@@ -98,7 +99,11 @@ $row = mysqli_fetch_assoc($res);
                 </div>
                 <div class="for-group">
                     <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
-                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
+                  <center><button type="submit" class="btn btn-primary" name="guardar">guardar</button></center>
+                </div>
+                <div>
+                <a class="nav-link" href="Panel.php?modulo=Usuarios " title="Regresar" style="color: black">
+        <i class="fa fa-backward" aria-hidden="true"></i></a>
                 </div>
               </form>
             </div>
