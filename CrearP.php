@@ -70,10 +70,14 @@
                   <label>Descripción</label>
                   <input type="text" name="descripcion"  class="form-control" required = "" >
                 </div>
+               <hr>
                 <div class="for-group">
-                    <br>
-                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
+                 <center><button type="submit" class="btn btn-primary" name="guardar">guardar</button></center>
                 </div>
+               <div>
+               <a class="nav-link" href="Panel.php?modulo=Usuarios " title="Regresar">
+        <i class="fa fa-backward" aria-hidden="true"></i></a>
+               </div>
               </form>
             </div>
             <!-- /.card -->
