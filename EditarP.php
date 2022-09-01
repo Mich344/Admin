@@ -77,15 +77,15 @@ $row = mysqli_fetch_assoc($res);
                   <label>descripcion</label>
                   <input type="text" name="descripcion"  class="form-control" value="<?php echo $row['descripcion']?>">
                 </div>
+               <hr>
                 <div class="for-group">
-                    <br>
                     <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
                   <center><button type="submit" class="btn btn-primary" name="guardar">guardar</button></cemter>
-                 <div>
+                </div>
+                <div>
                   <a class="nav-link" href="Panel.php?modulo=Productos " title="Regresar">
         <i class="fa fa-backward" aria-hidden="true"></i></a>
                  </div>
-                </div>
               </form>
             </div>
             <!-- /.card -->
