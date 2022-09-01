@@ -97,6 +97,7 @@ $row = mysqli_fetch_assoc($res);
                   <label>Telefono</label>
                   <input type="number" name="telefono"  class="form-control" value="<?php echo $row['telefono']?>">
                 </div>
+                <hr>
                 <div class="for-group">
                     <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
                   <center><button type="submit" class="btn btn-primary" name="guardar">guardar</button></center>
