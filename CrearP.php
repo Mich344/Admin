@@ -75,7 +75,7 @@
                  <center><button type="submit" class="btn btn-primary" name="guardar">guardar</button></center>
                 </div>
                <div>
-               <a class="nav-link" href="Panel.php?modulo=Usuarios " title="Regresar">
+               <a class="nav-link" href="Panel.php?modulo=Productos " title="Regresar">
         <i class="fa fa-backward" aria-hidden="true"></i></a>
                </div>
               </form>
