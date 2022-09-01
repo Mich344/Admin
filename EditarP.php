@@ -80,7 +80,11 @@ $row = mysqli_fetch_assoc($res);
                 <div class="for-group">
                     <br>
                     <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
-                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
+                  <center><button type="submit" class="btn btn-primary" name="guardar">guardar</button></cemter>
+                 <div>
+                  <a class="nav-link" href="Panel.php?modulo=Productos " title="Regresar">
+        <i class="fa fa-backward" aria-hidden="true"></i></a>
+                 </div>
                 </div>
               </form>
             </div>
