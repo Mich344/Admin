@@ -331,6 +331,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			var sound = new Audio();
 			sound.src = "../images/Audio/Ingresar.mp3"
 		</script>
+	<!--search jQuery-->
 	<!--//search jQuery-->
 	<!--smooth-scrolling-of-move-up-->
 	<script type="text/javascript">
