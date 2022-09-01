@@ -60,7 +60,8 @@ else {
                     <th>Fech nacimiento</th>
                    
                     <th>
-                     Acciones
+                     Acciones                          
+                      <a href="Panel.php?modulo=CrearU"> <i class="fa fa-user-plus" aria-hidden="true"></i></i></a>
                     </th>
                   </tr>
                 </thead>
@@ -86,7 +87,6 @@ else {
                       <td><?php echo $row['num_doc'] ?></td>
                       <td><?php echo $row['fech_nac'] ?></td>
                       <td>
-                           <a href="Panel.php?modulo=CrearU"> <i class="fa fa-user-plus" aria-hidden="true"></i></i></a>
                            <a href="Panel.php?modulo=EditarU&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
                         <a href="Panel.php?modulo=Usuarios&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
                       </td>
