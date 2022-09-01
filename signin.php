@@ -53,7 +53,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<!--header-->
 	<div class="header">
+		 <?php
+        if (isset($_REQUEST['login'])) {
+          session_start();
+          $email = $_REQUEST['email'] ?? '';
+          $passwordd = $_REQUEST['pasword'] ?? '';
 
+          include_once "Basedata.php";
+
+          $con = mysqli_connect($host, $user, $pasword, $db);
+
+          $query = "SELECT Id, email, nombre  from clientes where email= '" . $email . "'  and pasword= '" . $passwordd . "' ";
+
+          $res = mysqli_query($con, $query);
+          //  $paswordd = md5 ($passwordd);   Metodo opcional contraseña encriptada para evitar hackeos.
+          $row = mysqli_fetch_assoc($res);
+          if ($row) {
+            $_SESSION['IdCliente'] = $row['Id'];
+            $_SESSION['emailCliente'] = $row['email'];
+            $_SESSION['nombreCliente'] = $row['nombre'];
+            header("location: Index.php?mensaje=Usuario Registradro exitosamente");
+          } else {
+        ?>
+            <div class="alert alert-danger" role="alert"></div>
+            <strong>ERROR</strong>
+        <?php
+          }
+        }
+        ?>
 		<div class="top-header navbar navbar-default"><!--header-one-->
 			<a class="btn_audio" onclick="sound.play()"> <img src="images/n.12.jpg" class="voci" alt="sonido" title="Asistente de discapacidad visual"></a>
 			<div class="container">				
