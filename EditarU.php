@@ -39,7 +39,7 @@ include_once "Basedata.php";
  // ((mysqli_real_escape_string)) Significado llama consultas preparadas 
 $Id= mysqli_real_escape_string ($con, $_REQUEST['Id']??'');
 // Seleccionar los datos //
-$query = "SELECT Id, email, nombre, apellido, ciudad, telefono, tip_doc, num_doc, fech_nac from usuario WHERE  Id = '".$Id."';";
+$query = "SELECT Id, email, nombre, direccion, apellido, ciudad, telefono, tip_doc, num_doc, fech_nac from usuario WHERE  Id = '".$Id."';";
 // Pasar la conexion $con, $query y almacenar en la variable $res. //
 $res = mysqli_query($con , $query);
 // (mysqli_fetch_assoc) Entregar un registro con el almacenamiento de la variable $res
