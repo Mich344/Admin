@@ -87,7 +87,7 @@
                 </div></center>
                 
                 <div>
-                <a class="nav-link" href="Panel.php?modulo=Usuarios " title="Regresar" style="color: black">
+                <a class="nav-link" href="Panel.php?modulo=Usuarios " title="Regresar" >
         <i class="fa fa-backward" aria-hidden="true"></i></a>
                 </div>
               </form>
