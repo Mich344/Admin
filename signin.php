@@ -57,7 +57,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         if (isset($_REQUEST['login'])) {
           session_start();
           $email = $_REQUEST['email'] ?? '';
-          $passwordd = $_REQUEST['pasword'] ?? '';
+          $passwordd = $_REQUEST['password'] ?? '';
 
           include_once "Basedata.php";
 
@@ -278,18 +278,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h4><span id="signo">¡</span><b>Bienvenido a SportsWearLine</b><span id="signo">!</span> <br> <span id="signo">¿</span><b>No eres usuario</b><span id="signo">?</span> <a href="register.php"> Registrate Ahora</a> </h4>
 			</div>
 			<div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
-				<form>
-					<input type="text" class="user" name="email" placeholder="Enter your email" required="">
-					<input type="password" name="password" class="lock" placeholder="Password">
-					<input type="submit" name="login" value="Iniciar">
-					<div class="forgot-grid">
-						<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Recordar</label>
-						<div class="forgot">
-							<a href="#">¿Olvidaste tu contraseña?</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</form>
+				<form method="post">
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="email" name="email">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" placeholder="pasword" name="pasword">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+            <!-- /.col -->
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary btn-block" name="login">Ingresar</button>
+            </div>
+            <!-- /.col -->
+          </div>
+        </form>
 			</div>
 		</div>
 	</div>
