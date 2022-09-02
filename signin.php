@@ -63,7 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
           $con = mysqli_connect($host, $user, $pasword, $db);
 
-          $query = "SELECT Id, email, nombre  from clientes where email= '" . $email . "'  and pasword= '" . $passwordd . "' ";
+          $query = "SELECT Id, email, nombre  from clientes where email= '" . $email . "'  and password= '" . $passwordd . "' ";
 
           $res = mysqli_query($con, $query);
           //  $paswordd = md5 ($passwordd);   Metodo opcional contraseña encriptada para evitar hackeos.
@@ -280,7 +280,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
 				<form>
 					<input type="text" class="user" name="email" placeholder="Enter your email" required="">
-					<input type="password" name="pasword" class="lock" placeholder="Password">
+					<input type="password" name="password" class="lock" placeholder="Password">
 					<input type="submit" name="login" value="Iniciar">
 					<div class="forgot-grid">
 						<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Recordar</label>
