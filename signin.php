@@ -51,9 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//end-smooth-scrolling-->
 </head>
 <body>
-	<!--header-->
-	<div class="header">
-		 <?php
+	 <?php
         if (isset($_REQUEST['login'])) {
           session_start();
           $email = $_REQUEST['email'] ?? '';
@@ -81,8 +79,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           }
         }
         ?>
+	<!--header-->
+	<div class="header">
 		<div class="top-header navbar navbar-default"><!--header-one-->
-			<a class="btn_audio" onclick="sound.play()"> <img src="images/n.12.jpg" class="voci" alt="sonido" title="Asistente de discapacidad visual"></a>
+			<!--<a class="btn_audio" onclick="sound.play()"> <img src="images/n.12.jpg" class="voci" alt="sonido" title="Asistente de discapacidad visual"></a> -->
 			<div class="container">				
 				<div class="nav navbar-nav wow fadeInLeft animated" data-wow-delay=".5s">
 					<p><strong> <a href="sda.php" style = "color: #B2051F ">SPORTS</a>WEARLINE</strong>|<a href="register.php"><strong>Registrarse</strong> </a> O <a href="signin.php"><strong>Ingresar </strong></a></p>
@@ -341,10 +341,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--//footer-->			
 	<!--search jQuery-->
 	<script src="js/main.js"></script>
-	<script type="text/javascript">
+	<!--<script type="text/javascript">
 			var sound = new Audio();
 			sound.src = "../images/Audio/Ingresar.mp3"
-		</script>
+		</script> -->
 	<!--search jQuery-->
 	<!--//search jQuery-->
 	<!--smooth-scrolling-of-move-up-->
