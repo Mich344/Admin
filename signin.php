@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -85,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!--<a class="btn_audio" onclick="sound.play()"> <img src="images/n.12.jpg" class="voci" alt="sonido" title="Asistente de discapacidad visual"></a> -->
 			<div class="container">				
 				<div class="nav navbar-nav wow fadeInLeft animated" data-wow-delay=".5s">
-					<p><strong> <a href="sda.php" style = "color: #B2051F ">SPORTS</a>WEARLINE</strong>|<a href="register.php"><strong>Registrarse</strong> </a> O <a href="signin.php"><strong>Ingresar </strong></a></p>
+					<p><strong> <a href="#" style = "color: #B2051F">SPORTS</a>WEARLINE</strong>|<a href="register.php"><strong>Registrarse</strong> </a></p>
 				</div>
 				<div class="redes-container">
 					<ul>
@@ -110,26 +108,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 					</div>
 				<div class="nav navbar-nav logo wow zoomIn animated" data-wow-delay=".7s">
-					<h1><a href="index1.php" style="color: #B2051F">SPORTS<b>WEARLINE</b><span class="tag"><strong> Vístete bien, hoy tienes una cita con el deporte ¡Marca tú estilo!</strong></span></a></h1>
+					<center><h1><a href="index1.php" style="color: #B2051F">SPORTS<b>WEARLINE</b><span class="tag"><strong> Vístete bien, hoy tienes una cita con el deporte ¡Marca tú estilo!</strong></span></a></h1></center>
 				</div>
 
 				<div class="clearfix"> </div>
-			</div>
-		</div>
-		<div class="top-nav navbar navbar-default"><!--header-three-->
-			<div class="container">
-				<nav class="navbar" role="navigation">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
-					<!--navbar-header-->
-					<!--//navbar-header-->
-				</nav>
 			</div>
 		</div>
 	</div>
@@ -175,37 +157,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!--//login-->
-	<!--footer-->
-	<div class="footer" style= " background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);">
-		<div class="container">
-			<div class="footer-info">
-				<div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".5s">
-					<h4 class="footer-logo"><a href="index1.php" style = "color: #B2051F">SPORTS <b style = "color: white">WEARLINE</b> <span class="tag"> </span> </a></h4>
-					<p style = "color: white"><strong>© SPORTSWEARLINE. El mejor contenido para el deporte.</strong></p>
-				</div>
-				<div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".7s">
-					<h3  style = "color: #B2051F"><strong>Popular</strong></h3>
-					<ul>
-						<li><a href="about.php" style = "color: white"><strong>Acerca de Nosotros</strong></a></li>
-				
-					<li><a href="contact.php"  style = "color: white"><strong>Contáctanos</strong></a></li>
-						<li><a href="faq.php"  style = "color: white"><strong>Preguntas Frecuentes</strong></a></li>
-			
-					</ul>
-				</div>
-				<div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".9s">
-					<h2 style="color:#B2051F"><strong>Disfruta comprando tus productos favoritos </strong></h2>
-					<p style="color:white;"><strong>Dejanos tu sugerencia en un comentario</stron></p>
-					<form>
-						<input type="text" placeholder="Escribenos tu opinion aqui" required="">
-						<input style="color:black" type="submit" value="Enviar">
-					</form>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-	<!--//footer-->			
 	<!--search jQuery-->
 	<script src="js/main.js"></script>
 	<!--<script type="text/javascript">
