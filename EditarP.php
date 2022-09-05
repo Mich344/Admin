@@ -80,7 +80,8 @@ $row = mysqli_fetch_assoc($res);
                 </div>
                 <div class="photo">
                   <label>Imagen(es)</label>
-                  <input type="file" name="imagen" class="form-control-file" value="<?php echo "'upload/".$row['imagen']."'"?>" >
+                  <input type="text" name="imagenname"  class="form-control" value="<?php echo "'upload/".$row['imagen']."'"?>">
+                  <input type="file" name="imagen" class="form-control-file">
                 </div>
                 <div class="for-group">
                     <br>
