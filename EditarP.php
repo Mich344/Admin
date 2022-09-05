@@ -1,5 +1,4 @@
 <?php
-
 include_once "Basedata.php";
 $con =mysqli_connect($host,$user,$pasword,$db);
  if (isset($_REQUEST['guardar'])){
@@ -9,7 +8,8 @@ $con =mysqli_connect($host,$user,$pasword,$db);
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
   $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
   $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? '');
-  $query = "UPDATE productos SET nombre = '".$nombre."' ,precio = '".$precio."' ,cantidad = '".$cantidad."' ,talla = '".$talla."' ,descripcion = '".$descripcion."' WHERE Id = '".$Id."';";
+  $imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');  
+  $query = "UPDATE productos SET nombre = '".$nombre."' ,precio = '".$precio."' ,cantidad = '".$cantidad."' ,talla = '".$talla."' ,descripcion = '".$descripcion."' ,imagen = '".$imagen."' WHERE Id = '".$Id."';";
   //Restultados 
   $res = mysqli_query($con, $query);
   if($res){
@@ -27,7 +27,7 @@ $con =mysqli_connect($host,$user,$pasword,$db);
  // ((mysqli_real_escape_string)) Significado llama consultas preparadas 
 $Id= mysqli_real_escape_string ($con, $_REQUEST['Id']??'');
 // Seleccionar los datos //
-$query = "SELECT Id, nombre, precio, cantidad, talla, descripcion from productos WHERE  Id = '".$Id."';";
+$query = "SELECT Id, nombre, precio, cantidad, talla, descripcion, imagen from productos WHERE  Id = '".$Id."';";
 // Pasar la conexion $con, $query y almacenar en la variable $res. //
 $res = mysqli_query($con , $query);
 // (mysqli_fetch_assoc) Entregar un registro con el almacenamiento de la variable $res
@@ -57,6 +57,7 @@ $row = mysqli_fetch_assoc($res);
             <!-- /.card-header -->
             <div class="card-body">
               <form action="Panel.php?modulo=EditarP" method="post">
+                
                 <div class="for-group">
                   <label>Nombre</label>
                   <input type="text" name="nombre"  class="form-control" value="<?php echo $row['nombre']?>">
@@ -77,18 +78,18 @@ $row = mysqli_fetch_assoc($res);
                   <label>descripcion</label>
                   <input type="text" name="descripcion"  class="form-control" value="<?php echo $row['descripcion']?>">
                 </div>
-               <hr>
-                <div class="for-group">
-                    <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
-                  <center><button type="submit" class="btn btn-primary" name="guardar">guardar</button></cemter>
+                <div class="photo">
+                  <label>Imagen(es)</label>
+                  <input type="file" name="imagen" class="form-control-file" value="<?php echo "'upload/".$row['imagen']."'"?>" >
                 </div>
-                <div>
-                  <a class="nav-link" href="Panel.php?modulo=Productos " title="Regresar">
-        <i class="fa fa-backward" aria-hidden="true"></i></a>
-                 </div>
+                <div class="for-group">
+                    <br>
+                    <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
+                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
+                </div>
               </form>
             </div>
-            <!-- /.card -->
+            <!-- LA CANTIDAD (EN EL FRONT) NO PUEDE SER MAYOR A LA CANTIDAD QUE HAY DE PORDUCTOS. ES DECIR NO SE PUEDE ESCOGER MAYOR CANTIDAD CIERTO PRODUCTO-->
 
           </div>
           <!-- /.col -->
@@ -100,3 +101,4 @@ $row = mysqli_fetch_assoc($res);
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
