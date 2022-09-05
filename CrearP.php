@@ -1,3 +1,4 @@
+
 <?php 
  if (isset($_REQUEST['guardar'])){
   include_once "Basedata.php";
@@ -7,12 +8,41 @@
   $precio = mysqli_real_escape_string($con, $_REQUEST['precio']?? '');
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
   $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
-  $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? '');
-   $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."');";
-  //Restultados 
-  
+  $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? ''); 
+  $imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');
+  // $ruta = 'upload/';
+  //    if (isset($_FILES['imagen']) && $_FILES['imagen']['name'][0]){
+  //     for ($i=0; $i < count($_FILES['imagen']['name']); $i++) { 
+  //       if ($_FILES['imagen']['type'][$i] == "image/jpeg" || $_FILES['imagen']['type'][$i] == "image/pjpeg" || $_FILES['imagen']['type'][$i] == "
+  //       image/gif" || $_FILES['imagen']['type'][$i] == "image/png" || $_FILES['imagen']['type'][$i] == "image/jpg") {
+  //          if (file_exists($ruta) || @mkdir($ruta)){
+  //           $origen_archivo = $_FILES['imagen']['tmp_name'][i];
+  //           $destino = $ruta.$_FILES['imagen']['name'][i];
+  //           if (@move_uploaded_file($origen_archivo, $destino)){
+  //             echo "<br>".$_FILES['imagen']['name'][i]." guardado correctamente";
+  //           }
+  //           else {
+  //             "Error";
+  //           }
+  //         }
+  //         else {
+  //           "Error";
+  //         }
+  //       }
+  //       else {
+  //         "Error";
+  //       }
+  //     }
+  //   }
+  //   else {
+  //     "Error";
+  //   }
+
+  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$imagen."');";
+  //resultados
   $res = mysqli_query($con, $query);
   if($res){
+    
     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=Producto creado correctamente" />';
   }
   else {
@@ -23,9 +53,6 @@
 <?php
   }
  }
-
-
-
 ?> 
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -46,7 +73,7 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
-
+          
             <!-- /.card-header -->
             <div class="card-body">
               <form action="Panel.php?modulo=CrearP" method="post">
@@ -68,16 +95,17 @@
                 </div>
                <div class="for-group">
                   <label>Descripción</label>
-                  <input type="text" name="descripcion"  class="form-control" required = "" >
+                  <input type="text" name="descripcion"  class="form-control"  required = "" >
                 </div>
-               <hr>
+                <div class="photo">
+                  <label>Imagen(es)</label>
+                  <input id="imagen" class="form-control-file" type="file" name="imagen" multiple="multiple" required = "" >
+                </div>
                 <div class="for-group">
-                 <center><button type="submit" class="btn btn-primary" name="guardar">guardar</button></center>
+                    <br>
+                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
                 </div>
-               <div>
-               <a class="nav-link" href="Panel.php?modulo=Productos " title="Regresar">
-        <i class="fa fa-backward" aria-hidden="true"></i></a>
-               </div>
+                
               </form>
             </div>
             <!-- /.card -->
@@ -92,3 +120,4 @@
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+<script src="js/imagenproductos.js"></script>
