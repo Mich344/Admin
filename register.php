@@ -54,9 +54,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<?php  
 	
-	if(isset($_REQUEST['registrarse'])){
+	if(isset($_REQUEST['Registrarse'])){
 	include_once "Basedata.php";
 	$con = mysqli_connect($host, $user, $pasword, $db);
+	
+	$nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
+	$apeliido = mysqli_real_escape_string($con, $_REQUEST['apellido']?? '');
+	$email = mysqli_real_escape_string($con, $_REQUEST['email']?? '');
+	$password = mysqli_real_escape_string($con, $_REQUEST['password']?? '');	
+	$direccion = mysqli_real_escape_string($con, $_REQUEST['direccion']?? '');
+	$ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudad']?? '');
+	$telefono = mysqli_real_escape_string($con, $_REQUEST['telefono']?? '');	
 	}
 	
 	?>
@@ -141,7 +149,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<input type="text" placeholder="Direccion" required="">
 					<input type="text" class="email" placeholder="Correo electronico" required="">
 					<input type="password" name="password" class="lock" placeholder="Contraseña"> -->
-					   <label>Nombre</label>
+		  <label>Nombre</label>
                   <input type="text" name="nombre"  class="form-control" value="<?php echo $row['nombre']?>">
                 </div>
 		  <div class="for-group">
@@ -152,19 +160,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   <label>Email</label>
                   <input type="text" name="email"  class="form-control" value="<?php echo $row['email']?>">
                 </div>
+		   <div class="for-group">
+                  <label>Password</label>
+                  <input type="password" name="password"  class="form-control" value="<?php echo $row['password']?>">
+                </div>
 		  <div class="for-group">
                   <label>Direccion</label>
-                  <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
+                  <input type="text" name="direccion"  class="form-control" value="<?php echo $row['direccion']?>">
                 </div>
 		  <div class="for-group">
                   <label>Ciudad</label>
-                  <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
+                  <input type="text" name="ciudad"  class="form-control" value="<?php echo $row['ciudad']?>">
                 </div>
 		  <div class="for-group">
                   <label>Telefono</label>
-                  <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
+                  <input type="number" name="tenefono"  class="form-control" value="<?php echo $row['telefono']?>">
                 </div>
-					<input type="submit" name="Register" value="Registrarse">
+					<input type="submit" name="Registrarse" value="Registrarse">
 					<div class="for-group"> 
                  
 				</form>
