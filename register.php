@@ -58,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<a class="btn_audio" onclick="sound.play()"> <img src="images/n.12.jpg" class="voci" alt="sonido" title="Asistente de discapacidad visual"></a>
 			<div class="container">
 				<div class="nav navbar-nav wow fadeInLeft animated" data-wow-delay=".5s">
-					<p><strong> <a href="#" style="color:#B2051F">SPORTS</a>WEARLINE</strong>|<a href="register.php"><strong>Registrarse</strong> </a> O <a href="signin.php"><strong>Ingresar </strong></a></p>
+					<p><strong> <a href="#" style="color:#B2051F">SPORTS</a>WEARLINE</strong>|<a href="signin.php"><strong>Ingresar </strong></a></p>
 				</div>
 				<div class="redes-container">
 					<ul>
