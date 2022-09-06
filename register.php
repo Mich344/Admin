@@ -52,6 +52,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//end-smooth-scrolling-->
 </head>
 <body>
+	<?php  
+	
+	if(isset($_REQUEST['registrarse'])){
+	include_once "Basedata.php";
+	$con = mysqli_connect($host, $user, $pasword, $db);
+	}
+	
+	?>
 	<!--header-->
 	<div class="header">
 		<div class="top-header navbar navbar-default"><!--header-one-->
