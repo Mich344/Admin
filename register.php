@@ -132,10 +132,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<input type="text" placeholder="Apellido" required="">
 					<input type="text" placeholder="Direccion" required="">
 					<input type="text" class="email" placeholder="Correo electronico" required="">
-					<input type="password" name="password" class="lock" placeholder="Contraseña">
-					<input type="submit" name="Register" value="Registrarse">
-					<div class="for-group"> -->
-                  <label>Nombre</label>
+					<input type="password" name="password" class="lock" placeholder="Contraseña"> -->
+					   <label>Nombre</label>
                   <input type="text" name="nombre"  class="form-control" value="<?php echo $row['nombre']?>">
                 </div>
 		  <div class="for-group">
@@ -158,6 +156,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   <label>Telefono</label>
                   <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
                 </div>
+					<input type="submit" name="Register" value="Registrarse">
+					<div class="for-group"> 
+                 
 				</form>
 			</div>
 		</div>
