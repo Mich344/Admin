@@ -84,24 +84,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="nav navbar-nav logo wow zoomIn animated" data-wow-delay=".7s">
 					<h1><a href="index1.php" style="color:#B2051F">SPORTS<b>WEARLINE</b><span class="tag"> Vístete bien hoy tienes una cita con el deporte ¡Marca tu estilo!</span> </a></h1>
 				</div>
-				
-				<div class="nav navbar-nav navbar-right header-two-right">
-					<div class="header-right my-account">
-						<a href="contact.php"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> CONTÁCTANOS</a>
-						
-					</div>
-					<div class="header-right cart">
-						<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-						<h4><a href="checkout.php">
-								<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
-						</a></h4>
-						<div class="cart-box">
-							<p><a href="javascript:;" class="simpleCart_empty">Vaciar</a></p>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
@@ -117,137 +99,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</button>
 					</div>
 					<!--navbar-header-->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">		          
-						<ul class="nav navbar-nav top-nav-info">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mujer<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column multi-column1">
-								<div class="row">
-										<div class="col-sm-4 menu-grids menulist1">
-											<h4>PRENDAS SUPERIORES</h4>
-											<ul class="multi-column-dropdown ">
-												<li><a class="list" href="mujer/camisamlarga.php"><b>Manga larga</b></a></li>
-												<li><a class="list" href="mujer/camisamcorta.php"><b>Manga corta</b></a></li>
-												<li><a class="list" href="mujer/sinmanga.php"><b>Sin mangas</b></a></li>
-												
-											</ul>
-										</div>																		
-										<div class="col-sm-2 menu-grids">
-											<h4>PRENDAS INFERIORES</h4>
-											<ul class="multi-column-dropdown">
-												<li><a class="list" href="mujer/pantalonesm.php"><b>Pantalones</b></a></li>
-												<li><a class="list" href="mujer/shorts.php"><b>Shorts</b></a></li>
-											</ul>
-										</div>
-										
-
-									<div class="col-sm-3 menu-grids">
-										<div class="ok">
-
-												</div>	
-
-										</div>	
-										<div class="clearfix"> </div>
-									</div>	
-								</ul>
-							</li>	
-							<li class="dropdown grid">
-								<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Hombre<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column multi-column2">
-									<div class="row">
-										<div class="col-sm-3 menu-grids">
-											<h4>PRENDAS SUPERIORES</h4>
-											<ul class="multi-column-dropdown">
-												<li><a class="list" href="hombre/camisamg.php"><b>Manga larga</b></a></li>
-												<li><a class="list" href="hombre/camisamc.php"><b>Manga corta</b></a></li>
-									                        <li><a class="list" href="hombre/camisasm.php"><b>Sin mangas</b></a></li>
-												
-											</ul>
-										</div>																		
-										<div class="col-sm-3 menu-grids">
-											<h4>PRENDAS INFERIORES</h4>
-											<ul class="multi-column-dropdown">
-												<li><a class="list" href="hombre/sudadera.php"><b>Pantalones</b></a></li>											
-												<li><a class="list" href="hombre/bermuda.php"><b>Bermudas</b></a></li>	
-											</ul>
-										</div>
-										<div class="col-sm-3 menu-grids">
-											<ul class="multi-column-dropdown">
-											</ul>
-										</div>
-										<div class="col-sm-3 menu-grids new-add2">
-
-												<div class="lll">
-												</div>	
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-								</ul>
-							</li>
-							<li class="dropdown grid">
-							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Zapatillas<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column menu-two multi-column3">
-									<div class="row">
-										<div class="col-sm-4 menu-grids">
-											<ul class="multi-column-dropdown">
-												<h4>Zapatillas</h4>
-												<li><a class="list" href="zapatillas/zapatillaspc.php"><b>Correr</b></a></li>
-												<li><a class="list" href="zapatillas/zapatillassd.php"><b>Senderismo</b></a></li>
-												
-											</ul>
-										</div>
-										<div class="col-sm-8 menu-grids">
-
-												<div class="imag">
-
-												</div>	
-
-										</div>	
-										<div class="clearfix"> </div>
-									</div>	
-								</ul>
-							</li>	
-							<li class="dropdown grid">
-							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Productos<b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column menu-two multi-column3">
-									<div class="row">
-										<div class="col-sm-4 menu-grids">
-											<ul class="multi-column-dropdown">
-												<h4>Accesorios</h4>
-
-												<li><a class="list" href="products.php"><b>Cuerdas</b></a></li>
-												<li><a class="list" href="products.php"><b>Mancuernas</b></a></li>
-												<li><a class="list" href="products.php"><b>Botellas</b></a></li>
-												<li><a class="list" href="products.php"><b>Guantes</b></a></li>
-											</ul>
-										</div>
-										<div class="col-sm-8 menu-grids">
-
-												<div class="new-add">
-
-												</div>	
-
-										</div>	
-										<div class="clearfix"> </div>
-									</div>	
-								</ul>
-							</li>
-						</ul>
-						<div class="clearfix"> </div>
-						<!--//navbar-collapse-->
-						<header class="cd-main-header">
-							<ul class="cd-header-buttons">
-								<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
-							</ul> <!-- cd-header-buttons -->
-						</header>
-					</div>
 					<!--//navbar-header-->
 				</nav>
-				<div id="cd-search" class="cd-search">
-					<form>
-						<input type="search" placeholder="Buscar...">
-					</form>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -285,36 +138,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--//login-->
 	<!--footer-->
-	<div class="footer" style="background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
-">
-		<div class="container">
-			<div class="footer-info">
-				<div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".5s">
-					<h4 class="footer-logo"><a href="index1.php" style="color:#B2051F">SPORTS <b style="color:white">WEARLINE</b> <span class="tag"> </span> </a></h4>
-					<p style="color: white"><strong>© SPORTSWEARLINE. El mejor contenido para el deporte.</strong></p>
-				</div>
-				<div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".7s">
-					<h3  style="color:#B2051F"><strong>Popular</strong></h3>
-					<ul>
-						<li><a href="about.php" style="color:white"><strong>Acerca de Nosotros</strong></a></li>
-				
-					<li><a href="contact.php"  style="color:white"><strong>Contáctanos</strong></a></li>
-						<li><a href="faq.php"  style="color:white"><strong>Preguntas Frecuentes</strong></a></li>
-			
-					</ul>
-				</div>
-				<div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".9s">
-					<h2 style="color:#B2051F"><strong>Disfruta comprando tus productos favoritos </strong></h2>
-					<p style="color:white;"><strong>Dejanos tu sugerencia en un comentario</stron></p>
-					<form>
-						<input type="text" placeholder="Escribenos tu opinion aqui" required="">
-						<input style="color:black" type="submit" value="Enviar">
-					</form>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
 	<!--//footer-->				
 	<!--search jQuery-->
 	<script src="js/main.js"></script>
