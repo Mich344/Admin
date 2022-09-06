@@ -61,12 +61,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	$nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
 	$apeliido = mysqli_real_escape_string($con, $_REQUEST['apellido']?? '');
 	$email = mysqli_real_escape_string($con, $_REQUEST['email']?? '');
-	$password = mysqli_real_escape_string($con, $_REQUEST['password']?? '');	
+	$password = mysqli_real_escape_string($con, $_REQUEST['pasword']?? '');	
 	$direccion = mysqli_real_escape_string($con, $_REQUEST['direccion']?? '');
 	$ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudad']?? '');
 	$telefono = mysqli_real_escape_string($con, $_REQUEST['telefono']?? '');
 	
-	$query = "INSERT INTO clientes(nombre,apellido,email,password,direccion,ciudad,telefono) VALUES ('".$nombre."', '".$apellido."', '".$email."', '".$password."', '".$direccion."', 
+	$query = "INSERT INTO clientes(nombre,apellido,email,pasword,direccion,ciudad,telefono) VALUES ('".$nombre."', '".$apellido."', '".$email."', '".$pasword."', '".$direccion."', 
 	'".$ciudad."', '".$telefono."');";
 		
 	$res = mysqli_query($con, $query);
@@ -157,7 +157,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h4><span id="signo">¿</span><b>Ya tienes una cuenta</b><span id="signo">?</span><a href="signin.php">Ingresa</a></h4>
 			</div>
 			<div class="login-body">
-				  <form action="Panel.php?modulo=EditarU" method="post">
+				  <form action="#" method="post">
 				<!--<form class="wow fadeInUp animated" data-wow-delay=".7s"> 
 					<input type="text" placeholder="Nombre" required="">
 					<input type="text" placeholder="Apellido" required="">
@@ -165,36 +165,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<input type="text" class="email" placeholder="Correo electronico" required="">
 					<input type="password" name="password" class="lock" placeholder="Contraseña"> -->
 		  <label>Nombre</label>
-                  <input type="text" name="nombre"  class="form-control" value="<?php echo $row['nombre']?>">
+                  <input type="text" name="nombre"  class="form-control" required = "">
                 </div>
 		  <div class="for-group">
                   <label>Apellido</label>
-                  <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
+                  <input type="text" name="apellido"   class="form-control" required = "">
                 </div>
 		  <div class="for-group">
                   <label>Email</label>
-                  <input type="text" name="email"  class="form-control" value="<?php echo $row['email']?>">
+                  <input type="text" name="email"  class="form-control" required = "">
                 </div>
 		   <div class="for-group">
                   <label>Password</label>
-                  <input type="password" name="password"  class="form-control" value="<?php echo $row['password']?>">
+                  <input type="password" name="password" class="form-control" required = "">
                 </div>
 		  <div class="for-group">
                   <label>Direccion</label>
-                  <input type="text" name="direccion"  class="form-control" value="<?php echo $row['direccion']?>">
+                  <input type="text" name="direccion"  class="form-control" required = "">
                 </div>
 		  <div class="for-group">
                   <label>Ciudad</label>
-                  <input type="text" name="ciudad"  class="form-control" value="<?php echo $row['ciudad']?>">
+                  <input type="text" name="ciudad"  class="form-control" required = "">
                 </div>
 		  <div class="for-group">
                   <label>Telefono</label>
-                  <input type="tel" name="tenefono"  class="form-control" value="<?php echo $row['telefono']?>">
+                  <input type="tel" name="tenefono"   class="form-control" required = "">
+               <hr>
+               <center> <div class="for-group">
+                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
+                </div></center>
+                
+                <div>
+                <a class="nav-link" href="#" title="Regresar" >
+        <i class="fa fa-backward" aria-hidden="true"></i></a>
                 </div>
-					<input type="submit" name="Registrarse" value="Registrarse">
-					<div class="for-group"> 
-                 
-				</form>
+              </form>
 			</div>
 		</div>
 	</div>
