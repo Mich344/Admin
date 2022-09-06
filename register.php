@@ -126,12 +126,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h4><span id="signo">¿</span><b>Ya tienes una cuenta</b><span id="signo">?</span><a href="signin.php">Ingresa</a></h4>
 			</div>
 			<div class="login-body">
-				<form class="wow fadeInUp animated" data-wow-delay=".7s">
-					<input type="text" placeholder="Nombres" required="">
-					<input type="text" placeholder="Apellidos" required="">
+				  <form action="Panel.php?modulo=EditarU" method="post">
+				<!--<form class="wow fadeInUp animated" data-wow-delay=".7s"> 
+					<input type="text" placeholder="Nombre" required="">
+					<input type="text" placeholder="Apellido" required="">
+					<input type="text" placeholder="Direccion" required="">
 					<input type="text" class="email" placeholder="Correo electronico" required="">
 					<input type="password" name="password" class="lock" placeholder="Contraseña">
 					<input type="submit" name="Register" value="Registrarse">
+					<div class="for-group"> -->
+                  <label>Nombre</label>
+                  <input type="text" name="nombre"  class="form-control" value="<?php echo $row['nombre']?>">
+                </div>
+		  <div class="for-group">
+                  <label>Apellido</label>
+                  <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
+                </div>
+		  <div class="for-group">
+                  <label>Email</label>
+                  <input type="text" name="email"  class="form-control" value="<?php echo $row['email']?>">
+                </div>
+		  <div class="for-group">
+                  <label>Direccion</label>
+                  <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
+                </div>
+		  <div class="for-group">
+                  <label>Ciudad</label>
+                  <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
+                </div>
+		  <div class="for-group">
+                  <label>Telefono</label>
+                  <input type="text" name="apellido"  class="form-control" value="<?php echo $row['apellido']?>">
+                </div>
 				</form>
 			</div>
 		</div>
