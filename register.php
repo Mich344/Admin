@@ -64,8 +64,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	$password = mysqli_real_escape_string($con, $_REQUEST['password']?? '');	
 	$direccion = mysqli_real_escape_string($con, $_REQUEST['direccion']?? '');
 	$ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudad']?? '');
-	$telefono = mysqli_real_escape_string($con, $_REQUEST['telefono']?? '');	
-	}
+	$telefono = mysqli_real_escape_string($con, $_REQUEST['telefono']?? '');
+	
+	$query = "INSERT INTO clientes(nombre,apellido,email,password,direccion,ciudad,telefono) VALUES ('".$nombre."', '".$apellido."', '".$email."', '".$password."', '".$direccion."', 
+	'".$ciudad."', '".$telefono."');";
+		
+	$res = mysqli_query($con, $query);
+		if($res){
+		echo '<meta http-equiv= "refresh" content="0; url=index1.php" />';
+		}
+	 else {
+              ?>
+               <div class="alert alert-danger" role="alert">
+               Error al crear usuario <?php echo mysqli_error($con)?>
+               </div>
+               <?php
+                      }
+                         }
 	
 	?>
 	<!--header-->
@@ -174,7 +189,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
 		  <div class="for-group">
                   <label>Telefono</label>
-                  <input type="number" name="tenefono"  class="form-control" value="<?php echo $row['telefono']?>">
+                  <input type="tel" name="tenefono"  class="form-control" value="<?php echo $row['telefono']?>">
                 </div>
 					<input type="submit" name="Registrarse" value="Registrarse">
 					<div class="for-group"> 
