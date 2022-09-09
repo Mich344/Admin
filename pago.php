@@ -12,7 +12,7 @@
           color: 'silver',
           layout: 'horizontal',
           label: 'paypal',
-          tagline: true
+          
         },
 
         createOrder: function(data, actions) {
