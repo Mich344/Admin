@@ -10,7 +10,7 @@
     
 
 <?php
-echo "hablame menor textinandp";
+
 ?>
 </body>
 </html>
