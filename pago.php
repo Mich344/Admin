@@ -1,19 +1,18 @@
-
-  <div id="smart-button-container">
+<div id="smart-button-container">
       <div style="text-align: center;">
         <div id="paypal-button-container"></div>
       </div>
     </div>
-  <script src="AT6WdzGS4YhY5QWNxVPFpAOldbBnRFUsXauhJ7XgPD2Nyj3lm7HolEQGd0mbvl1sfiL0gyNhRQn308It" data-sdk-integration-source="button-factory"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=AT6WdzGS4YhY5QWNxVPFpAOldbBnRFUsXauhJ7XgPD2Nyj3lm7HolEQGd0mbvl1sfiL0gyNhRQn308It" data-sdk-integration-source="button-factory"></script>
   <script>
     function initPayPalButton() {
       paypal.Buttons({
         style: {
-          shape: 'rect',
-          color: 'gold',
-          layout: 'vertical',
+          shape: 'pill',
+          color: 'silver',
+          layout: 'horizontal',
           label: 'paypal',
-          
+          tagline: true
         },
 
         createOrder: function(data, actions) {
