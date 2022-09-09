@@ -9,6 +9,9 @@
 </head>
 <body>
 <div id="paypal-buttom-conteiner"></div>    
+<script> 
+paypal.Buttons().render('#paypal-buttom-conteiner');
+</script>
 </body>
 </html>
 
