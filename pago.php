@@ -32,8 +32,6 @@
             const element = document.getElementById('paypal-button-container');
             element.innerHTML = '';
             element.innerHTML = '<h3>Gracias por su compra.</h3>';
-
-            // Or go to another URL:  actions.redirect('thank_you.html');
             
           });
         },
