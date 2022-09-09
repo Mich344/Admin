@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></scrip
+     <script src="https://www.paypal.com/sdk/js?client-id="CODE CLIENTE"></scrip
 </head>
 <body>
     
