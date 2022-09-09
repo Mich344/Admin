@@ -9,9 +9,9 @@
     <script src="https://www.paypal.com/sdk/js?client-id=AT6WdzGS4YhY5QWNxVPFpAOldbBnRFUsXauhJ7XgPD2Nyj3lm7HolEQGd0mbvl1sfiL0gyNhRQn308It currency=COP"></scrip
 </head>
 <body>
-<div id="paypal-buttom-conteiner"></div>    
+<div id="paypal-buttom-container"></div>    
 <script> 
-paypal.Buttons().render('#paypal-buttom-conteiner');
+paypal.Buttons().render('#paypal-buttom-container');
 </script>
 </body>
     
