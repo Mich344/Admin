@@ -1,4 +1,5 @@
-<div id="smart-button-container">
+
+  <div id="smart-button-container">
       <div style="text-align: center;">
         <div id="paypal-button-container"></div>
       </div>
@@ -8,9 +9,9 @@
     function initPayPalButton() {
       paypal.Buttons({
         style: {
-          shape: 'pill',
-          color: 'silver',
-          layout: 'horizontal',
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
           label: 'paypal',
           
         },
