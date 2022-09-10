@@ -21,6 +21,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	<div class="contenedor">
 	<div class="caja__columna">
+		<svg> <rect> </rect> </svg>
 		
 		<div class="Texto">
 			<h2> Información </h2>
