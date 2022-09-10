@@ -7,20 +7,13 @@ $tan: #C3A1A0;
 $pink: #D9AAB7;
 $rose: #BA7E7E;
 $dark: #4E4E4E;
-
-/* center container in the middle */
-html {
-  display: grid;
-  min-height: 100%;
+.sombra {
+  margin: 25px auto;
+  border: 1px solid #ccc;
+  width: 500px;
+  height: 200px;
+  box-shadow: 7px 7px 15px #592A08; 
 }
-
-body {
-  display: grid;
-  background: $light;
-  font-family: $font, sans-serif;
-  text-transform: uppercase;
-}
-
 .container {
   position: relative;
   margin: auto;
