@@ -12,13 +12,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<!--header-->
 				<div class="nav navbar-nav logo wow zoomIn animated" data-wow-delay=".7s">
-					<h1><a style="color: #B2051F">SPORTS<b>WEARLINE</b><span class="tag"><strong> Vístete bien, hoy tienes una cita con el deporte ¡Marca tú estilo!</strong></span></a></h1>
+					<h1><a style="color: #B2051F">SPORTS<b>WEARLINE</b><span class="tag"><strong> Vístete bien, hoy tienes una cita con el deporte ¡Marca tú estilo!</strong></span></a></h1> <br>
 				</div>
 	<!--//header-->
 	
 <div>
   <div>
-        Es esta tu direccion de envio o desea editarla?
+      <br>  Es esta tu direccion de envio o desea editarla?
       <address>
             Nombre del comprador <br>
             telefono del comprador <br>
