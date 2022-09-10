@@ -9,7 +9,7 @@
   <title>Pagos</title>
 </head>
 <body>
-<!-- 
+
 <div class="card" style="width: 18rem;">
   <div class="card-body">
         Es esta tu direccion de envio o desea editarla?
@@ -20,37 +20,7 @@
             Direccion,Ciudad <br>
       <address>
   </div>
-</div>  -->
-  <div id="perspectiva">
-  <div id="contenedor">
-    <div class="cara frontal">
-			<h1>Онгойлгох</h1> 
-		</div>
-		<div class="cara trasera">
-			<div id="abrir"></div>
-			<div id="partes"></div>
-			<div id="carta">
-				<i class="icon-cancel"></i>
-				<?xml version="1.0" encoding="utf-8"?>
-				<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					 width="30.312px" height="35px" viewBox="0 0 30.312 35" enable-background="new 0 0 30.312 35" xml:space="preserve">
-					<g>
-						<polygon fill="#E5332A" points="30.312,0 20.208,0 15.156,8.75 20.207,17.5 	"/>
-						<polygon fill="#8E1315" points="0,0 10.104,0 20.207,17.5 10.104,17.5 	"/>
-						<polygon fill="#8E1315" points="0,35 10.104,35 15.156,26.25 10.104,17.5 	"/>
-						<polygon fill="#E5332A" points="30.312,35 20.208,35 10.104,17.5 20.207,17.5 	"/>
-					</g>
-				</svg>
-				<p>AUTOR: MARCO BARRÍA / DISEÑADOR</p>
-				<p>
-					DISEÑO WEB - FRONT-END<br>
-					Soy un auto marginado de Flash, ahora pregono el Html5, Css3 y Javascrit.<br>
-				</p>
-			</div>
-		</div>
-	</div><!-- fin contenedor -->
-</div>
+</div> 
 
 <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Bad+Script|Titillium+Web' rel='stylesheet' type='text/css'>
