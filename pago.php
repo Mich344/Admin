@@ -25,7 +25,7 @@
 <div id="perspectiva">
   <div id="contenedor">
     <div class="cara frontal">
-			<h1>Codepen</h1> 
+			<h1>Datos de envío</h1>
 		</div>
 		<div class="cara trasera">
 			<div id="abrir"></div>
