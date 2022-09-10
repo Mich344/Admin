@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- 
 <div class="card" style="width: 18rem;">
   <div class="card-body">
         Es esta tu direccion de envio o desea editarla?
@@ -21,7 +20,7 @@
             Direccion,Ciudad <br>
       <address>
   </div>
-</div> -->
+</div> 
 <div id="smart-button-container">
       <div style="text-align: center;">
             <div id="paypal-button-container">
