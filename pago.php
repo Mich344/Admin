@@ -1,10 +1,10 @@
 <div>
        Es esta tu direccion de envio o desea editarla?
       <address>
-            Nombre del comprador
-            telefono del comprador
-            Email del comprador
-            Direccion,Ciudad
+            Nombre del comprador <br>
+            telefono del comprador <br>
+            Email del comprador <br>
+            Direccion,Ciudad <br>
       <address>
 </div>
 
