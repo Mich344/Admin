@@ -13,16 +13,4 @@ height: 440px;
 margin: 10px;
  
 }
-.caja__columna .texto{
-position: absolute;
-top: 15px;
-left: 15px;
-right: 15px;
-bottom: 15px;
-border: 2px solid #69ca62;
-padding: 30px;
-}
-.caja__columna .texto h2{
-font-size: 40px;
-margin: 0 0 10px;
-}
+
