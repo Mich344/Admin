@@ -17,17 +17,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 	<!--//header-->
 	
-<div>
-  <div>
-      <br>  Es esta tu direccion de envio o desea editarla?
-      <address>
-            Nombre del comprador <br>
-            telefono del comprador <br>
-            Email del comprador <br>
-            Direccion,Ciudad <br>
-      </address>
-  </div>
-</div> 
+<section class="caja">
+	
+	<div class="contenedor">
+	<div class="caja__columna">
+		
+		<div class="Texto">
+			<h2> Información </h2>
+			<p> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
 	
 	
 
