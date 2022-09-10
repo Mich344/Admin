@@ -31,33 +31,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	
 
-<div>
-	<h5> PRODUCTOS A PAGAR </h5>
-	<div class="sombra"></div>
-	<div class="container">
-		  <div class="images">
-		    <img src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" />
-		  </div>
-		  <div class="slideshow-buttons">
-		    <div class="one"></div>
-		    <div class="two"></div>
-		    <div class="three"></div>
-		    <div class="four"></div>
-		  </div>
-		  <div class="product">
-			<p>Nombre</p>
-		    	<h2>Precio</h2>
-		    <p class="desc">Descripcion</p>
-		    <div class="buttons">
-			<p>Talla elegida</p>
-			<p>Color elegida</p>
-			<p>Cantidad de productos elegidos</p>
-		    </div>
-		  </div>
-	</div>
-</div>
-	</div>
-
 <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Bad+Script|Titillium+Web' rel='stylesheet' type='text/css'>
 <div id="smart-button-container">
