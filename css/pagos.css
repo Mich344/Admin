@@ -1,25 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-$font: 'Lato', sans-serif;
-
-$white: #F5F5F5;
-$light: #E0C9CB;
-$tan: #C3A1A0;
-$pink: #D9AAB7;
-$rose: #BA7E7E;
-$dark: #4E4E4E;
-
 /* center container in the middle */
-html {
-  display: grid;
-  min-height: 100%;
-}
-
-body {
-  display: grid;
-  background: $light;
-  font-family: $font, sans-serif;
-  text-transform: uppercase;
-}
 
 .container {
   position: relative;
