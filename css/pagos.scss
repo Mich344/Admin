@@ -44,24 +44,8 @@ img {
   border-radius: 50%;
   background: light;
 }
-
-.one {
-  left: 22%;
-}
-.two {
-  left: 27%;
-}
-.three {
-  left: 32%;
-}
-.four {
-  left: 37%;
-}
-
 .product {
   position: absolute;
-  width: 40%;
-  height: 100%;
   top: 10%;
   left: 60%;
 }
@@ -95,65 +79,13 @@ button {
   }
 }
 
-.add {
-  width: 67%;
-}
-
 .like {
   width: 22%;
 }
 
-.sizes {
-  display: grid;
-  color: pink;
-  grid-template-columns: repeat(auto-fill, 30px);
-  width: 60%;
-  grid-gap: 4px;
-  margin-left: 20px;
-  margin-top: 5px;
-  &:hover {
-    cursor: pointer;
-  }
-}
 
 .pick {
   margin-top: 11px;
   margin-bottom:0;
   margin-left: 20px;
-}
-
-.size {
-  padding: 9px;
-  border: 1px solid light;
-  font-size: 0.7em;
-  text-align: center;
-  &:hover{
-    background: rose;
-    color: white;
-    transition: all .4s ease-in-out;
-  }
-}
-
-.focus{
-  background: rose;
-  color: white;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  padding: 10px;
-  p {
-    letter-spacing: 3px;
-  }
-  a {
-    color: #ffffff;
-    text-decoration: none;
-    &:hover {
-      color: #7d7d7d;
-    }
-  }
 }
