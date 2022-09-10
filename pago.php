@@ -1,13 +1,15 @@
-<div>
-       Es esta tu direccion de envio o desea editarla?
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+        Es esta tu direccion de envio o desea editarla?
       <address>
             Nombre del comprador <br>
             telefono del comprador <br>
             Email del comprador <br>
             Direccion,Ciudad <br>
       <address>
+  </div>
 </div>
-
 <div id="smart-button-container">
       <div style="text-align: center;">
             <div id="paypal-button-container">
