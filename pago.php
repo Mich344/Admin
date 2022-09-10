@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             telefono del comprador <br>
             Email del comprador <br>
             Direccion,Ciudad <br>
-      <address>
+      </address>
   </div>
 </div> 
 
