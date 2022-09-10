@@ -55,48 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h1><a style="color: #B2051F">SPORTS<b>WEARLINE</b><span class="tag"><strong> Vístete bien, hoy tienes una cita con el deporte ¡Marca tú estilo!</strong></span></a></h1>
 				</div>
 	<!--//header-->
-	<!-- the jScrollPane script -->
-	<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
-			<script type="text/javascript" id="sourcecode">
-				$(function()
-				{
-					$('.scroll-pane').jScrollPane();
-				});
-			</script>
-	<!-- //the jScrollPane script -->
-	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-	<!-- the mousewheel plugin -->
-	<!--search jQuery-->
-	<script src="js/main.js"></script>
-		 <script type="text/javascript">
-			var sound = new Audio();
-			sound.src = "../images/Audio/Productos.mp3"
-		</script>
-	<!--//search jQuery-->
-	<!--smooth-scrolling-of-move-up-->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			
-			$().UItoTop({ easingType: 'easeOutQuart' });
-			
-		});
-	</script>
-	<!--//smooth-scrolling-of-move-up-->
-	<!--Bootstrap core JavaScript
-    ================================================== -->
-    <!--Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>
-	</body>
-</html>
-
-
+	
 <div class="card" style="width: 18rem;">
   <div class="card-body">
         Es esta tu direccion de envio o desea editarla?
@@ -156,6 +115,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
       </div>
 </div>
-  
-</body>
+	<!-- the jScrollPane script -->
+	<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+			<script type="text/javascript" id="sourcecode">
+				$(function()
+				{
+					$('.scroll-pane').jScrollPane();
+				});
+			</script>
+	<!-- //the jScrollPane script -->
+	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+	<!-- the mousewheel plugin -->
+	<!--search jQuery-->
+	<script src="js/main.js"></script>
+		 <script type="text/javascript">
+			var sound = new Audio();
+			sound.src = "../images/Audio/Productos.mp3"
+		</script>
+	<!--//search jQuery-->
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!--//smooth-scrolling-of-move-up-->
+	<!--Bootstrap core JavaScript
+    ================================================== -->
+    <!--Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+	</body>
 </html>
