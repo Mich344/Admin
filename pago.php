@@ -43,12 +43,12 @@
 						<polygon fill="#E5332A" points="30.312,35 20.208,35 10.104,17.5 20.207,17.5 	"/>
 					</g>
 				</svg>
-				<address>
-            Nombre del comprador <br>
-            telefono del comprador <br>
-            Email del comprador <br>
-            Direccion,Ciudad <br>
-      <address>
+		<address>
+                      nombre del comprador <br>
+                      telefono del comprador <br>
+                      email del comprador <br>
+                      direccion,ciudad <br>
+                 <address>
 			</div>
 		</div>
 	</div><!-- fin contenedor -->
