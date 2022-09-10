@@ -1,11 +1,11 @@
 <div>
        Es esta tu direccion de envio o desea editarla?
-      <adress>
+      <address>
             Nombre del comprador
             telefono del comprador
             Email del comprador
             Direccion,Ciudad
-      <adress>
+      <address>
 </div>
 
 <div id="smart-button-container">
