@@ -16,8 +16,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 	<!--//header-->
 	
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
+<div>
+  <div>
         Es esta tu direccion de envio o desea editarla?
       <address>
             Nombre del comprador <br>
