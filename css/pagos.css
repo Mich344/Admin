@@ -8,7 +8,7 @@
   width: 520px;
   height: 350px;
   background: white;
-  box-shadow: 5px 5px 15px rgba($rose, .5);
+  box-shadow: 5px 5px 15px rgba(rose, .5);
   border-radius: 10px;
 }
 
@@ -72,7 +72,7 @@ img {
   text-transform: none;
   letter-spacing: 0;
   margin-bottom: 17px;
-  color: $dark;
+  color: dark;
   font-size: .7em;
   line-height: 1.6em;
   margin-right: 25px;
