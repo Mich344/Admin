@@ -2,6 +2,7 @@
 <html lang = "es">
 <head>
 <title>Pagos</title>
+	<link rol="stylesheet" type="text/css" href="css/pagos.css">
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
