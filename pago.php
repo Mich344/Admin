@@ -27,6 +27,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </address>
   </div>
 </div> 
+	
+	
+
+<div>
+	<h5> PRODUCTOS A PAGAR </h5>
+</div>
 
 <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Bad+Script|Titillium+Web' rel='stylesheet' type='text/css'>
