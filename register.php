@@ -1,238 +1,175 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<title>Spotswearline - Registro</title>
-<!-- for-mobile-apps -->
-	
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Modern Shoppe Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+  <title>Sportswearline - Registro</title>
+  <!-- for-mobile-apps -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Modern Shoppe Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--//for-mobile-apps -->
-<!--Custom Theme files -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!--//Custom Theme files -->
-<!--js-->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
-<!--//js-->
-<!--cart-->
-<script src="js/simpleCart.min.js"></script>
-<!--cart-->
-<!--web-fonts-->
-<link href='//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'><link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Fascinate' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-<!--web-fonts-->
-<!--animation-effect-->
-<link href="css/animate.min.css" rel="stylesheet"> 
-<script src="js/wow.min.js"></script>
-<!--Iconos de redes sociales (LIBRERIA)-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<script>
- new WOW().init();
-</script>
-<!--//animation-effect-->
-<!--start-smooth-scrolling-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>	
-<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-			});
-		});
-</script>
-<!--//end-smooth-scrolling-->
+  <script type="application/x-javascript">
+    addEventListener("load", function() {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+  </script>
+  <!--//for-mobile-apps -->
+  <!--Custom Theme files -->
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <!--//Custom Theme files -->
+  <!--js-->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/modernizr.custom.js"></script>
+  <!--//js-->
+  <!--cart-->
+  <script src="js/simpleCart.min.js"></script>
+  <!--cart-->
+  <!--web-fonts-->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Fascinate' rel='stylesheet' type='text/css'>
+  <!--web-fonts-->
+  <!--animation-effect-->
+  <link href="css/animate.min.css" rel="stylesheet">
+  <script src="js/wow.min.js"></script>
+  <!--libreria iconos redes sociales-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script>
+    new WOW().init();
+  </script>
+  <!--//animation-effect-->
+  <!--start-smooth-scrolling-->
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event) {
+        event.preventDefault();
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 1000);
+      });
+    });
+  </script>
+  <!--//end-smooth-scrolling-->
 </head>
+
 <body>
-	<?php  
-	
-	if(isset($_REQUEST['Registrarse'])){
-	include_once "Basedata.php";
-	$con = mysqli_connect($host, $user, $pasword, $db);
-	
-	$nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
-	$apeliido = mysqli_real_escape_string($con, $_REQUEST['apellido']?? '');
-	$email = mysqli_real_escape_string($con, $_REQUEST['email']?? '');
-	$password = mysqli_real_escape_string($con, $_REQUEST['pasword']?? '');	
-	$direccion = mysqli_real_escape_string($con, $_REQUEST['direccion']?? '');
-	$ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudad']?? '');
-	$telefono = mysqli_real_escape_string($con, $_REQUEST['telefono']?? '');
-	
-	$query = "INSERT INTO clientes(nombre,apellido,email,pasword,direccion,ciudad,telefono) VALUES ('".$nombre."', '".$apellido."', '".$email."', '".$pasword."', '".$direccion."', 
-	'".$ciudad."', '".$telefono."');";
-		
-	$res = mysqli_query($con, $query);
-		if($res){
-		echo '<meta http-equiv= "refresh" content="0; url=index1.php" />';
-		}
-	 else {
-              ?>
-               <div class="alert alert-danger" role="alert">
-               Error al crear usuario <?php echo mysqli_error($con)?>
-               </div>
-               <?php
-                      }
-                         }
-	
-	?>
-	<!--header-->
-	<div class="header">
-		<div class="top-header navbar navbar-default"><!--header-one-->
-			<a class="btn_audio" onclick="sound.play()"> <img src="images/n.12.jpg" class="voci" alt="sonido" title="Asistente de discapacidad visual"></a>
-			<div class="container">
-				<div class="nav navbar-nav wow fadeInLeft animated" data-wow-delay=".5s">
-					<p><strong> <a href="#" style="color:#B2051F">SPORTS</a>WEARLINE</strong>|<a href="signin.php"><strong>Ingresar </strong></a></p>
-				</div>
-				<div class="redes-container">
-					<ul>
-						<li><a href="https://www.facebook.com/Sportswearline-103380179122013" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-						<li><a href="https://www.instagram.com/sportswearline_/?hl=es"  target="_blank" class="instagram"><i class="fab fa-instagram"></i></a></li>
-						<li><a href="https://twitter.com/sportwearline" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a></li>
-						<li><a href="https://co.pinterest.com/sportwearline/" target="_blank" class="pinterest"><i class="fab fa-pinterest-p"></i></a></li> 
-					</ul>
-					</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-		<div class="header-two navbar navbar-default"><!--header-two-->
-			<div class="container">
-				<div class="nav navbar-nav header-two-left">
-					<ul>
-						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="https://wa.link/hzuccw" target="_blank"><strong>Hablanos por WhatsApp</strong></a></li>
-						</ul>
-						<ul>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:sportwearline@gmail.com"><strong>Sportwearline</strong></a></li>		
-					</ul>
-				</div>
-				<div class="nav navbar-nav logo wow zoomIn animated" data-wow-delay=".7s">
-					<h1><a href="index1.php" style="color:#B2051F">SPORTS<b>WEARLINE</b><span class="tag"> Vístete bien hoy tienes una cita con el deporte ¡Marca tu estilo!</span> </a></h1>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-		<div class="top-nav navbar navbar-default"><!--header-three-->
-			<div class="container">
-				<nav class="navbar" role="navigation">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
-					<!--navbar-header-->
-					<!--//navbar-header-->
-				</nav>
-			</div>
-		</div>
-	</div>
-	<!--//header-->
-	<!--breadcrumbs-->
-	<div class="breadcrumbs">
-		<div class="container">
-			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href="index1.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Inicio</a></li>
+  <!--header-->
+  <div class="header">
+    <!--header-one-->
+    <!--<a class="btn_audio" onclick="sound.play()"> <img src="images/n.12.jpg" class="voci" alt="sonido" title="Asistente de discapacidad visual"></a> -->
+    <!--header-two-->
+  </div>
+  <!--//breadcrumbs-->
+  <!--login-->
+  <div class="login-page">
+    <div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+      <h3 class="title">Registrar<span>Sesion </span></h3>
+      <p>Si ya tienes una cuenta puedes ingresar aquí mismo. </p>
+    </div>
+    <div class="widget-shadow">
+      <div class="login-top wow fadeInUp animated" data-wow-delay=".7s">
+        <h4><span id="signo">¡</span><b>Bienvenido a SportsWearLine</b><span id="signo">!</span> <br> <span id="signo">¿</span><b>Ya eres miebro</b><span id="signo">?</span> <a href="signin.php"> Ingresa ahora</a> </h4>
+      </div>
+      <div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
+        <?php
+        if (isset($_REQUEST['registro'])) {
+          session_start();
+          $nombre = $_REQUEST['nombre'] ?? '';
+          $apellido = $_REQUEST['apellido'] ?? '';
+          $email = $_REQUEST['email'] ?? '';
+          $paswordd = $_REQUEST['pasword'] ?? '';
+          $ciudad = $_REQUEST['ciudad'] ?? '';
+          //$telefono = $_REQUEST['telefono'] ?? '';
 
-			</ol>
-		</div>
-	</div>
-	<!--//breadcrumbs-->
-	<!--login-->
-	<div class="login-page">
-		<div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
-			<h3 class="title">Registrar cuenta</h3>
-			<p></p>
-		</div>
-		<div class="widget-shadow">
-			<div class="login-top wow fadeInUp animated" data-wow-delay=".7s">
-				<h4><span id="signo">¿</span><b>Ya tienes una cuenta</b><span id="signo">?</span><a href="signin.php">Ingresa</a></h4>
-			</div>
-			<div class="login-body">
-				  <form action="#" method="post">
-				<!--<form class="wow fadeInUp animated" data-wow-delay=".7s"> 
-					<input type="text" placeholder="Nombre" required="">
-					<input type="text" placeholder="Apellido" required="">
-					<input type="text" placeholder="Direccion" required="">
-					<input type="text" class="email" placeholder="Correo electronico" required="">
-					<input type="password" name="password" class="lock" placeholder="Contraseña"> -->
-		  <label>Nombre</label>
-                  <input type="text" name="nombre"  class="form-control" required = "">
-                </div>
-		  <div class="for-group">
-                  <label>Apellido</label>
-                  <input type="text" name="apellido"   class="form-control" required = "">
-                </div>
-		  <div class="for-group">
-                  <label>Email</label>
-                  <input type="text" name="email"  class="form-control" required = "">
-                </div>
-		   <div class="for-group">
-                  <label>Password</label>
-                  <input type="password" name="password" class="form-control" required = "">
-                </div>
-		  <div class="for-group">
-                  <label>Direccion</label>
-                  <input type="text" name="direccion"  class="form-control" required = "">
-                </div>
-		  <div class="for-group">
-                  <label>Ciudad</label>
-                  <input type="text" name="ciudad"  class="form-control" required = "">
-                </div>
-		  <div class="for-group">
-                  <label>Telefono</label>
-                  <input type="tel" name="tenefono"   class="form-control" required = "">
-               <hr>
-               <center> <div class="for-group">
-                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
-                </div></center>
-                
-                <div>
-                <a class="nav-link" href="#" title="Regresar" >
-        <i class="fa fa-backward" aria-hidden="true"></i></a>
-                </div>
-              </form>
-			</div>
-		</div>
-	</div>
-	<!--//login-->
-	<!--footer-->
-	<!--//footer-->				
-	<!--search jQuery-->
-	<script src="js/main.js"></script>
-	<script type="text/javascript">
-		var sound = new Audio();
-		sound.src = "../images/Audio/Registro.mp3"
-	</script>
-	<!--//search jQuery-->
-	<!--smooth-scrolling-of-move-up-->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			
-			$().UItoTop({ easingType: 'easeOutQuart' });
-			
-		});
-	</script>
-	<!--//smooth-scrolling-of-move-up-->
-	<!--Bootstrap core JavaScript
+          include_once "Basedata.php";
+          $con = mysqli_connect($host, $user, $pasword, $db);
+          $query = "INSERT into clientes(nombre,apellido,email,pasword,ciudad) values ('$nombre', '$apellido', '$email', '$paswordd', '$ciudad')";
+          $res = mysqli_query($con, $query);
+          //  $paswordd = md5 ($passwordd);   Metodo opcional contraseña encriptada para evitar hackeos.
+          if ($res) {
+        ?>
+            <div class="alert alert-registro exitoso" role="alert">
+              <strong>registro exitoso</strong> <a href="signin.php">ir a login </a>
+            </div>
+          <?php
+          } else {
+          ?>
+            <div class="alert alert-danger" role="alert"></div>
+            <strong>Error de registro </strong>
+        <?php
+          }
+        }
+        ?>
+        <div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
+          <form method="POST">
+            <div class="">
+              <input type="text" class="user" name="nombre" placeholder="Nombre" required="">
+            </div>
+            <div>
+              <input type="text" name="apellido" placeholder="Apellido" required="">
+            </div>
+            <div>
+              <input type="text" name="email" placeholder="Email" required="">
+            </div>
+            <div>
+              <input type="password" name="pasword" class="lock" placeholder="Password" required="">
+            </div>
+            <div>
+              <input type="text" name="ciudad" placeholder="Ciudad" required="">
+            </div>
+            <!--<div>
+            <input type="tel" name="telefono" placeholder="Ciudad" required="">
+      </div> -->
+            <input type="submit" name="registro" value="Ingresar">
+            <br>
+            <br>
+            <div>
+              <a class="nav-link" href="index1.php " title="Regresar inicio">
+                <i class="fa fa-backward" aria-hidden="true" style="color:black;"></i></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--//login-->
+  <!--search jQuery-->
+  <script src="js/main.js"></script>
+  <!--<script type="text/javascript">
+			var sound = new Audio();
+			sound.src = "../images/Audio/Ingresar.mp3"
+		</script> -->
+  <!--search jQuery-->
+  <!--//search jQuery-->
+  <!--smooth-scrolling-of-move-up-->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear'
+      };
+
+      $().UItoTop({
+        easingType: 'easeOutQuart'
+      });
+
+    });
+  </script>
+  <!--//smooth-scrolling-of-move-up-->
+  <!--Bootstrap core JavaScript
     ================================================== -->
-    <!--Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>
+  <!--Placed at the end of the document so the pages load faster -->
+  <script src="js/bootstrap.js"></script>
 </body>
-</html>
 
+</html>
