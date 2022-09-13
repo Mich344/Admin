@@ -84,10 +84,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         if (isset($_REQUEST['login'])) {
           session_start();
           $email = $_REQUEST['email'] ?? '';
-          $passwordd = $_REQUEST['password'] ?? '';
+          $paswordd = $_REQUEST['pasword'] ?? '';
           include_once "Basedata.php";
           $con = mysqli_connect($host, $user, $pasword, $db);
-          $query = "SELECT Id, email, nombre  from clientes where email= '" . $email . "'  and password= '" . $passwordd . "' ";
+          $query = "SELECT Id, email, nombre  from clientes where email= '" . $email . "'  and pasword= '" . $paswordd . "' ";
           $res = mysqli_query($con, $query);
           //  $paswordd = md5 ($passwordd);   Metodo opcional contraseña encriptada para evitar hackeos.
           $row = mysqli_fetch_assoc($res);
@@ -95,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             $_SESSION['IdCliente'] = $row['Id'];
             $_SESSION['emailCliente'] = $row['email'];
             $_SESSION['nombreCliente'] = $row['nombre'];
-            header("location: index1.php?mensaje=Usuario Registradro exitosamente");
+            header("location: index1.php?mensaje=Usuario registradro exitosamente");
           } else {
         ?>
             <div class="alert alert-danger" role="alert"></div>
@@ -105,9 +105,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
         ?>
         <div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
-          <form>
+          <form method="POST">
             <input type="text" class="user" name="email" placeholder="Email" required="">
-            <input type="password" name="password" class="lock" placeholder="Password">
+            <input type="password" name="pasword" class="lock" placeholder="Password">
             <input type="submit" name="login" value="Ingresar">
             <div class="forgot-grid">
               <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Recordar</label>
@@ -115,6 +115,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <a href="#">¿Olvidaste tu contraseña?</a>
               </div>
               <div class="clearfix"> </div>
+            </div>
+            <div>
+              <a class="nav-link" href="index1.php " title="Regresar inicio">
+                <i class="fa fa-backward" aria-hidden="true" style="color:black;"></i></a>
             </div>
           </form>
         </div>
