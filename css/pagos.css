@@ -70,12 +70,12 @@
     top: 100px;
     width: 50%;
     height: 100%;
-    color: #000000;
+    color: #fff;
     display: inline-block;
   }
   
   h3{
-   color: #000000;
+   color: #fff;
    text-align: center;
    font-size:60px;
   }
@@ -86,7 +86,7 @@
   }
   
   .cajacolumna{
-  color: #000000;
+  color: #fff;
   background: #0f22b;
   position: relative;
   text-align: center;
