@@ -106,8 +106,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         ?>
         <div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
           <form method="POST">
-            <input type="text" class="user" name="email" placeholder="Email" required="">
-            <input type="password" name="pasword" class="lock" placeholder="Password">
+            <input type="text"  class="form-control" style="height:41px;" class="user" name="email" placeholder="Email" required="">
+            <input type="password"  class="form-control" style="height:41px;" name="pasword" class="lock" placeholder="Password">
             <input type="submit" name="login" value="Ingresar">
             <div class="forgot-grid">
               <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Recordar</label>
