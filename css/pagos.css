@@ -1,1 +1,72 @@
 
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  /*   border: 1px solid black; */
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 10% 0;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: left;
+  }
+  .fadeIn {
+    animation: fadein 5s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .model {
+    width: 700px;
+    height: 500px;
+    border-radius: 46px 20px 42px 19px;
+    -moz-border-radius: 46px 20px 42px 19px;
+    -webkit-border-radius: 46px 20px 42px 19px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: 17px 9px 84px -12px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 17px 9px 84px -12px rgba(69,69,69,0.71);
+    box-shadow: 17px 9px 84px -12px rgba(69,69,69,0.71);
+    color: white;
+    animation: slideInFromLeft 1s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+    animation-fill-mode: forwards;
+  }
+  .room {
+    margin: 15px;
+    width: 45%;
+    height: 90%;
+    border-radius: 46px 0px 42px 0px;
+    -moz-border-radius: 46px 0px 42px 0px;
+    -webkit-border-radius: 46px 0px 42px 0px;
+    background: url("../upload/imagen.jpeg") no-repeat center center;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 10px;
+  }
+
+  .payment {
+    padding: 20px;
+    position: relative;
+    top: 100px;
+    width: 50%;
+    height: 100%;
+    color: #000000;
+    display: inline-block;
+  }
