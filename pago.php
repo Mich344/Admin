@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	    </div><div class="payment">
 	      <div class="receipt-box">
 		<h2>MANCUERNAS LINDAS</h2>
-			<h3>PRECIO: $50.000</h3><BR>
+			<h2>PRECIO: $50.000</h2><BR>
 			<h4>TALLA: UNICA</h4>
 			<h4>COLOR: AMARILLO</h4>
 			<h4>CANTIDAD: 4 UNIDADES</h4><br>
