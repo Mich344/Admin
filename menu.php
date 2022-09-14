@@ -18,7 +18,7 @@
             <?php
 
             //isset para verificar 
-            if (isset($_SESSION['IdCliente']) == true) {
+            if (isset($_SESSION['IdCliente'])) {
             ?>
               <div class="alert alert-danger" role="alert"></div>
               <strong>ERROR</strong>
