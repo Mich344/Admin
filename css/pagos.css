@@ -76,3 +76,8 @@
    text-align: center;
    font-size:60px;
   }
+  
+  .contenedor{
+  margin: auto;
+  width: 100%;
+  }
