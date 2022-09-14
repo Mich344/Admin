@@ -82,7 +82,7 @@
   width: 100%;
   }
   
-  .caja__columna{
+  .cajacolumna{
   color: #000000;
   background: #0f22b;
   position: relative;
@@ -92,7 +92,7 @@
   margin: 10px;
   }
   
-  .caja__columna .text{
+  .cajacolumna .texto{
   position: absolute;
   top: 15px;
   right: 15px;
@@ -100,3 +100,4 @@
   border: 2px solid #69ca62;
   padding: 30px;
   }
+  
