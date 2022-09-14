@@ -81,3 +81,13 @@
   margin: auto;
   width: 100%;
   }
+  
+  .caja__columna{
+  color: #fff;
+  background: #0f22b;
+  position: relative;
+  text-align: center;
+  width: 98%;
+  height: 440px;
+  margin: 10px;
+  }
