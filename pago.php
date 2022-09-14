@@ -8,7 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Modern Shoppe Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/pagos.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
