@@ -70,3 +70,9 @@
     color: #000000;
     display: inline-block;
   }
+  
+  h1{
+   color: #fff;
+   text-align: center;
+   font-size:60px;
+  }
