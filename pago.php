@@ -20,8 +20,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 <section class="caja">
 	
-	<div class="contenedor">
-		<div class="caja__columna">
+	<div class="contenedorr">
+		<div class="caja__columnaa">
 		<svg> <rect> </rect> </svg>
 		<div class="Texto">
 		<h2> Información </h2>
@@ -29,7 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <br>
 		</div>
 			
-	        <div class="caja__columna">
+	        <div class="caja__columnaa">
 		<svg> <rect> </rect> </svg>
 		<div class="Texto">
 		<h2> Información </h2>
@@ -37,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <br>
 		</div>
 	        
-		  <div class="caja__columna">
+		  <div class="caja__columnaa">
 		<svg> <rect> </rect> </svg>
 		<div class="Texto">
 		<h2> Información </h2>
