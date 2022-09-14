@@ -17,6 +17,10 @@ $name_size = $_FILES['']['size'];
 $destino = $_SERVER['DOCUMENT_ROOT'] . '/upload/';
 $ruta = $destino.$name_image;
 move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
+
+<div class="alert alert-danger" role="alert">
+   EL PRODUCTO <?php echo $name_image;?>
+</div>
  
   $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$ruta."');";
   //resultados
