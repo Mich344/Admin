@@ -13,8 +13,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 	<!--header-->
-				<div class="nav navbar-nav logo wow zoomIn animated" data-wow-delay=".7s">
-				<center>	<h1><a style="color: #B2051F">SPORTS<b>WEARLINE</b><span class="tag"><strong> Vístete bien, hoy tienes una cita con el deporte ¡Marca tú estilo!</strong></span></a></h1> <br> </center>
+				<div  class="nav navbar-nav logo wow zoomIn animated" data-wow-delay=".7s">
+					<h1><center><a style="color: #B2051F">SPORTS<b>WEARLINE</b><span class="tag"><strong> Vístete bien, hoy tienes una cita con el deporte ¡Marca tú estilo!</strong></span></a></center></h1> <br>
 				</div>
 	<!--//header-->
 	
