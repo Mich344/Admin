@@ -32,7 +32,7 @@ move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
  </div>
 <?php
   }
- 
+ }
 ?> 
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
