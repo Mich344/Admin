@@ -27,8 +27,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h2> Información </h2>
 		<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque quam quos vitae. Sed libero et nulla suscipit quae nostrum distinctio corrupti cumque, cum porro accusantium, ullam sit dolores quas nisi!</p>
 		 <br>
-			<div class="model">
+		</div>
+			
+	        <div class="caja__columna">
+		<svg> <rect> </rect> </svg>
+		<div class="Texto">
+		<h2> Información </h2>
+		<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque quam quos vitae. Sed libero et nulla suscipit quae nostrum distinctio corrupti cumque, cum porro accusantium, ullam sit dolores quas nisi!</p>
+		 <br>
+		</div>
+			
+			<!-- DIVISONES -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		<div class="model">
 	    <div class="room">
+				
 			<!-- <img width="100%" height="100%" src="upload/imagen.jpeg" alt=""> -->
 	    </div><div class="payment">
 	      <div class="receipt-box">
@@ -38,8 +61,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h4>COLOR: AMARILLO</h4>
 			<h4>CANTIDAD: 4 UNIDADES</h4><br>
 			<h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa omnis explicabo commodi delectus eveniet alias harum, eligendi corrupti voluptas, dolor natus ad numquam animi culpa? Expedita ullam assumenda veniam! Vel.</h4>
-	      </div>
-	    </div>
+		      </div>
+			</div>
 	  </div>
 				<br>
 <div id="PayPal">
