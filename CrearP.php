@@ -18,16 +18,16 @@ $destino = $_SERVER['DOCUMENT_ROOT'] . '/upload/';
 $ruta = $destino.$name_image;
 move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
 
-<div class="alert alert-danger" role="alert">
-   EL PRODUCTO <?php echo $name_image;?>
-</div>
+// <div class="alert alert-danger" role="alert">
+//    EL PRODUCTO <?php echo $name_image;?>
+// </div>
  
   $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$ruta."');";
   //resultados
   $res = mysqli_query($con, $query);
   if($res){
     
-    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=Producto creado correctamente" />';
+    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=Producto '. $_FILES['imagen']['name'] . '  creado correctamente" />';
   }
   else {
 ?>
