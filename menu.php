@@ -16,12 +16,10 @@
               <i class="fas fa-users mr-2"></i> Registrarse
             </a>
             <?php
-
+            include_once "Basedata.php";
             //isset para verificar 
             if (isset($_SESSION['IdCliente'])) {
             ?>
-              <div class="alert alert-danger" role="alert"></div>
-              <strong>ERROR</strong>
               <a href="index1.php?modulo=usuario" class="dropdown-item">
                 <i class="fas fa-user text-primary mr-2"></i> Bienvenido <?php echo $_SESSION['nombreCliente'] ?>
               </a>
