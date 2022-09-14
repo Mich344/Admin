@@ -14,6 +14,9 @@
     min-height: 100vh;
     display: flex;
     justify-content: left;
+    background-color: #0f222b;
+    font-family: sans-serif;
+    box-sizing: border-box
   }
   .fadeIn {
     animation: fadein 5s;
