@@ -9,36 +9,15 @@
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
   $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
   $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? ''); 
-  $imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');
-  // $ruta = 'upload/';
-  //    if (isset($_FILES['imagen']) && $_FILES['imagen']['name'][0]){
-  //     for ($i=0; $i < count($_FILES['imagen']['name']); $i++) { 
-  //       if ($_FILES['imagen']['type'][$i] == "image/jpeg" || $_FILES['imagen']['type'][$i] == "image/pjpeg" || $_FILES['imagen']['type'][$i] == "
-  //       image/gif" || $_FILES['imagen']['type'][$i] == "image/png" || $_FILES['imagen']['type'][$i] == "image/jpg") {
-  //          if (file_exists($ruta) || @mkdir($ruta)){
-  //           $origen_archivo = $_FILES['imagen']['tmp_name'][i];
-  //           $destino = $ruta.$_FILES['imagen']['name'][i];
-  //           if (@move_uploaded_file($origen_archivo, $destino)){
-  //             echo "<br>".$_FILES['imagen']['name'][i]." guardado correctamente";
-  //           }
-  //           else {
-  //             "Error";
-  //           }
-  //         }
-  //         else {
-  //           "Error";
-  //         }
-  //       }
-  //       else {
-  //         "Error";
-  //       }
-  //     }
-  //   }
-  //   else {
-  //     "Error";
-  //   }
+  //$imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');
 
-  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$imagen."');";
+$name_image = $_FILES['imagen']['name'];
+$type_image = $_FILES['imagen']['type'];
+$name_size = $_FILES['']['size'];
+$destino = $_SERVER['DOCUMENT_ROOT'] . '/upload/';
+move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
+ 
+  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$destino."');";
   //resultados
   $res = mysqli_query($con, $query);
   if($res){
