@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -62,10 +63,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <!--//end-smooth-scrolling-->
   <?
   session_start();
-  $accion($_REQUEST['accion'] ?? '');
-  if ($accion == 'cerrar') {
+  session_regenerate_id(true);
+  
+  if (isset($_REQUEST['accion']) && $_REQUEST['accion'] == "cerrar") {
     session_destroy();
-    header("Refresh:0");
+    header("location: index1.php");
   }
   ?>
 </head>
