@@ -87,11 +87,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           $email = $_REQUEST['email'] ?? '';
           $paswordd = $_REQUEST['pasword'] ?? '';
           $ciudad = $_REQUEST['ciudad'] ?? '';
+          $telefono = $_REQUEST['telefono'] ?? '';
           //$telefono = $_REQUEST['telefono'] ?? '';
 
           include_once "Basedata.php";
           $con = mysqli_connect($host, $user, $pasword, $db);
-          $query = "INSERT into clientes(nombre,apellido,email,pasword,ciudad) values ('$nombre', '$apellido', '$email', '$paswordd', '$ciudad')";
+          $query = "INSERT into clientes(nombre,apellido,email,pasword,ciudad,telefono) values ('$nombre', '$apellido', '$email', '$paswordd', '$ciudad', '$telefono')";
           $res = mysqli_query($con, $query);
           //  $paswordd = md5 ($passwordd);   Metodo opcional contraseña encriptada para evitar hackeos.
           if ($res) {
@@ -111,23 +112,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
           <form method="POST">
             <div class="">
-              <input type="text" class="user" name="nombre" placeholder="Nombre" required="">
+              <input  style="height:41px;" class="form-control" type="text" class="user" name="nombre" placeholder="Nombre" required="">
             </div>
             <div>
-              <input type="text" name="apellido" placeholder="Apellido" required="">
+              <input  style="height:41px;" class="form-control" type="text" name="apellido" placeholder="Apellido" required="">
             </div>
             <div>
-              <input type="text" name="email" placeholder="Email" required="">
+              <input  style="height:41px;" class="form-control" type="text" name="email" placeholder="Email" required="">
             </div>
             <div>
-              <input type="password" name="pasword" class="lock" placeholder="Password" required="">
+              <input  style="height:41px;"  class="form-control" type="password" name="pasword" class="lock" placeholder="Password" required="">
             </div>
             <div>
-              <input type="text" name="ciudad" placeholder="Ciudad" required="">
+              <input  style="height:41px;" class="form-control" type="text" name="ciudad" placeholder="Ciudad" required="">
             </div>
-            <!--<div>
-            <input type="tel" name="telefono" placeholder="Ciudad" required="">
-      </div> -->
+            <div>
+              <input  style="height:41px;" class="form-control" type="tel" name="telefono" placeholder="Telefono" required="">
+            </div>
+            <div>
+            <!-- <input type="date" value="  echo date('Y-m-d', strtotime($valor['fecha'])) ?>"> -->
+            </div>
             <input type="submit" name="registro" value="Ingresar">
             <br>
             <br>
