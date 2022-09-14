@@ -15,7 +15,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--header-->
 				
 	<!--//header-->
-	<h1> <center> Caja linda </center></h1>
+	<h1> Caja linda </h1>
 <section class="caja">
 	
 	<div class="contenedor">
