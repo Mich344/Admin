@@ -15,9 +15,10 @@ $name_image = $_FILES['imagen']['name'];
 $type_image = $_FILES['imagen']['type'];
 $name_size = $_FILES['']['size'];
 $destino = $_SERVER['DOCUMENT_ROOT'] . '/upload/';
+$ruta = $destino.$name_image;
 move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
  
-  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$destino."');";
+  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$ruta."');";
   //resultados
   $res = mysqli_query($con, $query);
   if($res){
