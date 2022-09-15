@@ -381,7 +381,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<p><span class="item_price"><?php echo $row['Precio'] ?></span></p>
 								<h4 class="sizes">Sizes: <a href="#"> s</a> - <a href="#">m</a> - <a href="#">l</a> - <a href="#">xl</a> </h4>
 								<ul>
-									<li><a href="single.php" title="Informacion del producto"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></li>
+									<li><a href="single.php" title="Informacion del producto"><span class="glyphicon fa fa-shopping-basketlobe" aria-hidden="true"></span></a></li>
 									<li><a class="item_add" title="Añadir al carrito" href="#"><span class="glyphicon glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
 									
 								</ul>
