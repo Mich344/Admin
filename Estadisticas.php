@@ -150,17 +150,17 @@
                   <div class="row">
                     <div class="col-4 text-center">
                       <div id="sparkline-1"></div>
-                      <div class="text-white">Visitors</div>
+                      <div class="text-white">Visitantes</div>
                     </div>
                     <!-- ./col -->
                     <div class="col-4 text-center">
                       <div id="sparkline-2"></div>
-                      <div class="text-white">Online</div>
+                      <div class="text-white">En linea</div>
                     </div>
                     <!-- ./col -->
                     <div class="col-4 text-center">
                       <div id="sparkline-3"></div>
-                      <div class="text-white">Sales</div>
+                      <div class="text-white">Grafica</div>
                     </div>
                     <!-- ./col -->
                   </div>
