@@ -537,6 +537,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     sound.src = "../images/Audio/AudioAcces.mp3"
   </script>
   <script src="js/app.js"></script>
+	 <script type="text/javascript">
+    $(document).ready(function() {
+
+      var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear'
+      };
+
+      $().UItoTop({
+        easingType: 'easeOutQuart'
+      });
+
+    });
+  </script>
   <!--//search jQuery-->
   <!--smooth-scrolling-of-move-up-->
  
