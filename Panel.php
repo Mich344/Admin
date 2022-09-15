@@ -302,7 +302,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
     });
   </script>
   <footer class="main-footer" style="background:radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)">
-    <strong>SportsWearline &copy; 2015-2022 <a href="https://sportswearline.netlify.app" target="_blank" style="color:white">Tienda Virtual Aqui.</a></strong>
+    <strong>SportsWearline &copy; 2015-2022 <a href="index1.php" target="_blank" style="color:white">Tienda Virtual Aqui.</a></strong>
     <div class="float-right d-none d-sm-inline-block">
       <b style="color:red">SportsWearline</b>
     </div>
