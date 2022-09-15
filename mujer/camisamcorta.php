@@ -277,7 +277,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 while ($row = mysqli_fetch_assoc($res)) {
 		?>
 		  <div class="col-md-3 gallery-grid gallery-grid2 wow flipInY animated" data-wow-delay=".9s">
-		    <a href="single.php?modulo=single&Id=<?php echo $row['Id'] ?>"><?php echo "<img src='upload/" . $row['imagen'] . "' class='img-responsive' alt=''>" ?></a>
+		    <a href="single.php?modulo=single&Id=<?php echo $row['Id'] ?>"><?php echo "<img src='../upload/" . $row['imagen'] . "' class='img-responsive' alt=''>" ?></a>
 		    <div class="gallery-text simpleCart_shelfItem">
 		      <h5><a class="name" href="single.php"> <?php echo $row['nombre'] ?> </a></h5>
 		      <p><span class="item_price"><?php echo $row['precio'] ?></span></p>
