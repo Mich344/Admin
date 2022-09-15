@@ -539,22 +539,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <script src="js/app.js"></script>
   <!--//search jQuery-->
   <!--smooth-scrolling-of-move-up-->
-  <script type="text/javascript">
-    $(document).ready(function() {
-
-      var defaults = {
-        containerID: 'toTop', // fading element id
-        containerHoverID: 'toTopHover', // fading element hover id
-        scrollSpeed: 1200,
-        easingType: 'linear'
-      };
-
-      $().UItoTop({
-        easingType: 'easeOutQuart'
-      });
-
-    });
-  </script>
+ 
   <!--//smooth-scrolling-of-move-up-->
   <!--Bootstrap core JavaScript
     ================================================== -->
