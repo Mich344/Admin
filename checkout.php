@@ -291,59 +291,74 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--//breadcrumbs-->
 	<!--cart-items-->
-	<table class="table table-light  table-bordered">
-<tbody>
-<tr>
-<th width ="40%">descripcion</th>
-	<th width ="15%" class="text-center">cantidad</th>
-	<th width ="20%"class="text-center">precio</th>
-	<th width ="20%"class="text-center">total</th>
-
-</tr>
-<?php $total=0;?>
- <?php
-     include_once "Basedata.php";
-     $con = mysqli_connect($host, $user, $pasword, $db);
-	 $query = "SELECT Id, nombre, precio, cantidad,descripcion FROM productos";
-	 $res = mysqli_query($con, $query);
-	 while ($row = mysqli_fetch_assoc($res)){
-		?>
-			<tr>
-	<th width ="40%"><?php echo $row['nombre'] ?></th>
-	<th width ="15%" class="text-center"><?php echo $row['cantidad'] ?></th>
-	<th width ="20%"class="text-center"><?php echo $row['precio'] ?></th>
-	<th width ="20%"class="text-center"><?php echo number_format($row['precio']*$row['cantidad'],2) ?></th>
-	<td width ="2%"class="text-center">
-	
-	
-	<form action=""  method="POST">
-	<button class="btn btn-danger" 
-	type="sumbmit"
-	name="item_add"
-	value="eliminar"
-	>eliminar producto</button>	
-</form>
-	
-	</td>
-	
-	
-	
-	
-	<?php $total=$total+($row['precio']*$row['cantidad']); ?>
-	<?php } ?>
-		</tr>
-	
-</tr>
-<tr>
-<td colspan="3" align ="right"><h3>Total</h3></td>
-<td align ="right"><h3>$<?php echo number_format($total,2);?></h3></td>
-<td></td>
-</tr>
-
-	
-	 
-</tbody>
-	</table>
+	<div class="cart-items">
+		<div class="container">
+			<h3 class="wow fadeInUp animated" data-wow-delay=".5s">Mi Carrito De Compras</h3>
+			<div class="cart-header wow fadeInUp animated" data-wow-delay=".5s">
+				<div class="alert-close"> </div>
+				<div class="cart-sec simpleCart_shelfItem">
+					<div class="cart-item cyc">
+						<a href="single.php"><img src="images/3p.png" class="img-responsive" alt=""></a>
+					</div>
+					<div class="cart-item-info">
+						<h4><a href="single.php"> Buzo con capucha Badge of Sport Felpa </a></h4>
+						<ul class="qty">
+							
+							
+						</ul>
+						<div class="delivery">
+							<p>Valor de entrega  : $10.000</p>
+							<span>Delivered in 1-1:30 hours</span>
+							<div class="clearfix"></div>
+						</div>	
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="cart-header1 wow fadeInUp animated" data-wow-delay=".7s">
+				<div class="alert-close1"> </div>
+				<div class="cart-sec simpleCart_shelfItem">
+					<div class="cart-item cyc">
+						<a href="single.php"><img src="images/1p.png" class="img-responsive" alt=""></a>
+					</div>
+					<div class="cart-item-info">
+						<h4><a href="single.php"> camiseta 3 rayas Essentials. </a></h4>
+						<ul class="qty">
+							
+							
+						</ul>
+						<div class="delivery">
+						<p>Valor de Entrega : $10.000</p>
+						<span>Delivered in 1-1:30 hours</span>
+						<div class="clearfix"></div>
+					</div>	
+				   </div>
+				   <div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="cart-header wow fadeInUp animated" data-wow-delay=".5s">
+				<div class="alert-close"> </div>
+				<div class="cart-sec simpleCart_shelfItem">
+					<div class="cart-item cyc">
+						<a href="single.php"><img src="images/2p.png" class="img-responsive" alt=""></a>
+					</div>
+					<div class="cart-item-info">
+						<h4><a href="single.php"> Buzo con capucha Badge of Sport Felpa </a></h4>
+						<ul class="qty">
+							
+							
+						</ul>
+						<div class="delivery">
+							<p>Valor de entrega  : $10.000</p>
+							<span>Delivered in 1-1:30 hours</span>
+							<div class="clearfix"></div>
+						</div>	
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>	
+		</div>
+	</div>
 	<!--//cart-items-->	
 	<!--footer-->
 	<div class="footer" style= " background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
