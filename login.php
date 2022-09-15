@@ -64,7 +64,7 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Contraseña" name="pasword">
+            <input type="password" class="form-control" placeholder="password" name="pasword">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
