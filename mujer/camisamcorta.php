@@ -271,10 +271,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		/*CONECTA LA BASE DE DATOS (BASEDATA) CON EL LOCALHOST, USUARIO, CONTRASEÑA Y DB*/
 		$con = mysqli_connect($host, $user, $pasword, $db);
 		/* UTILIZA UN REQUERIMIENTO DONDE SE VA A SELECCIONAR TODOS LOS PRODUCTOS CON SU ID, NOMBRE, PRECIO Y CANTIDAD DE LA TABLA PRODUCTOS  */
-		$query1 = "SELECT * FROM productos WHERE descripcion LIKE '%manga corta%' AND descripcion LIKE '%mujer%';";
-		$query2 = "SELECT * FROM productos WHERE descripcion LIKE '%unisex%'AND descripcion LIKE '%manga corta%';";
+		$query1 = "SELECT * FROM productos WHERE descripcion LIKE '%manga corta%' AND descripcion LIKE '%unisex%' OR descripcion LIKE '%manga corta%' AND descripcion LIKE '%mujer%';";
+
 		/* DA UNA RESPUESTA CON EL MYSQL CON LOS REQUERIMIENTOS Y LA CONEXION */
-		$res = mysqli_query($con, $query1, $query2);
+		$res = mysqli_query($con, $query1);
 		 while ($row = mysqli_fetch_assoc($res)) {
 		?>
 		  <div class="col-md-3 gallery-grid gallery-grid2 wow flipInY animated" data-wow-delay=".9s">
