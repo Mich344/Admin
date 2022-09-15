@@ -323,13 +323,6 @@ $(window).load(function() {
 						<h4>Size</h4>
 						<li><a href="#">6-12 M</a></li>
 					</ul>
-					<ul class="color">
-						<h4>Color</h4>
-						<li><a href="#"></a></li>
-						<li><a href="#" class="red"></a></li>
-						<li><a href="#" class="green"></a></li>
-						<li><a href="#" class="pink"></a></li>
-					</ul>
 					<div class="clearfix"> </div>
 					<div class="quantity">
 						<p class="qty"> cantidad:  </p><input min="1" type="number" value="1" max="<?php echo $rowproducto['cantidad'] ?>" class="item_quantity">
