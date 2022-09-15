@@ -173,7 +173,7 @@
                 <div class="card-header border-0">
                   <h3 class="card-title">
                     <i class="fas fa-th mr-1"></i>
-                    Sales Graph
+                    Grafica De Ventas
                   </h3>
                   <div class="card-tools">
                     <button type="button" class="btn bg-info btn-sm" data-card-widget="collapse">
