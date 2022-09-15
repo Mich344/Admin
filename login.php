@@ -73,21 +73,13 @@
           </div>
           <div class="row">
 
-            <!-- /.col -->
+            <!-- ingresar comienzo -->
             <div class="col-4">
               <button type="submit" class="btn btn-primary btn-block" name="login">Ingresar</button>
             </div>
-            <!-- /.col -->
+         
+                        <!-- Ingresar end -->
 
-
-        <p class="mb-1">
-          <a href="forgot-password.html">I forgot my password</a>
-        </p>
-        <p class="mb-0">
-          <a href="register.html" class="text-center">Register a new membership</a>
-        </p>
-      </div>
-      <!-- /.login-card-body -->
     </div>
   </div>
   <!-- /.login-box -->
