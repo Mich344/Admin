@@ -9,16 +9,16 @@
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
   $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
   $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? ''); 
-  //$imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');
+  $imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');
 
-$name_image = $_FILES['imagen']['name'];
-$type_image = $_FILES['imagen']['type'];
-$name_size = $_FILES['']['size'];
-$destino = $_SERVER['DOCUMENT_ROOT'] . '/upload/';
-$ruta = $destino.$name_image;
-move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
+// $name_image = $_FILES['imagen']['name'];
+// $type_image = $_FILES['imagen']['type'];
+// $name_size = $_FILES['']['size'];
+// $destino = $_SERVER['DOCUMENT_ROOT'] . '/upload/';
+// $ruta = $destino.$name_image;
+// move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
  
-  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$ruta."');";
+  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$imagen."');";
   //resultados
   $res = mysqli_query($con, $query);
   if($res){
