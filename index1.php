@@ -97,6 +97,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         if ($modulo == "signin") {
           include_once "signin.php";
         }
+	if ($modulo == "about"){
+	  include_once ""about.php;
+	}
 
         ?>
         <div class="nav navbar-nav header-two-left">
