@@ -189,12 +189,12 @@
                   <div class="row">
                     <div class="col-4 text-center">
                       <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                      <div class="text-white">Mail-Orders</div>
+                      <div class="text-white">pedidos por correo</div>
                     </div>
                     <!-- ./col -->
                     <div class="col-4 text-center">
                       <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                      <div class="text-white">Online</div>
+                      <div class="text-white">En linea</div>
                     </div>
                     <!-- ./col -->
                     <div class="col-4 text-center">
