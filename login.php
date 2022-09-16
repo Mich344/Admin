@@ -75,7 +75,7 @@
 
             <!-- ingresar comienzo -->
              <div class="col-4">
-             <center> <button type="submit" class="btn btn-primary btn-block" name="login">Ingresar</button> </center>
+               <button type="button" class="btn btn-danger" name="login">Danger</button>
             </div>
            
          
