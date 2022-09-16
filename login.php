@@ -75,7 +75,7 @@
 
             <!-- ingresar comienzo -->
              <div class="col-4">
-               <button type="button" class="btn btn-danger" name="login">Danger</button>
+               <button type="button" class="btn btn-danger" name="login">Login</button>
             </div>
            
          
