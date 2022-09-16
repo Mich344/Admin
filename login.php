@@ -77,9 +77,7 @@
             <div class="d-grid gap-2 col-6 mx-auto">
               <button class="btn btn-primary" type="button">Button</button>
            </div>
-            <div class="col-4">
-             <center> <button type="submit" class="btn btn-primary btn-block" name="login">Ingresar</button> </center>
-            </div>
+           
          
                         <!-- Ingresar end -->
 
