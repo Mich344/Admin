@@ -1465,8 +1465,7 @@ h4.panel-title a {
 }
 .panel-default > .panel-heading {
     color: #fff;
-    background-color: #b2051f;
-    border-color: #b2051f;
+   background: linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
     padding: 0;
 }
 /*--//single-page--*/
