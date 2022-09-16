@@ -75,7 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
   <?php
   include_once "Basedata.php";
-  $con = mysqli_connect($host, $user, $pasword, $db)
+  $con = mysqli_connect($host, $user, $pasword, $db);
   ?>
   <?php
   include_once "menu.php";
