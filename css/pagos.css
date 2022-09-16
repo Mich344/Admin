@@ -9,8 +9,6 @@ body {
  justify-items: center;
  align-items: center;
  min-height: 100vh;
- background: linear-gradient(180deg, #4ba9e9, #4ba9e9 50%, 
- #FFF 50%, #FFF 100%
- );
+ background-color: crimson;
 
 }
