@@ -262,7 +262,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!--//breadcrumbs-->
-	<!--products--> 		
+	<!--products--> 
+			<br>
+	<div class="container">
+	      <div class="new-info">
+		<?php 
+		include_once "../Basedata.php";
+		/*CONECTA LA BASE DE DATOS (BASEDATA) CON EL LOCALHOST, USUARIO, CONTRASEÑA Y DB*/
+		$con = mysqli_connect($host, $user, $pasword, $db);
+		/* UTILIZA UN REQUERIMIENTO DONDE SE VA A SELECCIONAR TODOS LOS PRODUCTOS CON SU ID, NOMBRE, PRECIO Y CANTIDAD DE LA TABLA PRODUCTOS  */
+		$query1 = "SELECT * FROM productos WHERE descripcion LIKE '%zapat%' AND descripcion LIKE '%unisex%' OR descripcion LIKE '%zapat%' AND descripcion LIKE '%hombre%';";
+
+		/* DA UNA RESPUESTA CON EL MYSQL CON LOS REQUERIMIENTOS Y LA CONEXION */
+		$res = mysqli_query($con, $query1);
+		 while ($row = mysqli_fetch_assoc($res)) {
+		?>
+		  <div class="col-md-3 gallery-grid gallery-grid2 wow flipInY animated" data-wow-delay=".9s">
+		    <a href="single.php?modulo=single&Id=<?php echo $row['Id'] ?>"><?php echo "<img src='../upload/" . $row['imagen'] . "' class='img-responsive' alt=''>" ?></a>
+		    <div class="gallery-text simpleCart_shelfItem">
+		      <h5><a class="name" href="single.php"> <?php echo $row['nombre'] ?> </a></h5>
+		      <p><span class="item_price"><?php echo $row['precio'] ?></span></p>
+		      <h4 class="sizes">Sizes: <a href="#"> s</a> - <a href="#">m</a> - <a href="#">l</a> - <a href="#">xl</a> </h4>
+		      <ul>
+			<li><a href="products.php"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></li>
+			<li><a class="item_add" href=""><span class="glyphicon glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+		      </ul>
+		    </div>
+		  </div>
+		<?php
+		}
+		?>
+
+		<div class="clearfix"> </div>
+	      </div>
+    </div>
 	<!--//products-->
 	<!--footer-->
 <div class="footer" style= " background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)">
