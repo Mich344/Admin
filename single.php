@@ -314,7 +314,6 @@ $(window).load(function() {
 							<label for="rating1">1</label>
 						</span>
 						<p>5.00 out of 5</p>
-						<a href="#">Add Your Review</a>
 					</div>
 					<h6 class="item_price"><?php echo $rowproducto['precio'] ?></h6>			
 					<p><?php  echo $rowproducto['descripcion'] ?></p>
