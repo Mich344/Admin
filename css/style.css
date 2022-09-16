@@ -1455,8 +1455,7 @@ h4.panel-title a {
     padding: .6em 1.5em;
 }
 .panel-default {
-    padding: 1em 1.5em;
-    background: linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
+   background: linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
 }
 .panel-body {
 	padding: 15px;
