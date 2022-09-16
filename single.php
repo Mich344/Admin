@@ -313,7 +313,7 @@ $(window).load(function() {
 							<input id="rating1" type="radio" name="rating" value="1">
 							<label for="rating1">1</label>
 						</span>
-						<p>5.00 out of 5</p>
+						
 					</div>
 					<h6 class="item_price"><?php echo $rowproducto['precio'] ?></h6>			
 					<p><?php  echo $rowproducto['descripcion'] ?></p>
