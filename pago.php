@@ -28,7 +28,7 @@
     </div>
 
  <!-- Paypal Pay Option -->
-<div id="PayPal">
+<!-- <div id="PayPal">
 	<script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Bad+Script|Titillium+Web' rel='stylesheet' type='text/css'>
 	<div id="smart-button-container">
@@ -71,7 +71,7 @@
 		    </div>
 	      </div>
 	</div>
-</div>
+</div> -->
  <!-- End Paypal Pay Option -->
 
 
