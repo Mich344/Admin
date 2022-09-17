@@ -10,9 +10,20 @@
 <body>
     <div class="card"
       <div class="imgBox"></div>
+	<img src="upload./zap1.jpg" alt="shoe">
 <!-- 	LLAMAR IMAGEN SELECCIONADA EN EL CARRITO -->
       <div class="details"></div>
-
+	<div class="title">
+		<h3> Tu producto <br>
+			<small>loremp jhrf qreb </small>
+		</h3>
+	      <div class="description"></div>
+	      <div class="size"></div>
+	      <div class="buy"></div>
+      
+      
+      
+      
 
     </div>
 
