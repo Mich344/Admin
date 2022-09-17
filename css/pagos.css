@@ -25,7 +25,7 @@
 
    }
 
-   .card, .imgBox {
+   .card .imgBox {
     position: relative;
     min-width: 300px;
     width: 300px;
@@ -36,15 +36,15 @@
     transition: 0.5ms;
    }
    
-   .card:hover, .imgBox{
+   .card:hover .imgBox{
     transform: rotate(-35deg);
    }
 
-   .card, . img{
+   .card . img{
     width: 85%;
    }
 
-   .card, .details {
+   .card .details {
     position: relative;
     min-height: 300px;
     background-color: #B2051F;
