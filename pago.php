@@ -10,6 +10,7 @@
 <body>
     <div class="card"
       <div class="imgBox"></div>
+<!-- 	LLAMAR IMAGEN SELECCIONADA EN EL CARRITO -->
       <div class="details"></div>
 
 
