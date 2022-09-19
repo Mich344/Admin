@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -75,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
   <?php
   include_once "Basedata.php";
-  $con = mysqli_connect($host, $user, $pasword, $db);
+  $con = mysqli_connect($host, $user, $pasword, $db)
   ?>
   <?php
   include_once "menu.php";
@@ -97,9 +96,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         if ($modulo == "signin") {
           include_once "signin.php";
         }
-	if ($modulo == "about"){
-	  include_once "about.php";
-	}
 
         ?>
         <div class="nav navbar-nav header-two-left">
@@ -269,12 +265,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ul>
             <div class="clearfix"> </div>
             <!--//navbar-collapse-->
-            <header class="cd-main-header">
-              <ul class="cd-header-buttons">
-                <li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
-              </ul> <!-- cd-header-buttons -->
-            </header>
-          </div>
+           
           <!--//navbar-header-->
         </nav>
         <div id="cd-search" class="cd-search">
@@ -287,6 +278,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
   <!--//header-->
   <!--banner-->
+   
   <div class="banner">
     <div class="container">
       <div class="banner-text">
@@ -306,7 +298,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <p class="seconds_text">Segundos</p>
               </li>
             </ul>
-
             <div class="clearfix"> </div>
             <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
             <script type="text/javascript">
@@ -320,6 +311,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </div>
 
         </div>
+        
         <!-- <div class="col-sm-7 banner-right wow fadeInRight animated" data-wow-delay=".5s">			
 					 <section class="slider grid">
 						<div class="flexslider">
@@ -357,6 +349,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
   </div>
   <!--//banner-->
+  
   <!--new-->
   <div class="new">
     <div class="container">
@@ -384,7 +377,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<p><span class="item_price"><?php echo $row['Precio'] ?></span></p>
 								<h4 class="sizes">Sizes: <a href="#"> s</a> - <a href="#">m</a> - <a href="#">l</a> - <a href="#">xl</a> </h4>
 								<ul>
-									<li><a href="single.php" title="Informacion del producto"><span class="glyphicon fa fa-shopping-basketlobe" aria-hidden="true"></span></a></li>
+									<li><a href="single.php" title="Informacion del producto"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></li>
 									<li><a class="item_add" title="Añadir al carrito" href="#"><span class="glyphicon glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
 									
 								</ul>
@@ -429,20 +422,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
   </div>
   <!--//new-->
-  <!--gallery-->
-  <div class="gallery">
-    <div class="container">
-      <div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
-        <h3 class="title">Productos<span> Populares</span></h3>
-        <p>Productos más vendidos</p>
-      </div>
-      <div class="gallery-info">
-
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </div>
-  <!--//gallery-->
   <!--trend-->
   <div class="trend wow zoomIn animated" data-wow-delay=".5s">
     <div class="container">
@@ -501,6 +480,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
   </div>
   <!--//trend-->
+  <!--gallery-->
+  <div class="gallery">
+    <div class="container">
+      <div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+        <h3 class="title">Productos<span> Populares</span></h3>
+        <p>Productos más vendidos</p>
+      </div>
+      <div class="gallery-info">
+
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!--//gallery-->
+
   <!--footer-->
   <div class="footer" style="background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)">
     <div class="container">
@@ -540,7 +534,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     sound.src = "../images/Audio/AudioAcces.mp3"
   </script>
   <script src="js/app.js"></script>
-	 <script type="text/javascript">
+  <!--//search jQuery-->
+  <!--smooth-scrolling-of-move-up-->
+  <script type="text/javascript">
     $(document).ready(function() {
 
       var defaults = {
@@ -556,9 +552,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     });
   </script>
-  <!--//search jQuery-->
-  <!--smooth-scrolling-of-move-up-->
- 
   <!--//smooth-scrolling-of-move-up-->
   <!--Bootstrap core JavaScript
     ================================================== -->
