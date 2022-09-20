@@ -223,7 +223,7 @@ Te reembolsaremos el importe del producto tanto si, una vez realizada la comprob
 						<li><a href="about.php" style = "color: white"><strong>Acerca de Nosotros</strong></a></li>
 						
 					<li><a href="contact.php"  style = "color: white;"><strong>Contáctanos</strong></a></li>
-						<li><a href="faq.php"  style = "color: white;"><strong>Preguntas Frecuentes</strong></a></li>
+						
 					
 					</ul>
 				</div>
