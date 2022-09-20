@@ -10,7 +10,7 @@
 <body>
     <div class="card"
       <div class="imgBox"></div>
-	<img src="upload./zap6.png" alt="shoe">
+	<img src="upload./9p.png" alt="shoe">
 <!-- 	LLAMAR IMAGEN SELECCIONADA EN EL CARRITO -->
       <div class="details"></div>
 	<div class="title">
