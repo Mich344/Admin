@@ -309,7 +309,8 @@ $(window).load(function() {
 					</ul>
 					<div class="clearfix"> </div>
 					<div class="quantity">
-						<p class="qty"> cantidad: </p>  <input min="1" type="number" value="1" max="<?php echo $rowproducto['cantidad'] ?>" class="item_quantity"> <p> Existentes: <?php echo $rowproducto['cantidad'] ?> </p>
+						<p class="qty"> cantidad: </p>  <input min="1" type="number" value="1" max="<?php echo $rowproducto['cantidad'] ?>" class="item_quantity">
+						
 					</div>
 					<div class="btn_form">
 						<a href="#" class="add-cart item_add">ADD TO CART</a>	
