@@ -18,13 +18,31 @@
 			<small>loremp jhrf qreb </small>
 		</h3>
 	      <div class="description"></div>
+		<p>loremp jgref qraeb </p>
 	      <div class="size"></div>
+		<h4> Tallas </h4>
+		<ul>
+			<li> 30 </li>
+			<li> 35 </li>
+			<li> 40 </li>
+			<li> 42 </li>
+			<li> 45 </li>
+			
+		</ul>
 	      <div class="buy"></div>
+		<div class="price">
+			<sup>$</sup>
+			<span>159.<small>55</small></span>
+			
+		</div>
+               <div class="btn">
+		       <a href="#">Comprar</a>
       
       
       
-      
-
+                    </div>
+	      </div>
+	</div>
     </div>
 
  <!-- Paypal Pay Option -->
