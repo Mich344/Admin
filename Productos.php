@@ -75,9 +75,9 @@ else {
                       <td>
                         <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
 <!--                         <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a> -->
-                        <button class="btn btn-secondar btn-sm">
+                        <a> <button class="btn btn-secondar btn-sm">
                           <span class="fa fa-power-off"> </span> Activar 
-                        </button>
+                          </button> </a>
                       </td>
                     </tr>
                   <?php
