@@ -331,7 +331,6 @@ $modulo = $_REQUEST['modulo'] ?? '';
     <strong>SportsWearline &copy; 2015-2022 <a href="index1.php" target="_blank" style="color:white">Tienda Virtual Aqui.</a></strong>
     <div class="float-right d-none d-sm-inline-block">
       <b style="color:red">SportsWearline</b>
-      <p>Lorem </p>
     </div>
   </footer>
 </body>
