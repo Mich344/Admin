@@ -22,6 +22,30 @@ else {
   }
 }
 ?>
+<!-- ACTUALIZAR  -->
+<?php
+include_once "Basedata.php";
+$con = mysqli_connect($host, $user, $pasword, $db);
+if(isset($_REQUEST['IdEstado'])){
+$Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado']??''); 
+$query = "UPDATE productos SET estado = '1' WHERE productos.Id = '".$Id."';";
+$res = mysqli_query($con, $query);
+if ($res){
+  ?>
+<div class="alert alert-warning float-right" role="alert">
+     El producto ha sido cambiado de estado con exito.
+    </div>
+<?php
+  }
+else {
+?>
+    <div class="alert alert-danger float-right" role="alert">
+      Error, no se pudo cambiar el estado del producto <?php echo mysqli_error ($con); ?> 
+    </div>
+    <?php
+  }
+}
+?>
 
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -59,7 +83,7 @@ else {
                 <?php
                   include_once "Basedata.php";
                    $con = mysqli_connect($host, $user, $pasword, $db);
-                    $query = "SELECT Id, nombre, precio, cantidad, talla, descripcion, imagen FROM productos;";
+                    $query = "SELECT Id, nombre, precio, cantidad, talla, descripcion, imagen, estado FROM productos;";
                     $res = mysqli_query($con, $query);
                     
                     while ($row = mysqli_fetch_assoc($res)){
@@ -74,11 +98,22 @@ else {
                       <td> <center><?php echo "<img width='80' height='80' src='upload/".$row['imagen']."'>"?></center> </td>
                       <td>
                         <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
-<!--                         <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a> -->
-                        <a> <button class="btn btn-secondar btn-sm">
-                          <span class="fa fa-power-off"> </span> Activar 
-                          </button> </a>
+                        <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
+                        <a href="Panel.php?modulo=Productos&IdEstado= <?php echo $row['Id'] ?> " class="btn btn-danger"> <i class="btn btn-danger"></i></a>
                       </td>
+                        <?php 
+                         if (isset($_REQUEST['guardar'])){
+                          include_once "Basedata.php";
+                          // Llamar la base de datos desde el include_once.
+                          $con = mysqli_connect($host, $user, $pasword, $db);
+                         }
+                        if ($row['estado'] == 1) {
+                                echo '<td><button class="btn btn-success btn-xs">Activado</button></td>';
+                              }
+                              else { 
+                                echo '<td><button class="btn btn-danger btn-xs">Desactivado</button></td>';
+                              }
+                              ?>
                     </tr>
                   <?php
                   }
