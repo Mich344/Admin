@@ -91,8 +91,8 @@ $modulo = $_REQUEST['modulo'] ?? '';
       <!-- Brand Logo -->
       <a href="#" class="brand-link">
         <!--poner logo-->
-        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">SportsWearline</span>
+        <img src="images/1.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light" style="color:red"><b>Sports</b></span><b style="color:white">Wearline</b>
       </a>
 
       <!-- Sidebar -->
@@ -135,7 +135,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
                   <a href="Panel.php?modulo=Estadisticas" class="nav-link <?php echo ($modulo == "Estadisticas" || $modulo == "") ? "active" : " "; ?>">
-                    <i class="fas fa-chart-bar  nav-icon  "></i>
+                  <i class="fa fa-signal" aria-hidden="true"></i>
                     <p>Estadisticas</p>
                   </a>
                 </li>
@@ -144,7 +144,25 @@ $modulo = $_REQUEST['modulo'] ?? '';
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
                   <a href="Panel.php?modulo=Usuarios" class="nav-link <?php echo ($modulo == "Usuarios" || $modulo == "CrearU") || $modulo == "EditarU" ? "active" : " "; ?>">
-                    <i class="far fa-user nav-icon"></i>
+                  <i class="fa fa-id-card" aria-hidden="true"></i>
+                    <p>Administradores</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <!-- Al dar a un clic de usuario o ventas se active -->
+                  <a href="Panel.php?modulo=Usuarios" class="nav-link <?php echo ($modulo == "Usuarios" || $modulo == "CrearU") || $modulo == "EditarU" ? "active" : " "; ?>">
+                  <i class="fa fa-address-card" aria-hidden="true"></i>
+                    <p>Empleados</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <!-- Al dar a un clic de usuario o ventas se active -->
+                  <a href="Panel.php?modulo=Usuarios" class="nav-link <?php echo ($modulo == "Usuarios" || $modulo == "CrearU") || $modulo == "EditarU" ? "active" : " "; ?>">
+                  <i class="fa fa-users" aria-hidden="true"></i>
                     <p>Usuarios</p>
                   </a>
                 </li>
@@ -152,10 +170,18 @@ $modulo = $_REQUEST['modulo'] ?? '';
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
+                  <a href="Panel.php?modulo=Usuarios" class="nav-link <?php echo ($modulo == "Usuarios" || $modulo == "CrearU") || $modulo == "EditarU" ? "active" : " "; ?>">
+                  <i class="fa fa-truck" aria-hidden="true"></i>  
+                    <p>Proveedores</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <!-- Al dar a un clic de usuario o ventas se active -->
                   <a href="Panel.php?modulo=Productos" class="nav-link <?php echo ($modulo == "Productos" || $modulo == "EditarP" || $modulo == "CrearP") ? "active" : " "; ?> ">
-
-                    <i class="fa fa-shopping-bag nav-icon" aria-hidden="true"></i>
-                    <p>Productos</p>
+                  <i class="fa fa-suitcase" aria-hidden="true"></i>
+                        <p>Productos</p>
                   </a>
                 </li>
               </ul>
@@ -163,8 +189,8 @@ $modulo = $_REQUEST['modulo'] ?? '';
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
                   <a href="Panel.php?modulo=Ventas" class="nav-link <?php echo ($modulo == "Ventas" || $modulo == "") ? "" : " "; ?> ">
-
-                    <i class="fa fa-table nav-icon" aria-hidden="true"></i>
+                  <i class="fa fa-archive" aria-hidden="true"></i> 
+                  
                     <p>Ventas</p>
                   </a>
                 </li>
@@ -305,6 +331,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
     <strong>SportsWearline &copy; 2015-2022 <a href="index1.php" target="_blank" style="color:white">Tienda Virtual Aqui.</a></strong>
     <div class="float-right d-none d-sm-inline-block">
       <b style="color:red">SportsWearline</b>
+      <p>Lorem </p>
     </div>
   </footer>
 </body>
