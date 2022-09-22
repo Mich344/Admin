@@ -8,8 +8,14 @@ $con =mysqli_connect($host,$user,$pasword,$db);
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
   $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
   $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? '');
-  $imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');  
-  $query = "UPDATE productos SET nombre = '".$nombre."' ,precio = '".$precio."' ,cantidad = '".$cantidad."' ,talla = '".$talla."' ,descripcion = '".$descripcion."' ,imagen = '".$imagen."' WHERE Id = '".$Id."';";
+  //$imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');  
+  $name_image = $_FILES['imagen']['name'];
+  $type_image = $_FILES['imagen']['type'];
+  $name_size = $_FILES['']['size'];
+  $destino = $_SERVER['DOCUMENT_ROOT'] . '/Admin/upload/';
+  $ruta = $destino.$name_image;
+  move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
+  $query = "UPDATE productos SET nombre = '".$nombre."' ,precio = '".$precio."' ,cantidad = '".$cantidad."' ,talla = '".$talla."' ,descripcion = '".$descripcion."' ,imagen = '".$name_image."' WHERE Id = '".$Id."';";
   //Restultados 
   $res = mysqli_query($con, $query);
   if($res){
@@ -56,7 +62,7 @@ $row = mysqli_fetch_assoc($res);
 
             <!-- /.card-header -->
             <div class="card-body">
-              <form action="Panel.php?modulo=EditarP" method="post">
+              <form action="Panel.php?modulo=EditarP" method="post"  enctype="multipart/form-data">
                 
                 <div class="for-group">
                   <label>Nombre</label>
@@ -102,4 +108,3 @@ $row = mysqli_fetch_assoc($res);
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
