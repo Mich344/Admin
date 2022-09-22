@@ -122,7 +122,7 @@ else {
                       <td><?php echo $row['talla'] ?></td>
                       <td><?php echo $row['descripcion'] ?></td>
                       <td> <center><?php echo "<img width='80' height='80' src='/Admin/upload/".$row['imagen']."'>"?></center> </td>
-                      <?php 
+                      <center><?php 
                          if (isset($_REQUEST['guardar'])){
                           include_once "Basedata.php";
                           // Llamar la base de datos desde el include_once.
@@ -134,7 +134,7 @@ else {
                               else { 
                                 echo '<td><button class="btn btn-danger btn-xs">Desactivado</button></td>';
                               }
-                              ?>
+                              ?></center>
                       <td>
                         <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
                         <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
