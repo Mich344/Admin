@@ -31,7 +31,7 @@ $con = mysqli_connect($host, $user, $pasword, $db);
                     <th>Id</th>
                     <th>Email</th>                  
                     <th>Nombre</th>
-                     <th>Apellido</th>
+                    <th>Apellido</th>
                     <th>Cuiudad</th>
                     <th>Direccion</th>
                     <th>Telefono</th>
@@ -45,16 +45,16 @@ $con = mysqli_connect($host, $user, $pasword, $db);
                 <?php
                   include_once "Basedata.php";
                    $con = mysqli_connect($host, $user, $pasword, $db);
-                    $query = "SELECT Id, email, nombre, direccion, apellido, ciudad, telefono, tip_doc, num_doc, fech_nac from usuario;";
+                    $query = "SELECT Id, nombre , apellido, email, direccion, ciudad, telefono, tip_doc, num_doc, fech_nac from administradores;";
                     $res = mysqli_query($con, $query);
                     while ($row = mysqli_fetch_assoc($res)){
                    
                   ?>
                   <tr>
                      <td><?php echo $row['Id']?></td>
-                     <td><?php echo $row['email'] ?></td>
-                      <td><?php echo $row['nombre'] ?></td> 
-                      <td><?php echo $row['direccion'] ?></td> 
+                     <td><?php echo $row['nombre'] ?></td>
+                      <td><?php echo $row['apellido'] ?></td> 
+                      <td><?php echo $row['email'] ?></td> 
                       <td><?php echo $row['apellido'] ?></td>
                       <td><?php echo $row['ciudad'] ?></td>
                       <td><?php echo $row['telefono'] ?></td>
