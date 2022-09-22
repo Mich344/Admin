@@ -10,13 +10,16 @@ if ($res){
 
 <div class="alert alert-warning float-right" role="alert">
      El producto ha sido borrado con exito.
-    </div>
+     <?php
+     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=El productoha sido borrado con exito" />';
+    ?>
+     </div>
 <?php
   }
 else {
 ?>
     <div class="alert alert-danger float-right" role="alert">
-      Error, no se pudo borrar el producto <?php echo mysqli_error ($con); ?> 
+       Error, no se pudo borrar el producto <?php echo mysqli_error ($con); ?> 
     </div>
     <?php
   }
@@ -24,6 +27,7 @@ else {
 ?>
 <!-- ACTUALIZAR  -->
 <?php
+
 include_once "Basedata.php";
 $con = mysqli_connect($host, $user, $pasword, $db);
 if(isset($_REQUEST['IdEstado1'])){
@@ -70,7 +74,6 @@ else {
   }
 }
 ?>
-
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
@@ -108,7 +111,7 @@ else {
                 <tbody>
                 <?php
                   include_once "Basedata.php";
-                   $con = mysqli_connect($host, $user, $pasword, $db);
+                    $con = mysqli_connect($host, $user, $pasword, $db);
                     $query = "SELECT Id, nombre, precio, cantidad, talla, descripcion, imagen, estado FROM productos;";
                     $res = mysqli_query($con, $query);
                     
@@ -122,24 +125,30 @@ else {
                       <td><?php echo $row['talla'] ?></td>
                       <td><?php echo $row['descripcion'] ?></td>
                       <td> <center><?php echo "<img width='80' height='80' src='/Admin/upload/".$row['imagen']."'>"?></center> </td>
-                     <center> <?php 
+                     <?php 
                          if (isset($_REQUEST['guardar'])){
                           include_once "Basedata.php";
                           // Llamar la base de datos desde el include_once.
                           $con = mysqli_connect($host, $user, $pasword, $db);
                          }
                         if ($row['estado'] == 1) {
-                              echo '<td><button class="btn btn-success btn-xs">Activado</button></td>';
+                          ?>
+                              <center><td><button class="btn btn-success btn-xs">Activo</button></td></center>
+
+                              <?php
                               }
+
                               else { 
-                              echo '<td><button class="btn btn-danger btn-xs">Desactivado</button></td>'; 
+                                ?>
+                                  <center> <td><button class="btn btn-danger btn-xs">Inactivo</button></td> </center>
+                              <?php
                               }
                               ?>
-                       <td> </center>
-                        <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
-                        <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
-                        <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-danger"></a> 
-                        <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-success"></a>
+                       <td>
+                          <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
+                          <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
+                          <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-lg"> <i class="fa fa-toggle-off" aria-hidden="true"></i></</a>
+                          <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-lg"> <i class="fa fa-toggle-on" aria-hidden="true"></i></</a>
                       </td>
                     </tr>
                   <?php
