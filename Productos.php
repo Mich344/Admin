@@ -9,19 +9,14 @@ if ($res){
   ?>
 
 <div class="alert alert-warning float-right" role="alert">
-     El producto ha sido borrado con exito.
      <?php
-     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=El productoha sido borrado con exito" />';
+     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=El producto ha sido borrado con exito" />';
     ?>
      </div>
 <?php
   }
 else {
-?>
-    <div class="alert alert-danger float-right" role="alert">
-       Error, no se pudo borrar el producto <?php echo mysqli_error ($con); ?> 
-    </div>
-    <?php
+     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=No se pudo borrar el producto ' .  mysqli_error ($con) . ' " />';
   }
 }
 ?>
@@ -35,17 +30,13 @@ $Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado1']??'');
 $query = "UPDATE productos SET estado = '1' WHERE productos.Id = '".$Id."';";
 $res = mysqli_query($con, $query);
 if ($res){
-  ?>
-<div class="alert alert-warning float-right" role="alert">
-     El producto ha sido cambiado de estado con exito.
-    </div>
-<?php
+echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=El productoha sido cambiado de estado con exito" />';
   }
 else {
 ?>
-    <div class="alert alert-danger float-right" role="alert">
-      Error, no se pudo cambiar el estado del producto <?php echo mysqli_error ($con); ?> 
-    </div>
+     <?php
+     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=No se pudo cambiar de estado el producto ' .  mysqli_error ($con) . ' " />';
+    ?>
     <?php
   }
 }
@@ -59,18 +50,10 @@ $Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado2']??'');
 $query = "UPDATE productos SET estado = '0' WHERE productos.Id = '".$Id."';";
 $res = mysqli_query($con, $query);
 if ($res){
-  ?>
-<div class="alert alert-warning float-right" role="alert">
-     El producto ha sido cambiado de estado con exito.
-    </div>
-<?php
+  echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=El productoha sido cambiado de estado con exito" />';
   }
 else {
-?>
-    <div class="alert alert-danger float-right" role="alert">
-      Error, no se pudo cambiar el estado del producto <?php echo mysqli_error ($con); ?> 
-    </div>
-    <?php
+echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=No se pudo cambiar de estado el producto ' .  mysqli_error ($con) . ' " />';
   }
 }
 ?>
