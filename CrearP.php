@@ -9,16 +9,17 @@
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
   $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
   $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? ''); 
-  $imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');
+ // $imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');
 
-// $name_image = $_FILES['imagen']['name'];
-// $type_image = $_FILES['imagen']['type'];
-// $name_size = $_FILES['']['size'];
-// $destino = $_SERVER['DOCUMENT_ROOT'] . '/upload/';
-// $ruta = $destino.$name_image;
-// move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
+//print_r($_REQUEST);
+$name_image = $_FILES['imagen']['name'];
+$type_image = $_FILES['imagen']['type'];
+$name_size = $_FILES['']['size'];
+$destino = $_SERVER['DOCUMENT_ROOT'] . '/Admin/upload/';
+$ruta = $destino.$name_image;
+move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
  
-  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$imagen."');";
+  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$name_image."');";
   //resultados
   $res = mysqli_query($con, $query);
   if($res){
@@ -56,7 +57,7 @@
           
             <!-- /.card-header -->
             <div class="card-body">
-              <form action="Panel.php?modulo=CrearP" method="post">
+              <form action="Panel.php?modulo=CrearP" method="post" enctype="multipart/form-data">
                 <div class="for-group">
                   <label>Nombre</label>
                   <input type="text" name="nombre"  class="form-control" required = "" >
@@ -77,6 +78,31 @@
                   <label>Descripción</label>
                   <input type="text" name="descripcion"  class="form-control"  required = "" >
                 </div>
+                <div class="photo">
+                  <label>Imagen(es)</label>
+                  <input id="imagen" class="form-control-file" type="file" name="imagen" multiple="multiple" required = "" >
+                </div>
+                <div class="for-group">
+                    <br>
+                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
+                </div>
+                
+              </form>
+            </div>
+            <!-- /.card -->
+
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+       <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<script src="js/imagenproductos.js"></script>
+
                 <div class="photo">
                   <label>Imagen(es)</label>
                   <input id="imagen" class="form-control-file" type="file" name="imagen" multiple="multiple" required = "" >
