@@ -1,4 +1,8 @@
 <div class="container">
+  <?php 
+  session_start();
+  //var_dump($_SESSION);
+  ?>
   <div class="redes-container">
     <ul class="navbar-nav ml-auto">
       <ul>
@@ -7,14 +11,7 @@
             <i class="far fa-user"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <div class="dropdown-divider"></div>
-            <a href="signin.php" class="dropdown-item">
-              <i class="fas fa-envelope mr-2"></i> Ingresar
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="register.php" class="dropdown-item">
-              <i class="fas fa-users mr-2"></i> Registrarse
-            </a>
+            
             <?php
             include_once "Basedata.php";
             //isset para verificar 
@@ -31,12 +28,17 @@
             <?php
             } else {
             ?>
-              <div class="alert alert-danger" role="alert"></div>
-              <strong>ERROR</strong>
+              <div class="dropdown-divider"></div>
+            <a href="signin.php" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> Ingresar
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="register.php" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> Registrarse
+            </a>
             <?php
             }
             ?>
-
         </li>
         </a> </li>
         <li><a href="https://www.facebook.com/Sportswearline-103380179122013" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>

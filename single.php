@@ -37,6 +37,8 @@ $(window).load(function() {
 <script src="js/simpleCart.min.js"></script>
 <!--cart-->
 <!--web-fonts-->
+<!--libreria iconos redes sociales-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link href='//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'><link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Fascinate' rel='stylesheet' type='text/css'>
@@ -45,8 +47,6 @@ $(window).load(function() {
 <link href="css/animate.min.css" rel="stylesheet"> 
 <script src="js/wow.min.js"></script>
 <script>
-<!--libreria iconos redes sociales-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
  new WOW().init();
 </script>
 <!--//animation-effect-->

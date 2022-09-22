@@ -4,7 +4,7 @@
         <h3 class="title">Productos <span> Nuevos</span></h3>
         <p>Productos subidos recientemente </p>
       </div>
-      <div class="new-info">
+      <div class="new-info row">
         <!-- INCLUIMOS LA BASE DE DATOS AL INDEX -->
         <?php include_once "Basedata.php";
         /*CONECTA LA BASE DE DATOS (BASEDATA) CON EL LOCALHOST, USUARIO, CONTRASEÑA Y DB*/
