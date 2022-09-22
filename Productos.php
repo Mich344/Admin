@@ -26,9 +26,33 @@ else {
 <?php
 include_once "Basedata.php";
 $con = mysqli_connect($host, $user, $pasword, $db);
-if(isset($_REQUEST['IdEstado'])){
-$Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado']??''); 
+if(isset($_REQUEST['IdEstado1'])){
+$Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado1']??''); 
 $query = "UPDATE productos SET estado = '1' WHERE productos.Id = '".$Id."';";
+$res = mysqli_query($con, $query);
+if ($res){
+  ?>
+<div class="alert alert-warning float-right" role="alert">
+     El producto ha sido cambiado de estado con exito.
+    </div>
+<?php
+  }
+else {
+?>
+    <div class="alert alert-danger float-right" role="alert">
+      Error, no se pudo cambiar el estado del producto <?php echo mysqli_error ($con); ?> 
+    </div>
+    <?php
+  }
+}
+?>
+<?php
+include_once "Basedata.php";
+$con = mysqli_connect($host, $user, $pasword, $db);
+
+if(isset($_REQUEST['IdEstado2'])){
+$Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado2']??''); 
+$query = "UPDATE productos SET estado = '0' WHERE productos.Id = '".$Id."';";
 $res = mysqli_query($con, $query);
 if ($res){
   ?>
@@ -66,6 +90,7 @@ else {
           <div class="card">
             <!-- /.card-header -->
             <div class="card-body">
+             <!--  <?php //var_dump($_SERVER) ?> -->
               <table id="tablaProductos" class="table table-bordered table-hover">
                 <thead>
                   <tr>
@@ -95,11 +120,12 @@ else {
                       <td><?php echo $row['cantidad'] ?></td>
                       <td><?php echo $row['talla'] ?></td>
                       <td><?php echo $row['descripcion'] ?></td>
-                      <td> <center><?php echo "<img width='80' height='80' src='upload/".$row['imagen']."'>"?></center> </td>
+                      <td> <center><?php echo "<img width='80' height='80' src='/Admin/upload/".$row['imagen']."'>"?></center> </td>
                       <td>
                         <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
                         <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
-                        <a href="Panel.php?modulo=Productos&IdEstado= <?php echo $row['Id'] ?> " class="btn btn-danger"> <i class="btn btn-danger"></i></a>
+                        <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-danger"></a> 
+                        <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-success"></a>
                       </td>
                         <?php 
                          if (isset($_REQUEST['guardar'])){
