@@ -24,7 +24,7 @@ move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
   $res = mysqli_query($con, $query);
   if($res){
     
-    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=Producto '. $_FILES['imagen']['name'] . '  creado correctamente" />';
+    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=Producto '. $nombre . '  creado correctamente" />';
   }
   else {
 ?>

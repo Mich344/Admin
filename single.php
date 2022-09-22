@@ -19,6 +19,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
 <!--//js-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Sportswearline - Producto </title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Modern Shoppe Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--//for-mobile-apps -->
+<!--Custom Theme files -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--//Custom Theme files -->
+<!--js-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<!--//js-->
 <!--flex slider-->
 <script defer src="js/jquery.flexslider.js"></script>
 <link rel="stylesheet" href="css/flexslider1.css" type="text/css" media="screen" />
@@ -293,7 +314,7 @@ $(window).load(function() {
 					<div class="flexslider">
 						<ul class="slides">
 							<li data-thumb="images/s1.jpg">
-								<div class="thumb-image"><?php $rowproducto['Id'] ?>"><?php echo "<img src='upload/".$rowproducto['imagen']."' data-imagezoom='true' class='img-responsive' alt=''>"?> </div>
+								<div class="thumb-image"><?php $rowproducto['Id'] ?><?php echo "<img src='/Admin/upload/".$rowproducto['imagen']."' data-imagezoom='true' class='img-responsive' alt=''>"?> </div>
 							</li> 
 						</ul>
 					</div>
@@ -415,4 +436,8 @@ $(window).load(function() {
     <script src="js/bootstrap.js"></script>
 </body>
 </html>
+
+
+
+
 
