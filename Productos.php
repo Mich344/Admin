@@ -101,6 +101,7 @@ else {
                     <th>Talla</th>
                     <th>Descripción</th>
                     <th>Imagen(es)</th>
+                    <th>Estado</th>
                     <th>Acciones <font size=2><a href="Panel.php?modulo=CrearP"> <i class="fa fa-cart-plus" aria-hidden="true"></i></a></font></th>
                   </tr>
                 </thead>
@@ -121,13 +122,7 @@ else {
                       <td><?php echo $row['talla'] ?></td>
                       <td><?php echo $row['descripcion'] ?></td>
                       <td> <center><?php echo "<img width='80' height='80' src='/Admin/upload/".$row['imagen']."'>"?></center> </td>
-                      <td>
-                        <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
-                        <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
-                        <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-danger"></a> 
-                        <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-success"></a>
-                      </td>
-                        <?php 
+                      <?php 
                          if (isset($_REQUEST['guardar'])){
                           include_once "Basedata.php";
                           // Llamar la base de datos desde el include_once.
@@ -140,6 +135,12 @@ else {
                                 echo '<td><button class="btn btn-danger btn-xs">Desactivado</button></td>';
                               }
                               ?>
+                      <td>
+                        <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
+                        <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
+                        <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-danger"></a> 
+                        <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-success"></a>
+                      </td>
                     </tr>
                   <?php
                   }
