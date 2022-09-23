@@ -60,18 +60,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
   </script>
   <!--//end-smooth-scrolling-->
-  <?
-  session_start();
-  session_regenerate_id(true);
-
-  if (isset($_REQUEST['accion']) && $_REQUEST['accion'] == "cerrar") {
-    session_destroy();
-    header("location: index1.php");
-  }
-  ?>
 </head>
 
 <body>
+<?php
+  if (isset($_REQUEST['accion']) && $_REQUEST['accion'] == "cerrar") {
+    session_start();
+    session_destroy();
+    $_REQUEST=[];
+    header("location: index1.php");
+  }
+  ?>
+
   <?php
   include_once "Basedata.php";
   $con = mysqli_connect($host, $user, $pasword, $db)
