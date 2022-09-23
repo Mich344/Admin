@@ -130,8 +130,8 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                        <td>
                           <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
                           <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
-                          <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-lg"> <i class="fa fa-toggle-off" aria-hidden="true"></i></</a>
-                          <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-lg"> <i class="fa fa-toggle-on" aria-hidden="true"></i></</a>
+                          <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:#6C2EB2;"> <i class="fa fa-toggle-off" aria-hidden="true"></i></</a>
+                          <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:#6C2EB2;"> <i class="fa fa-toggle-on" aria-hidden="true"></i></</a>
                       </td>
                     </tr>
                   <?php
