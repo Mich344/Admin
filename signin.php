@@ -81,6 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
       <div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
         <?php
+        
         if (isset($_REQUEST['login'])) {
           session_start();
           $email = $_REQUEST['email'] ?? '';
@@ -95,11 +96,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             $_SESSION['IdCliente'] = $row['Id'];
             $_SESSION['emailCliente'] = $row['email'];
             $_SESSION['nombreCliente'] = $row['nombre'];
-            header("location: index1.php?mensaje=Usuario registradro exitosamente");
+            header("location: index1.php?IdCliente=".$row['Id']."&mensaje=Usuario registradro exitosamente");
           } else {
         ?>
-            <div class="alert alert-danger" role="alert"></div>
-            <strong>ERROR</strong>
+            <div class="alert alert-danger" role="alert"> <strong>ERROR</strong></div>
+           
         <?php
           }
         }
@@ -107,8 +108,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
           <form method="POST">
             <input type="text"  class="form-control" style="height:41px;" class="user" name="email" placeholder="Email" required="">
+
             <input type="password"  class="form-control" style="height:41px;" name="pasword" class="lock" placeholder="Password">
+
             <input type="submit" name="login" value="Ingresar">
+
             <div class="forgot-grid">
               <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Recordar</label>
               <div class="forgot">
@@ -159,3 +163,4 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </body>
 
 </html>
+
