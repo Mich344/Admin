@@ -400,7 +400,10 @@ $(window).load(function() {
 				</div>
 				<div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".9s">
 					<h2 style="color:#B2051F"><strong>Disfruta comprando tus productos favoritos </strong></h2>
-					
+					<form>
+						<input type="text" placeholder="Escribenos tu opinion aqui" required="">
+						<input style="color:black" type="submit" value="Enviar">
+					</form
 				</div>
 				<div class="clearfix"></div>
 			</div>
