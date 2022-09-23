@@ -314,7 +314,7 @@ $(window).load(function() {
 					<div class="flexslider">
 						<ul class="slides">
 							<li data-thumb="images/s1.jpg">
-								<div class="thumb-image"><?php $rowproducto['Id'] ?>"><?php echo "<img src='upload/".$rowproducto['imagen']."' data-imagezoom='true' class='img-responsive' alt=''>"?> </div>
+								<div class="thumb-image"><?php $rowproducto['Id'] ?><?php echo "<img src='/Admin/upload/".$rowproducto['imagen']."' data-imagezoom='true' class='img-responsive' alt=''>"?> </div>
 							</li> 
 						</ul>
 					</div>
