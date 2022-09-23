@@ -17,9 +17,9 @@
               if ($row['estado'] == 1) {
               ?>
                 <div class="col-md-3 gallery-grid gallery-grid2 wow flipInY animated" data-wow-delay=".9s">
-                  <a href="single.php?modulo=single&Id=<?php echo $row['Id'] ?>"><?php echo "<img src='upload/" . $row['imagen'] . "' class='img-responsive' alt=''>" ?></a>
+                  <a href="single.php?modulo=single&Id=<?php echo $row['Id'] ?>"> <img <?php echo "src='/Admin/upload/" . $row['imagen'] . "'" ?> class='img-responsive' alt=''></a>
                   <div class="gallery-text simpleCart_shelfItem">
-                    <h5><a class="name" href="single.php"> <?php echo $row['nombre'] ?> </a></h5>
+                    <h5> <a class="name" href="single.php?modulo=single&Id=<?php echo $row['Id'] ?>"> <?php echo $row['nombre'] ?> </a> </h5>
                     <p><span class="item_price"><?php echo $row['precio'] ?></span></p>
                     <h4 class="sizes">Sizes: <a href="#"> s</a> - <a href="#">m</a> - <a href="#">l</a> - <a href="#">xl</a> </h4>
                     <ul>
@@ -36,3 +36,4 @@
       </div>
     </div>
   </div>
+
