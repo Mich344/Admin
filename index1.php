@@ -392,14 +392,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
   </div>
   <!--//trend-->
-  <!--gallery-->
-  <div class="gallery">
-    <div class="container">
-      <div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
-        <h3 class="title">Productos<span> Populares</span></h3>
-        <p>Productos más vendidos</p>
-      </div>
-      <div class="gallery-info">
+   class="gallery-info">
 
         <div class="clearfix"></div>
       </div>
