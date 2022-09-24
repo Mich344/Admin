@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-
+<?php
+    
+    include('index1.php');
 <!--trend-->
 <div class="trend wow zoomIn animated" data-wow-delay=".5s">
     <div class="container">
@@ -66,6 +68,7 @@
     </div>
   </div>
   <!--//trend-->
+    ?>
     
 </body>
 </html>
