@@ -132,11 +132,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-6 address-left wow fadeInLeft animated" data-wow-delay=".5s">
 					<div class="address-grid">
 						<h4 class="wow fadeIndown animated" data-wow-delay=".5s">CONTÁCTANOS</h4>
-						<form>
-							<input class="wow fadeIndown animated" data-wow-delay=".6s" type="text" placeholder="Nombre" required="">
-							<input class="wow fadeIndown animated" data-wow-delay=".7s" type="text" placeholder="Correo electronico" required="">
-							<input class="wow fadeIndown animated" data-wow-delay=".8s" type="text" placeholder="Asunto" required="">
-							<textarea class="wow fadeIndown animated" data-wow-delay=".8s" placeholder="Mensaje" required=""></textarea>
+						<form   action="https://formspree.io/f/xqkjqbaj"   method="POST">
+							<input class="wow fadeIndown animated" data-wow-delay=".6s" type="text" placeholder="Nombre" name="name"  required="">
+							<input class="wow fadeIndown animated" data-wow-delay=".7s" type="text" placeholder="Correo electronico"  name="email" required="">
+							<input class="wow fadeIndown animated" data-wow-delay=".8s" type="text" placeholder="Asunto" name="subject" required="">
+							<input class="wow fadeIndown animated" data-wow-delay=".8s" type="text" placeholder="mensaje" name="message" required="">
+							
+							
 							<input class="wow fadeIndown animated" data-wow-delay=".9s" type="submit" value="Enviar">
 						</form>
 					</div>
