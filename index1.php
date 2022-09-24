@@ -354,7 +354,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               </li>
               <li>
                 <div class="col-md-5 trend-left">
-                  <img src="images/k12.png" alt="" />
+                  <img src="images/2t.png" alt="" />
                 </div>
                 <div class="col-md-7 trend-right">
                   <h4>DESCUENTOS EN CAMISAS DEPORTIVAS <span>¡PARA TI!</span></h4>
