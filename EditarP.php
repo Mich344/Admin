@@ -8,14 +8,19 @@ $con =mysqli_connect($host,$user,$pasword,$db);
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
   $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
   $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? '');
-  //$imagen = mysqli_real_escape_string($con, $_REQUEST['imagen']?? '');  
-  $name_image = $_FILES['imagen']['name'];
-  $type_image = $_FILES['imagen']['type'];
-  $name_size = $_FILES['']['size'];
-  $destino = $_SERVER['DOCUMENT_ROOT'] . '/Admin/upload/';
-  $ruta = $destino.$name_image;
-  move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
-  $query = "UPDATE productos SET nombre = '".$nombre."' ,precio = '".$precio."' ,cantidad = '".$cantidad."' ,talla = '".$talla."' ,descripcion = '".$descripcion."' ,imagen = '".$name_image."' WHERE Id = '".$Id."';";
+  $resimagen = $_FILES['imagen']['name'];
+  if (empty($resimagen)){
+    $imagen = mysqli_real_escape_string($con, $_REQUEST['imagenname']?? '');
+    } else {
+      $imagen = $_FILES['imagen']['name'];
+      $type_image = $_FILES['imagen']['type'];
+      $name_size = $_FILES['imagen']['size'];
+      $destino = $_SERVER['DOCUMENT_ROOT'] . '/Admin/upload/';
+      $ruta = $destino.$imagen;
+      move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$imagen);
+    }
+  // ENRUTAR IMAGENES A LA CARPETA Y SUBIRLAS A LA DB  
+  $query = "UPDATE productos SET nombre = '".$nombre."' ,precio = '".$precio."' ,cantidad = '".$cantidad."' ,talla = '".$talla."' ,descripcion = '".$descripcion."' ,imagen = '".$imagen."' WHERE Id = '".$Id."';";
   //Restultados 
   $res = mysqli_query($con, $query);
   if($res){
@@ -85,9 +90,9 @@ $row = mysqli_fetch_assoc($res);
                   <input type="text" name="descripcion"  class="form-control" value="<?php echo $row['descripcion']?>">
                 </div>
                 <div class="photo">
-                  <label>Imagen(es)</label>
-                  <input type="text" name="imagenname"  class="form-control" value="<?php echo "'upload/".$row['imagen']."'"?>">
-                  <input type="file" name="imagen" class="form-control-file">
+                  <label>Imagen(es)</label> 
+                  <input type="text" name="imagenname"  class="form-control" value="<?php echo $row['imagen'] ?>">
+                  <input type="file" name="imagen" class="form-control">
                 </div>
                 <div class="for-group">
                     <br>
