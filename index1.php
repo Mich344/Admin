@@ -343,7 +343,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <!--//gallery-->
   <!--carrucel-->
 <?php
-include_once "carrucel.php"
+include_once "carrucel.php";
 ?>
   <!--carrucelend->
 
