@@ -392,7 +392,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
   </div>
   <!--//trend-->
-   class="gallery-info">
+   <class="gallery-info">
 
         <div class="clearfix"></div>
       </div>
