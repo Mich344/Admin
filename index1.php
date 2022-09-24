@@ -341,6 +341,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
   </div>
   <!--//gallery-->
+  <!--carrucel-->
+<?php
+include_once "carrucel.php"
+?>
+  <!--carrucelend->
 
   <!--footer-->
   <div class="footer" style="background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)">
