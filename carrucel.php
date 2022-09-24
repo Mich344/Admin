@@ -9,8 +9,7 @@
 <body>
 <?php
     
-    include_once("index1.php");
-<!--trend-->
+    <!--trend-->
 <div class="trend wow zoomIn animated" data-wow-delay=".5s">
     <div class="container">
       <div class="trend-info">
