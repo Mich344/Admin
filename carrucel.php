@@ -9,7 +9,7 @@
 <body>
 <?php
     
-    <!--trend-->
+   
 <div class="trend wow zoomIn animated" data-wow-delay=".5s">
     <div class="container">
       <div class="trend-info">
@@ -66,7 +66,7 @@
       </div>
     </div>
   </div>
-  <!--//trend-->
+
     ?>
     
 </body>
