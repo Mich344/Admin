@@ -27,7 +27,7 @@
               </li>
               <li>
                 <div class="col-md-5 trend-left">
-                  <img src="images/2t.png" alt="" />
+                  <img src="images/t2.png" alt="" />
                 </div>
                 <div class="col-md-7 trend-right">
                   <h4>DESCUENTOS EN CAMISAS DEPORTIVAS <span>¡PARA TI!</span></h4>
