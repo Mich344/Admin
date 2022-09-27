@@ -24,7 +24,7 @@ $destino = $_SERVER['DOCUMENT_ROOT'] . '/Admin/upload/';
 $ruta = $destino.$name_image;
 move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
  
-  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$name_image."');";
+  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen, estado) VALUES ('".$nombre."' , '".$precio."' , '".$cantidad."' , '".$talla."' , '".$descripcion."' ,'".$name_image."', '1');";
   //resultados
   $res = mysqli_query($con, $query);
   if($res){
