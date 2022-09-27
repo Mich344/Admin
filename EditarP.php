@@ -6,8 +6,15 @@ $con =mysqli_connect($host,$user,$pasword,$db);
   $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre']?? '');
   $precio = mysqli_real_escape_string($con, $_REQUEST['precio']?? '');
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad']?? '');
-  $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
-  $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? '');
+   $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion']?? ''); 
+  // EN CASO DE QUE NO RECIBA RESPUESTA ALGUNA EL CAMPO DE TALLA 
+  $restalla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
+  if (empty($restalla)){
+    $talla  = "No aplica" ;
+  } else {
+    $talla = mysqli_real_escape_string($con, $_REQUEST['talla']?? '');
+  }
+  // EN CASO DE QUE NO SE QUIERA CAMBIAR LA IMAGEN
   $resimagen = $_FILES['imagen']['name'];
   if (empty($resimagen)){
     $imagen = mysqli_real_escape_string($con, $_REQUEST['imagenname']?? '');
