@@ -60,12 +60,6 @@
                                         <input type="email" class="form-control" value="AGREGAR">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="tel" class="col-2">Apellidos</label>
-                                    <div class="col-8">
-                                        <input type="text" class="form-control" value="AGREGAR">
-                                    </div>
-                                </div>
                                 <div class="form-group text-center">
                                     <button class="btn btn-info">Actualizar</button>
                                     <button class="btn btn-danger">Cancelar</button>
