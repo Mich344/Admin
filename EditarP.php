@@ -99,7 +99,7 @@ $row = mysqli_fetch_assoc($res);
                 <div class="photo">
                   <label>Imagen(es)</label> 
                   <input type="text" name="imagenname"  class="form-control" value="<?php echo $row['imagen'] ?>">
-                  <input type="file" name="imagen" class="form-control">
+                  <input type="file" name="imagen" class="form-control"  accept="image/png, image/jpg, image/jpeg, image/pjpeg">
                 </div>
                 <div class="for-group">
                     <br>
