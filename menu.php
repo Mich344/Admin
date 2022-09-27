@@ -20,6 +20,9 @@
               <a href="index1.php?modulo=usuario" class="dropdown-item">
                 <i class="fas fa-user text-primary mr-2"></i> Bienvenido <?php echo $_SESSION['nombreCliente'] ?>
               </a>
+              <a href="editarperfil.php" class="dropdown-item">
+                <i class="fas fa-user-edit"></i> Editar perfil
+              </a>
               <form action="index1.php?accion=cerrar" method="post">
                 <button name="accion" class="btn btn-danger dropdown-item mr-2" type="submit" value="cerrar">
                   <i class="fa fa-power-off"></i>Cerrar sesion
