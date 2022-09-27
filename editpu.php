@@ -48,6 +48,12 @@
                                         <input type="text" class="form-control" value="AGREGAR">
                                     </div>
                                 </div>
+                                 <div class="form-group row">
+                                    <label for="tel" class="col-2">Apellidos</label>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" value="AGREGAR">
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <label for="email" class="col-2"> Email </label>
                                     <div class="col-8">
@@ -55,9 +61,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="tel" class="col-2"> Telefono </label>
+                                    <label for="tel" class="col-2">Apellidos</label>
                                     <div class="col-8">
-                                        <input type="tel" class="form-control" value="AGREGAR">
+                                        <input type="text" class="form-control" value="AGREGAR">
                                     </div>
                                 </div>
                                 <div class="form-group text-center">
@@ -72,19 +78,19 @@
                         <div class="col-md-6 offset-md-3">
                             <h3 class="text-center">Cambiar contraseña</h3>
                             <div class="form-group row">
-                                <label for="contrasenia" class="col-4">Contraseña actual</label>
+                                <label for="contraseña" class="col-4">Contraseña actual</label>
                                 <div class="col-8">
                                     <input type="password" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="ncontrasenia" class="col-4">Nueva contraseña</label>
+                                <label for="contraseña" class="col-4">Nueva contraseña</label>
                                 <div class="col-8">
                                     <input type="password" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="ncontrasenia" class="col-4">Confirmar contraseña</label>
+                                <label for="contraseña" class="col-4">Confirmar contraseña</label>
                                 <div class="col-8">
                                     <input type="password" class="form-control">
                                 </div>
@@ -100,20 +106,26 @@
                         <div class="col-md-6 offset-md-3">
                             <h3 class="text-center">Datos de envio</h3>
                             <div class="form-group row">
-                                <label for="contrasenia" class="col-4">Direccion</label>
+                                <label for="direccion" class="col-4">Direccion</label>
                                 <div class="col-8">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="ncontrasenia" class="col-4">Ciudad</label>
+                                <label for="ciudad" class="col-4">Ciudad</label>
                                 <div class="col-8">
                                   <!-- SE SUPONE QUE AQUI DEBE DE HABER UNA LISTA DE LAS CIUDADES -->
                                     <input type="ciudad" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="ncontrasenia" class="col-4">Barrio</label>
+                                <label for="telefono" class="col-4">Telefono</label>
+                                <div class="col-8">
+                                    <input type="tel" class="form-control">
+                                </div>
+                            </div>
+                             <div class="form-group row">
+                                <label for="contraseña" class="col-4">No se que más xd</label>
                                 <div class="col-8">
                                     <input type="text" class="form-control">
                                 </div>
