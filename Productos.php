@@ -86,6 +86,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                     <th>Cantidad</th>
                     <th>Talla</th>
                     <th>Descripción</th>
+                    <th>Proveedor</th>
                     <th>Imagen(es)</th>
                     <th>Estado</th>
                     <th>Acciones <font size=2><a href="Panel.php?modulo=CrearP"> <i class="fa fa-cart-plus" aria-hidden="true"></i></a></font></th>
