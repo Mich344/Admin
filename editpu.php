@@ -113,7 +113,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="ncontrasenia" class="col-4">No se que más xd</label>
+                                <label for="ncontrasenia" class="col-4">Barrio</label>
                                 <div class="col-8">
                                     <input type="text" class="form-control">
                                 </div>
