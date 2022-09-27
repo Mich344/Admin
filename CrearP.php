@@ -85,7 +85,7 @@ move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
                 </div>
                 <div class="photo">
                   <label>Imagen(es)</label>
-                  <input id="imagen" class="form-control-file" type="file" name="imagen" multiple="multiple" required = "" >
+                  <input id="imagen" class="form-control-file" type="file" name="imagen"  accept="image/png, image/jpg, image/jpeg, image/pjpeg " required = "" >
                 </div>
                 <div class="for-group">
                     <br>
@@ -107,17 +107,6 @@ move_uploaded_file($_FILES['imagen']['tmp_name'], $destino.$name_image);
 </div>
 <!-- /.content-wrapper -->
 <script src="js/imagenproductos.js"></script>
-
-                <div class="photo">
-                  <label>Imagen(es)</label>
-                  <input id="imagen" class="form-control-file" type="file" name="imagen"  accept="image/png, image/jpg, image/jpeg, image/pjpeg "  required = "" >
-                </div>
-                <div class="for-group">
-                    <br>
-                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
-                </div>
-                
-              </form>
             </div>
             <!-- /.card -->
 
