@@ -108,6 +108,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                       <td><?php echo $row['cantidad'] ?></td>
                       <td><?php echo $row['talla'] ?></td>
                       <td><?php echo $row['descripcion'] ?></td>
+                      <td><?php echo "No esta hecho" ?></td>
                       <td> <center><?php echo "<img width='80' height='80' src='/Admin/upload/".$row['imagen']."'>"?></center> </td>
                      <?php 
                          if (isset($_REQUEST['guardar'])){
