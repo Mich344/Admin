@@ -6,7 +6,6 @@ body{
 }
 body a{
 	transition: 0.5s all;
-	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
 	-o-transition: 0.5s all;
 	-ms-transition: 0.5s all;
@@ -1451,7 +1450,7 @@ h4.panel-title a {
 }
 .panel-body {
 	padding: 15px;
-	color: #000000;
+	color: #fff;
 	line-height: 1.8em;
 	font-size: 1em;
 }
