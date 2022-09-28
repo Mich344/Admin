@@ -20,7 +20,7 @@
               <a href="index1.php?modulo=usuario" class="dropdown-item">
                 <i class="fas fa-user text-primary mr-2"></i> Bienvenido <?php echo $_SESSION['nombreCliente'] ?>
               </a>
-              <a href="editarperfil.php" class="dropdown-item">
+              <a href="editup.php" class="dropdown-item">
                 <i class="fas fa-user-edit"></i> Editar perfil
               </a>
               <form action="index1.php?accion=cerrar" method="post">
