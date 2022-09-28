@@ -123,7 +123,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<p>la mejor ropa es la de<strong> SPORTSWEARLINE</strong> </p>
 			</div>
 			<div class="about-info">
-				<p>La empresa <strong>SPORTSWEARLINE </strong> nacio con la intension de llegar a todo tipo de personas especialmente para insentivarlas a ser deporte con productos de buena calidad y comoda para hacer todo tipo de ejercicio. ofrecemos una gran variedad de productos para los deportistas y personas interesadas en ejercitarse.</p>
+				<p>La empresa <strong>SPORTSWEARLINE </strong> nacio con la intension de llegar a todo tipo de personas especialmente para insentivarlas a hacer deporte con productos de buena calidad y comoda para hacer todo tipo de ejercicio. ofrecemos una gran variedad de productos para los deportistas y personas interesadas en ejercitarse.</p>
 				<h4>Mas Acerca De Nosotros </h4>
 				<p> Nos enfocamos en ofrecer productos una muy buena calidad, funcionales y con diseños que se adapten al estilo de cada persona. Nuestros diseños estan alineados con la innovacion y las tendecias en el momento para que las personas se sientan con estilo y unicos.</p>
 			</div>
