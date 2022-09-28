@@ -140,20 +140,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<p style="color:white"><strong>SPORTSWEARLINE El mejor contenido para el deporte.</strong></p>
 				</div>
 				<div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".7s">
-					<h3  style="color:#B2051F"><strong>Popular</strong></h3>
+					<h3  style="color:#B2051F"><strong>Popular.</strong></h3>
 					<ul>
 						
 				
-					<li><a href="contact.php"  style="color:white"><strong>Contáctanos</strong></a></li>
-						<li><a href="faq.php"  style="color:white"><strong>Preguntas Frecuentes</strong></a></li>
+					<li><a href="contact.php"  style="color:white"><strong>Contáctanos.</strong></a></li>
+						<li><a href="faq.php"  style="color:white"><strong>Preguntas Frecuentes.</strong></a></li>
 			
 					</ul>
 				</div>
 				<div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".9s">
-					<h2 style="color:#B2051F"><strong>Disfruta comprando tus productos favoritos </strong></h2>
-					<p style="color:white;"><strong>Dejanos tu sugerencia en un comentario</stron></p>
+					<h2 style="color:#B2051F"><strong>Disfruta comprando tus productos favoritos. </strong></h2>
+					<p style="color:white;"><strong>Dejanos tu sugerencia en un comentario.</stron></p>
 					<form>
-						<input type="text" placeholder="Escribenos tu opinion aqui" required="">
+						<input type="text" placeholder="Escribenos tu opinion aqui." required="">
 						<input style="color:black" type="submit" value="Enviar">
 					</form>
 				</div>
