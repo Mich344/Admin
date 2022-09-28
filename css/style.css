@@ -1440,7 +1440,7 @@ input#amount {
 h4.panel-title a {
     font-size: 1.3em;
     text-transform: capitalize;
-    color: #00000;
+    color: #fff;
     display: block;
     text-decoration: none;
     padding: .6em 1.5em;
@@ -1456,7 +1456,7 @@ h4.panel-title a {
 	font-size: 1em;
 }
 .panel-default > .panel-heading {
-    
+    color:#fff;
    background: linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
     padding: 0;
 }
