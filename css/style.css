@@ -1450,14 +1450,14 @@ h4.panel-title a {
    background: linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
 }
 .panel-body {
-	font-size: 1em;
-    color: #000000;
+    font-size: 1em;
+    color: #000;
     padding-left: 1.8em;
     line-height: 1.8em;
 }
 .panel-default > .panel-heading {
     color:#fff;
-   background:
+   background:linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
     padding: 0;
 }
 /*--//single-page--*/
