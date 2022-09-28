@@ -1456,8 +1456,8 @@ h4.panel-title a {
     line-height: 1.8em;
 }
 .panel-default > .panel-heading {
-    color:#fff;
-   background:linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
+    color:#000;
+   background:#fff;
     padding: 0;
 }
 /*--//single-page--*/
