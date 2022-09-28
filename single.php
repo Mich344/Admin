@@ -365,10 +365,10 @@ $(window).load(function() {
 							</h4>
 						</div>
 						<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-							<div class="panel-body">
+							
 								<p style"color:white;">Para cualquier duda puedes contactarnos a nuestro correo o a nuestro número. Dirigete al siguiente link para que puedas accerder a ellos <a href="products.php"> este link 
 							</p>
-									</div>
+									
 						</div>
 					</div>
 				</div>
