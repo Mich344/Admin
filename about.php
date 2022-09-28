@@ -125,8 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="about-info">
 				<p>La empresa <strong>SPORTSWEARLINE </strong> nacio con la intension de llegar a todo tipo de personas especialmente para insentivarlas a ser deporte con productos de buena calidad y comoda para hacer todo tipo de ejercicio. ofrecemos una gran variedad de productos para los deportistas y personas interesadas en ejercitarse.</p>
 				<h4>Mas Acerca De Nosotros </h4>
-				<p> Nos enfocamos en ofrecerte productos de excelente calidad, funcionales y con diseños que se adaptan a tu estilo. Además, le apostamos a la innovación y estamos alineados con las nuevas tendencias que te acompañarán en el día a día.
-				 Generamos capacidades y herramientas en los niños para actuar ante situaciones de intimidación escolar a través de contenidos audiovisuales.</p>
+				<p> Nos enfocamos en ofrecer productos una muy buena calidad, funcionales y con diseños que se adapten al estilo de cada persona. Nuestros diseños estan alineados con la innovacion y las tendecias en el momento para que las personas se sientan con estilo y unicos.</p>
 			</div>
 		</div>
 	</div>
