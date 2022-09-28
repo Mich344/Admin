@@ -119,11 +119,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="about">
 		<div class="container">
 			<div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
-				<h3 class="title">Acerca de<span> Nosotros</span></h3>
-				<p>la mejor ropa es la de<strong> SPORTS WEARLINE</strong> </p>
+				<h3 class="title">Acerca de<span> SPORTSWEARLINE</span></h3>
+				<p>la mejor ropa es la de<strong> SPORTSWEARLINE</strong> </p>
 			</div>
 			<div class="about-info">
-				<p>La empresa <strong>SPORTS</strong>WEARLINE nacio con la vision de poder llegar a los diferentes tipos de persona para que al realizar las diferentes actividades deportivas de una manera mas comoda teniendo como principio la calidad. Esta empresa nacio debido a la necesidad de buscar mejores formas de desarrollar mejor su actividad deportiva  </p>
+				<p>La empresa <strong>SPORTSWEARLINE </strong> nacio con la vision de poder llegar a los diferentes tipos de persona para que al realizar las diferentes actividades deportivas de una manera mas comoda teniendo como principio la calidad. Esta empresa nacio debido a la necesidad de buscar mejores formas de desarrollar mejor su actividad deportiva  </p>
 				<p>En 2015,   vio el gran potencial en una fábrica de ropa deportiva , deciden hacer su negocio utilizando diferentes productos para crear una línea de camisas, pantalonetas y demas. No pasó mucho tiempo para que los diseños de <strong>SPORTS</strong>WEARLINE se convirtieran en una gran oferta en ropa deportiva comprometidos con la calidad .</p>
 				<h4>Mas Acerca De Nosotros </h4>
 				<p> Nos enfocamos en ofrecerte productos de excelente calidad, funcionales y con diseños que se adaptan a tu estilo. Además, le apostamos a la innovación y estamos alineados con las nuevas tendencias que te acompañarán en el día a día.
