@@ -120,7 +120,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
 				<h3 class="title">Acerca de<span> Nosotros</span></h3>
-				<p><strong>la mejor ropa es la de SPORTS</strong> WEARLINE </p>
+				<p>la mejor ropa es la de<strong> SPORTS WEARLINE</strong> </p>
 			</div>
 			<div class="about-info">
 				<p>La empresa <strong>SPORTS</strong>WEARLINE nacio con la vision de poder llegar a los diferentes tipos de persona para que al realizar las diferentes actividades deportivas de una manera mas comoda teniendo como principio la calidad. Esta empresa nacio debido a la necesidad de buscar mejores formas de desarrollar mejor su actividad deportiva  </p>
