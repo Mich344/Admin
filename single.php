@@ -346,7 +346,7 @@ $(window).load(function() {
 						<div class="panel-heading" role="tab" id="headingOne">
 							<h4 class="panel-title">
 								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-								  Description
+								  Description.
 								</a>
 							</h4>
 						</div>
@@ -360,7 +360,7 @@ $(window).load(function() {
 						<div class="panel-heading" role="tab" id="headingFour">
 							<h4 class="panel-title">
 								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-									help
+									Ayuda.
 								</a>
 							</h4>
 						</div>
