@@ -170,7 +170,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
-                  <a href="Panel.php?modulo=Usuarios" class="nav-link <?php echo ($modulo == "Usuarios" || $modulo == "CrearU") || $modulo == "EditarU" ? "active" : " "; ?>">
+                  <a href="Panel.php?modulo=provedores" class="nav-link <?php echo ($modulo == "provedores" || $modulo == "CrearU") || $modulo == "EditarU" ? "active" : " "; ?>">
                   <i class="fa fa-truck" aria-hidden="true"></i>  
                     <p>Proveedores</p>
                   </a>
