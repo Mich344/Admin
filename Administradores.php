@@ -38,7 +38,7 @@ $con = mysqli_connect($host, $user, $pasword, $db);
                     <th>Tip documento</th>
                     <th>Num documneto</th>
                     <th>Fech nacimiento</th>
-                     
+                     <th>Estado</th> 
                   </tr>
                 </thead>
 
