@@ -46,7 +46,7 @@ $con = mysqli_connect($host, $user, $pasword, $db);
                 <?php
                   include_once "Basedata.php";
                    $con = mysqli_connect($host, $user, $pasword, $db);
-                    $query = "SELECT Id, nombre , apellido, email, direccion, ciudad, telefono, tip_doc, num_doc, fech_nac from administradores;";
+                    $query = "SELECT Id, nombre , apellido, email, direccion, ciudad, telefono, tip_doc, num_doc, fech_nac, estado from administradores;";
                     $res = mysqli_query($con, $query);
                     while ($row = mysqli_fetch_assoc($res)){
                    
@@ -62,6 +62,7 @@ $con = mysqli_connect($host, $user, $pasword, $db);
                       <td><?php echo $row['tip_doc'] ?></td>
                       <td><?php echo $row['num_doc'] ?></td>
                       <td><?php echo $row['fech_nac'] ?></td>
+                     <td><?php echo $row['estado'] ?></td>
                     </tr>
                   <?php
                   }
