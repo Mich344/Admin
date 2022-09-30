@@ -3,7 +3,7 @@ include_once "Basedata.php";
 $con = mysqli_connect($host, $user, $pasword, $db);
 if(isset($_REQUEST['IdBorrar'])){
 $Id = mysqli_real_escape_string($con, $_REQUEST['IdBorrar']??''); 
-$query = "DELETE from usuario where Id= '".$Id."';";
+$query = "DELETE from provedores where Id= '".$Id."';";
 $res = mysqli_query($con, $query);
 if ($res){
   ?>
@@ -29,7 +29,7 @@ else {
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1><strong>Usuarios</strong></h1>
+          <h1><strong>Proveedoressss</strong></h1>
         </div>
 
       </div>
@@ -51,11 +51,11 @@ else {
                     <th>Id</th>
                     <th>Email</th>                  
                     <th>Nombre</th>
-                     <th>Apellido</th>
-                    <th>Cuiudad</th>
+                     <th>Apellidos</th>
+                    <th>Ciudad</th>
                     <th>Direccion</th>
                     <th>Telefono</th>
-                    <th>Tip documento</th>
+                    <th>Tipo documento</th>
                     <th>Num documneto</th>
                     <th>Fech nacimiento</th>
                    
@@ -70,22 +70,22 @@ else {
                 <?php
                   include_once "Basedata.php";
                    $con = mysqli_connect($host, $user, $pasword, $db);
-                    $query = "SELECT Id, email, nombre, direccion, apellido, ciudad, telefono, tip_doc, num_doc, fech_nac from usuario;";
+                    $query = "SELECT Id, Email, Nombre, Apellidos, Ciudad, Direccion, Telefono, Tipo documento, Num documento , Fech nacimiento from provedores;";
                     $res = mysqli_query($con, $query);
                     while ($row = mysqli_fetch_assoc($res)){
                    
                   ?>
                   <tr>
                      <td><?php echo $row['Id']?></td>
-                     <td><?php echo $row['email'] ?></td>
-                      <td><?php echo $row['nombre'] ?></td> 
-                      <td><?php echo $row['direccion'] ?></td> 
-                      <td><?php echo $row['apellido'] ?></td>
-                      <td><?php echo $row['ciudad'] ?></td>
-                      <td><?php echo $row['telefono'] ?></td>
-                      <td><?php echo $row['tip_doc'] ?></td>
-                      <td><?php echo $row['num_doc'] ?></td>
-                      <td><?php echo $row['fech_nac'] ?></td>
+                     <td><?php echo $row['Email'] ?></td>
+                      <td><?php echo $row['Nombre'] ?></td> 
+                      <td><?php echo $row['Apellidos'] ?></td> 
+                      <td><?php echo $row['Ciudad'] ?></td>  
+                      <td><?php echo $row['Direccion'] ?></td> 
+                      <td><?php echo $row['Telefono'] ?></td>                                                            
+                      <td><?php echo $row['Tipo documento'] ?></td>
+                      <td><?php echo $row['Num documento'] ?></td>
+                      <td><?php echo $row['Fech nacimiento'] ?></td>
                       <td>
                            <a href="Panel.php?modulo=EditarU&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
                         <a href="Panel.php?modulo=Usuarios&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
@@ -111,18 +111,3 @@ else {
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-
