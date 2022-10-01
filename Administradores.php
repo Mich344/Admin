@@ -9,20 +9,54 @@ if ($res){
   ?>
 
 <div class="alert alert-warning float-right" role="alert">
-     Administrador borrado con exito.
-    </div>
+     <?php
+     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=El Administrador ha sido borrado con exito" />';
+    ?>
+     </div>
 <?php
   }
 else {
+     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=No se pudo borrar el Administrador ' .  mysqli_error ($con) . ' " />';
+  }
+}
 ?>
-    <div class="alert alert-danger float-right" role="alert">
-      Error no se pudo borrar el Administrador <?php echo mysqli_error ($con); ?> 
-    </div>
+<!-- ACTUALIZAR  -->
+<?php
+
+include_once "Basedata.php";
+$con = mysqli_connect($host, $user, $pasword, $db);
+if(isset($_REQUEST['IdEstado1'])){
+$Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado1']??''); 
+$query = "UPDATE Administradores SET estado = '1' WHERE Administradores.Id = '".$Id."';";
+$res = mysqli_query($con, $query);
+if ($res){
+echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=El Administrador sido cambiado de estado con exito" />';
+  }
+else {
+?>
+     <?php
+     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=No se pudo cambiar de estado del Administrador ' .  mysqli_error ($con) . ' " />';
+    ?>
     <?php
   }
 }
 ?>
+<?php
+include_once "Basedata.php";
+$con = mysqli_connect($host, $user, $pasword, $db);
 
+if(isset($_REQUEST['IdEstado2'])){
+$Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado2']??''); 
+$query = "UPDATE Administradores SET estado = '0' WHERE Administradores.Id = '".$Id."';";
+$res = mysqli_query($con, $query);
+if ($res){
+  echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=El Administrador sido cambiado de estado con exito" />';
+  }
+else {
+echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=No se pudo cambiar de estado del Administrador ' .  mysqli_error ($con) . ' " />';
+  }
+}
+?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
