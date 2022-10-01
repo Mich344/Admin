@@ -1,6 +1,26 @@
 <?php
 include_once "Basedata.php";
 $con = mysqli_connect($host, $user, $pasword, $db);
+if(isset($_REQUEST['IdBorrar'])){
+$Id = mysqli_real_escape_string($con, $_REQUEST['IdBorrar']??''); 
+$query = "DELETE from Administradores where Id= '".$Id."';";
+$res = mysqli_query($con, $query);
+if ($res){
+  ?>
+
+<div class="alert alert-warning float-right" role="alert">
+     Administrador borrado con exito.
+    </div>
+<?php
+  }
+else {
+?>
+    <div class="alert alert-danger float-right" role="alert">
+      Error no se pudo borrar el Administrador <?php echo mysqli_error ($con); ?> 
+    </div>
+    <?php
+  }
+}
 ?>
 
 <div class="content-wrapper">
