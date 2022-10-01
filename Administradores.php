@@ -63,39 +63,35 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administrador
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1><strong>Administradores</strong></h1>
+          <h1><strong>Productos</strong></h1> 
         </div>
-
       </div>
     </div><!-- /.container-fluid -->
   </section>
-
   <!-- Main content -->
   <section class="content">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
           <div class="card">
-
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="example2" class="table table-bordered table-hover">
+             <!--  <?php //var_dump($_SERVER) ?> -->
+              <table id="tablaAdministrador" class="table table-bordered table-hover">
                 <thead>
                   <tr>
-                    <th>Id</th>
-                    <th>Email</th>                  
+                    <th>Id</th>                
                     <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Cuiudad</th>
-                    <th>Direccion</th>
-                    <th>Telefono</th>
-                    <th>Tip documento</th>
-                    <th>Num documneto</th>
-                    <th>Fech nacimiento</th>
-                     <th>Estado</th> 
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Talla</th>
+                    <th>Descripción</th>
+                    <th>Proveedor</th>
+                    <th>Imagen(es)</th>
+                    <th>Estado</th>
+                    <th>Acciones <font size=2><a href="Panel.php?modulo="> <i class="fa fa-cart-plus" aria-hidden="true"></i></a></font></th>
                   </tr>
                 </thead>
-
                 <tbody>
                 <?php
                   include_once "Basedata.php";
