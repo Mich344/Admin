@@ -152,7 +152,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
-                  <a href="Panel.php?modulo=" class="nav-link <?php echo ($modulo == "Usuarios" || $modulo == "CrearU") ? "active" : " "; ?>">
+                  <a href="Panel.php?modulo=Empleados" class="nav-link <?php echo ($modulo == "Empleados" || $modulo == "Crearempleado"|| $modulo == "Editarempleado") ? "active" : " "; ?>">
                   <i class="fa fa-address-card" aria-hidden="true"></i>
                     <p>Empleados</p>
                   </a>
@@ -258,7 +258,15 @@ $modulo = $_REQUEST['modulo'] ?? '';
     if($modulo == "Crear"){
       include_once "CrearAdmin.php";
     }
-
+    if($modulo == "Empleados"){
+      include_once "Empleados.php";
+    }
+    if($modulo == "Crearempleado"){
+      include_once "Crearempleado.php";
+    }
+    if($modulo == "Editarempleado"){
+      include_once "Editarempleado.php";
+    }
     ?>
     <!-- /.content-wrapper -->
 
