@@ -9,18 +9,18 @@ if (isset($_REQUEST['guardar'])) {
   $pasword = mysqli_real_escape_string($con, $_REQUEST['paswordempleado'] ?? '');
   $ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudadempleado'] ?? '');
   $depar = mysqli_real_escape_string($con, $_REQUEST['deparempleado'] ?? '');
-  $direccion = mysqli_real_escape_string($con, $_REQUEST['direccionempledo'] ?? '');
+  $direccion = mysqli_real_escape_string($con, $_REQUEST['direccionempleado'] ?? '');
   $telefono = mysqli_real_escape_string($con, $_REQUEST['telefonoempleado'] ?? '');
   $tip_doc = mysqli_real_escape_string($con, $_REQUEST['tip_docempleado'] ?? '');
   $num_doc = mysqli_real_escape_string($con, $_REQUEST['num_docempleado'] ?? '');
   $fech_nac = mysqli_real_escape_string($con, $_REQUEST['fech_nacempleado'] ?? '');
  
 
-  $query = "INSERT INTO empleados (nombreempleado, apellidoempleado, emailempleado,paswordempleado, ciudadempleado, deparempleado, direccionempledo, telefonoempleado, tip_docempleado, num_docempleado, fech_nacempleado, estadoempleado) VALUES ('" . $nombre . "' , '" . $apellido . "' , '" . $email . "' , '" . $pasword . "' , '" . $ciudad . "' , '" . $depar . "' ,'" . $direccion . "' , '" . $telefono . "' , '" . $tip_doc . "' ,  '" . $num_doc . "' ,  '" . $fech_nac . "', '1');";
+  $query = "INSERT INTO empleados (nombreempleado, apellidoempleado, emailempleado,paswordempleado, ciudadempleado, deparempleado, direccionempleado, telefonoempleado, tip_docempleado, num_docempleado, fech_nacempleado, estadoempleado) VALUES ('" . $nombre . "' , '" . $apellido . "' , '" . $email . "' , '" . $pasword . "' , '" . $ciudad . "' , '" . $depar . "' ,'" . $direccion . "' , '" . $telefono . "' , '" . $tip_doc . "' ,  '" . $num_doc . "' ,  '" . $fech_nac . "', '1');";
   //Restultados 
   $res = mysqli_query($con, $query);
   if ($res) {
-    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Empleados&mensaje=Empleados ' . $nombre . ' Creado correctamente" />';
+    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Empleados&mensaje=Empleado ' . $nombre . ' Creado correctamente" />';
   } else {
 ?>
     <div class="alert alert-danger" role="alert">
@@ -154,7 +154,7 @@ if (isset($_REQUEST['guardar'])) {
                 </div>
                 <div class="for-group">
                   <label>Direccion</label>
-                  <input type="text" name="direccionempledo" class="form-control" required="" minlength="6">
+                  <input type="text" name="direccionempleado" class="form-control" required="" minlength="6">
                 </div>
                 <div class="for-group">
                   <label>Telefono</label>
