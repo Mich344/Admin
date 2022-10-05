@@ -185,6 +185,7 @@ if (isset($_REQUEST['guardar'])) {
                     <button class="glow-on-hover" type="submit" name="guardar">Crear Usuario</button>
                   </div>
                 </center>
+                <a href="Panel.php?modulo=Administradores" ><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
                 <style>
                   .glow-on-hover {
                     width: 220px;

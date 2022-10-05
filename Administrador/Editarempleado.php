@@ -1,52 +1,62 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/Boton.css">
+  <link rel="stylesheet" href="Css/Fondo.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+</head>
+
+
 <?php
 include_once "Basedata.php";
-$con =mysqli_connect($host,$user,$pasword,$db);
- if (isset($_REQUEST['guardar'])){
-  $Id = mysqli_real_escape_string($con, $_REQUEST['Idempleado']?? '');
-  $nombre = mysqli_real_escape_string($con, $_REQUEST['nombreempleado']?? '');
-  $apellido = mysqli_real_escape_string($con, $_REQUEST['apellidoempleado']?? '');
-  $email = mysqli_real_escape_string($con, $_REQUEST['emailempleado']?? '');
-  $pasword= mysqli_real_escape_string($con, $_REQUEST['paswordempleado']?? '');
-  $ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudadempleado']?? ''); 
+$con = mysqli_connect($host, $user, $pasword, $db);
+if (isset($_REQUEST['guardar'])) {
+  $Id = mysqli_real_escape_string($con, $_REQUEST['Idempleado'] ?? '');
+  $nombre = mysqli_real_escape_string($con, $_REQUEST['nombreempleado'] ?? '');
+  $apellido = mysqli_real_escape_string($con, $_REQUEST['apellidoempleado'] ?? '');
+  $email = mysqli_real_escape_string($con, $_REQUEST['emailempleado'] ?? '');
+  $pasword = mysqli_real_escape_string($con, $_REQUEST['paswordempleado'] ?? '');
+  $ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudadempleado'] ?? '');
   $depar = mysqli_real_escape_string($con, $_REQUEST['deparempleado'] ?? '');
-  $direccion = mysqli_real_escape_string($con, $_REQUEST['direccionempleado']?? '');
-  $telefono = mysqli_real_escape_string($con, $_REQUEST['telefonoempleado']?? '');
-  $tip_doc = mysqli_real_escape_string($con, $_REQUEST['tip_docempleado']?? '');
-  $num_doc = mysqli_real_escape_string($con, $_REQUEST['num_docempleado']?? '');
-  $fech_nac = mysqli_real_escape_string($con, $_REQUEST['fech_nacempleado']?? '');
-  
-  $query = "UPDATE empleados SET nombreempleado = '".$nombre."' ,apellidoempleado = '".$apellido."' ,emailempleado = '".$email."' ,paswordempleado = '".$pasword."' ,ciudadempleado = '".$ciudad."' ,deparempleado = '".$depar."' ,direccionempleado = '".$direccion."' ,telefonoempleado = '".$telefono."' ,tip_docempleado = '".$tip_doc."' ,num_docempleado = '".$num_doc."' ,fech_nacempleado = '".$fech_nac."' WHERE Idempleado = '".$Id."';";
+  $direccion = mysqli_real_escape_string($con, $_REQUEST['direccionempleado'] ?? '');
+  $telefono = mysqli_real_escape_string($con, $_REQUEST['telefonoempleado'] ?? '');
+  $tip_doc = mysqli_real_escape_string($con, $_REQUEST['tip_docempleado'] ?? '');
+  $num_doc = mysqli_real_escape_string($con, $_REQUEST['num_docempleado'] ?? '');
+  $fech_nac = mysqli_real_escape_string($con, $_REQUEST['fech_nacempleado'] ?? '');
+
+  $query = "UPDATE empleados SET nombreempleado = '" . $nombre . "' ,apellidoempleado = '" . $apellido . "' ,emailempleado = '" . $email . "' ,paswordempleado = '" . $pasword . "' ,ciudadempleado = '" . $ciudad . "' ,deparempleado = '" . $depar . "' ,direccionempleado = '" . $direccion . "' ,telefonoempleado = '" . $telefono . "' ,tip_docempleado = '" . $tip_doc . "' ,num_docempleado = '" . $num_doc . "' ,fech_nacempleado = '" . $fech_nac . "' WHERE Idempleado = '" . $Id . "';";
   //Restultados 
   $res = mysqli_query($con, $query);
-  if($res){
-    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Empleados&mensaje=Empleado '.$nombre.' Editado correctamente" />';
-  }
-  else {
+  if ($res) {
+    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Empleados&mensaje=Empleado ' . $nombre . ' Editado correctamente" />';
+  } else {
 ?>
- <div class="alert alert-danger" role="alert">
-   Error al editar producto <?php echo mysqli_error($con)?>
- </div>
+    <div class="alert alert-danger" role="alert">
+      Error al editar producto <?php echo mysqli_error($con) ?>
+    </div>
 <?php
   }
- }
- // Leer los usuarios 
- // ((mysqli_real_escape_string)) Significado llama consultas preparadas 
-$Id= mysqli_real_escape_string ($con, $_REQUEST['Idempleado']??'');
+}
+// Leer los usuarios 
+// ((mysqli_real_escape_string)) Significado llama consultas preparadas 
+$Id = mysqli_real_escape_string($con, $_REQUEST['Idempleado'] ?? '');
 // Seleccionar los datos //
-$query = "SELECT Idempleado, nombreempleado, apellidoempleado, emailempleado, paswordempleado, ciudadempleado, deparempleado, direccionempleado, telefonoempleado, tip_docempleado, num_docempleado, fech_nacempleado from empleados WHERE  Idempleado = '".$Id."';";
+$query = "SELECT Idempleado, nombreempleado, apellidoempleado, emailempleado, paswordempleado, ciudadempleado, deparempleado, direccionempleado, telefonoempleado, tip_docempleado, num_docempleado, fech_nacempleado from empleados WHERE  Idempleado = '" . $Id . "';";
 // Pasar la conexion $con, $query y almacenar en la variable $res. //
-$res = mysqli_query($con , $query);
+$res = mysqli_query($con, $query);
 // (mysqli_fetch_assoc) Entregar un registro con el almacenamiento de la variable $res
 $row = mysqli_fetch_assoc($res);
 
-?> 
+?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1><strong>Editar empleadoes</strong></h1>
+          <h1><strong style="color: white;">Editar empleadoes</strong></h1>
         </div>
 
       </div>
@@ -63,27 +73,26 @@ $row = mysqli_fetch_assoc($res);
             <!-- /.card-header -->
             <div class="card-body">
               <form action="Panel.php?modulo=Editarempleado" method="post">
-                
+
                 <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombreempleado"  class="form-control" pattern="[a-zA-Z]+" required="" value="<?php echo $row['nombreempleado']?>">
+                  <input type="text" name="nombreempleado" class="form-control" pattern="[a-zA-Z]+" required="" value="<?php echo $row['nombreempleado'] ?>">
                 </div>
-                  <div class="for-group">
+                <div class="for-group">
                   <label>Apellido</label>
-                  <input type="text" name="apellidoempleado"  class="form-control" pattern="[a-zA-Z]+" required="" value="<?php echo $row['apellidoempleado']?>">
+                  <input type="text" name="apellidoempleado" class="form-control" pattern="[a-zA-Z]+" required="" value="<?php echo $row['apellidoempleado'] ?>">
                 </div>
-                 <div class="for-group">
+                <div class="for-group">
                   <label>Email</label>
-                  <input type="email" name="emailempleado"  class="form-control" required="" value="<?php echo $row['emailempleado']?>">
+                  <input type="email" name="emailempleado" class="form-control" required="" value="<?php echo $row['emailempleado'] ?>">
                 </div>
-                 <div class="for-group">
+                <div class="for-group">
                   <label>Password</label>
-                  <input type="password" name="paswordempleado"  class="form-control" minlength="5" maxlength="20" required="" value="<?php echo $row['paswordempleado']?>">
+                  <input type="password" name="paswordempleado" class="form-control" minlength="5" maxlength="20" required="" value="<?php echo $row['paswordempleado'] ?>">
                 </div>
-                 <div class="for-group">
-                 <div class="for-group">
+                <div class="for-group">
                   <label>Ciudad</label>
-                  <select class="form-control" name="ciudadempleado" required="" value="<?php echo $row['ciudadempleado']?>">
+                  <select class="form-control" name="ciudadempleado" required="" value="<?php echo $row['ciudadempleado'] ?>">
                     <option value="">-</option>
                     <option value="Arauca">Arauca</option>
                     <option value="Armenia">Armenia</option>
@@ -121,37 +130,81 @@ $row = mysqli_fetch_assoc($res);
                 </div>
                 <div class="for-group">
                   <label>Departamento</label>
-                  <input type="text" name="deparempleado"  class="form-control" value="<?php echo $row['deparempleado']?>">
+                  <select type="text" name="deparempleado" class="form-control" value="<?php echo $row['deparempleado'] ?>">
+                    <option value="">-</option>
+                    <option value="Amazonas">Amazonas</option>
+                    <option value="Antioquia">Antioquia</option>
+                    <option value="Arauca">Arauca</option>
+                    <option value="Atlántico">Atlántico</option>
+                    <option value="Bolívar">Bolívar</option>
+                    <option value="Boyacá">Boyacá</option>
+                    <option value="Caldas">Caldas</option>
+                    <option value="Caquetá">Caquetá</option>
+                    <option value="Casanare">Casanare</option>
+                    <option value="Cauca">Cauca</option>
+                    <option value="Cesar">Cesar</option>
+                    <option value="Chocó">Chocó</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Cundinamarca">Cundinamarca</option>
+                    <option value="Guainía">Guainía</option>
+                    <option value="Guaviare">Guaviare</option>
+                    <option value="Huila">Huila</option>
+                    <option value="La Guajira">La Guajira</option>
+                    <option value="Magdalena">Magdalena</option>
+                    <option value="Meta">Meta</option>
+                    <option value="Nariño">Nariño</option>
+                    <option value="Norte de Santander">Norte de Santander</option>
+                    <option value="Putumayo">Putumayo</option>
+                    <option value="Quindío">Quindío</option>
+                    <option value="Risaralda">Risaralda</option>
+                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                    <option value="Santander">Santander</option>
+                    <option value="Sucre">Sucre</option>
+                    <option value="Tolima">Tolima</option>
+                    <option value="Valle del Cauca">Valle del Cauca</option>
+                    <option value="Vaupés">Vaupés</option>
+                    <option value="Vichada">Vichada</option>
+                  </select>
                 </div>
                 <div class="for-group">
                   <label>Direccion</label>
-                  <input type="text" name="direccionempleado"  class="form-control" value="<?php echo $row['direccionempleado']?>">
+                  <input type="text" name="direccionempleado" class="form-control" value="<?php echo $row['direccionempleado'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Telefono</label>
-                  <input type="tel" name="telefonoempleado"  class="form-control" value="<?php echo $row['telefonoempleado']?>">
+                  <input type="tel" name="telefonoempleado" class="form-control" value="<?php echo $row['telefonoempleado'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Tipo Documento</label>
-                  <input type="text" name="tip_docempleado"  class="form-control" value="<?php echo $row['tip_docempleado']?>">
+                  <select type="text" name="tip_docempleado" class="form-control" value="<?php echo $row['tip_docempleado'] ?>">
+                  <label>Tipo Documento</label>
+                    <option value="">-</option>
+                    <option value="Cedula Ciudadania">Cedula De Ciudadania</option>
+                    <option value="Cedula Extranjera">Cedula De Extranjeria</option>
+                    <option value="Contraseña">Contraseña</option>
+                  </select>
                 </div>
                 <div class="for-group">
                   <label>Numero Documento</label>
-                  <input type="text" name="num_docempleado"  class="form-control" value="<?php echo $row['num_docempleado']?>">
+                  <input type="text" name="num_docempleado" class="form-control" value="<?php echo $row['num_docempleado'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Fecha Nacimiento</label>
-                  <input type="date" name="fech_nacempleado"  class="form-control" value="<?php echo $row['fech_nacempleado']?>">
+                  <input type="date" name="fech_nacempleado" class="form-control" value="<?php echo $row['fech_nacempleado'] ?>">
                 </div>
                 <div class="for-group">
-                    <br>
-                    <input type="hidden" name="Idempleado" value="<?php echo $row['Idempleado'] ?>">
-                  <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
+                  <br>
+                  <input type="hidden" name="Idempleado" value="<?php echo $row['Idempleado'] ?>">
+                  <center>
+                    <div class="for-group">
+                      <br>
+                      <button class="glow-on-hover" type="submit" name="guardar">Crear Usuario</button>
+                    </div>
+                  </center>
+                  <a href="Panel.php?modulo=Empleados"><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
                 </div>
               </form>
             </div>
-            <!-- LA CANTIDAD (EN EL FRONT) NO PUEDE SER MAYOR A LA CANTIDAD QUE HAY DE PORDUCTOS. ES DECIR NO SE PUEDE ESCOGER MAYOR CANTIDAD CIERTO PRODUCTO-->
-
           </div>
           <!-- /.col -->
         </div>

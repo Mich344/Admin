@@ -57,15 +57,19 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
   }
 }
 ?>
-<div class="content-wrapper">
+<div class="content-wrapper"  style="background-color: black;" >
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1><strong>Productos</strong></h1> 
+          <h1><strong style="color:white;">Tabla Productos</strong></h1> 
         </div>
       </div>
+      <div>
+            <br>
+            <a href="Panel.php?modulo=CrearP" type="button" class="btn btn-success">Crear Usuarios</a>
+          </div> 
     </div><!-- /.container-fluid -->
   </section>
   <!-- Main content -->
@@ -88,7 +92,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                     <th>Descripción</th>
                     <th>Imagen(es)</th>
                     <th>Estado</th>
-                    <th>Acciones <font size=2><a href="Panel.php?modulo=CrearP"> <i class="fa fa-cart-plus" aria-hidden="true"></i></a></font></th>
+                    <th>Funciones<font size=2></font></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -128,10 +132,14 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                               }
                               ?>
                        <td>
-                          <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
-                          <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
-                          <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:green;"> <i class="fa fa-check" aria-hidden="true"></i></a>
-                          <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:red;"> <i class="fa fa-times" aria-hidden="true"></i></a>
+                          <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "><i class="fas fa-user-edit" title="Editar Usuario"></i></a>
+
+                          <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:green;"><i class="fas fa-user-plus" aria-hidden="true" title="Activo"></i></a>
+                          
+                          <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:red;"><i class="fas fa-user-minus" aria-hidden="true" title="Inactivo"></i></a>
+
+                          <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
+
                       </td>
                     </tr>
                   <?php

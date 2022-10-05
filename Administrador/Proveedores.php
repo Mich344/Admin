@@ -142,7 +142,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Proveedores&m
                        <td>
                           <a href="Panel.php?modulo=Editarproveedor&Idproveedor= <?php echo $row['Idproveedor'] ?> " style="margin: 8px "><i class="fas fa-user-edit" title="Editar Usuario"></i></a>
 
-                          <a href="Panel.php?modulo=Proveedores&IdEstado1= <?php echo $row['Idproveedor'] ?> " class="btn btn-md" style="color:green;"> <i class="fas fa-user-plus" aria-hidden="true" title="Activo"></i></a>
+                          <a href="Panel.php?modulo=Proveedores&IdEstado1= <?php echo $row['Idproveedor'] ?> " class="btn btn-md" style="color:green;"><i class="fas fa-user-plus" aria-hidden="true" title="Activo"></i></a>
 
                           <a href="Panel.php?modulo=Proveedores&IdEstado2= <?php echo $row['Idproveedor'] ?> " class="btn btn-md" style="color:red;"><i class="fas fa-user-minus" aria-hidden="true" title="Inactivo"></i></a>
 
