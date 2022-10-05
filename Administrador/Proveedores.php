@@ -10,13 +10,13 @@ if ($res){
 
 <div class="alert alert-warning float-right" role="alert">
      <?php
-     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Proveedores&mensaje=El producto ha sido borrado con exito" />';
+     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Proveedores&mensaje=El Usuario ha sido borrado con exito" />';
     ?>
      </div>
 <?php
   }
 else {
-     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Proveedores&mensaje=No se pudo borrar el producto ' .  mysqli_error ($con) . ' " />';
+     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Proveedores&mensaje=No se pudo borrar el Usuario ' .  mysqli_error ($con) . ' " />';
   }
 }
 ?>
@@ -63,7 +63,11 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Proveedores&m
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1><strong style="color:white;">Proveedores</strong></h1> 
+          <h1><strong style="color:white;">Proveedores</strong></h1>
+          <div>
+            <hr>
+            <a href="Panel.php?modulo=Crearproveedor" type="button" class="btn btn-success">Crear Usuarios</a>
+          </div> 
         </div>
       </div>
     </div><!-- /.container-fluid -->
@@ -92,7 +96,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Proveedores&m
                     <th>Numero Documento</th>
                     <th>Fecha Nacimiento</th>
                     <th>Estado</th>
-                    <th>Acciones <font size=2><a href="Panel.php?modulo=Crearproveedor"> <i class="fa fa-cart-plus" aria-hidden="true"></i></a></font></th>
+                    <th>Funciones <font size=2></font></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -136,10 +140,13 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Proveedores&m
                               }
                               ?>
                        <td>
-                          <a href="Panel.php?modulo=Editarproveedor&Idproveedor= <?php echo $row['Idproveedor'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
-                          <a href="Panel.php?modulo=Proveedores&IdBorrar= <?php echo $row['Idproveedor'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
-                          <a href="Panel.php?modulo=Proveedores&IdEstado1= <?php echo $row['Idproveedor'] ?> " class="btn btn-md" style="color:green;"> <i class="fa fa-check" aria-hidden="true"></i></a>
-                          <a href="Panel.php?modulo=Proveedores&IdEstado2= <?php echo $row['Idproveedor'] ?> " class="btn btn-md" style="color:red;"> <i class="fa fa-times" aria-hidden="true"></i></a>
+                          <a href="Panel.php?modulo=Editarproveedor&Idproveedor= <?php echo $row['Idproveedor'] ?> " style="margin: 8px "><i class="fas fa-user-edit" title="Editar Usuario"></i></a>
+
+                          <a href="Panel.php?modulo=Proveedores&IdEstado1= <?php echo $row['Idproveedor'] ?> " class="btn btn-md" style="color:green;"> <i class="fas fa-user-plus" aria-hidden="true" title="Activo"></i></a>
+
+                          <a href="Panel.php?modulo=Proveedores&IdEstado2= <?php echo $row['Idproveedor'] ?> " class="btn btn-md" style="color:red;"><i class="fas fa-user-minus" aria-hidden="true" title="Inactivo"></i></a>
+
+                          <a href="Panel.php?modulo=Proveedores&IdBorrar= <?php echo $row['Idproveedor'] ?> " class="text-danger borrar"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
                       </td>
                     </tr>
                   <?php
