@@ -62,8 +62,12 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administrador
   <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
-        <div class="col-sm-6">
+        <div class="col-lg-12">
           <h1><strong style="color:white;">Administradores</strong></h1> 
+          <div>
+            <hr>
+            <a href="Panel.php?modulo=Crear" type="button" class="btn btn-success">Crear Usuarios</a>
+          </div>
         </div>
       </div>
     </div><!-- /.container-fluid -->
@@ -92,7 +96,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administrador
                     <th>Numero Documento</th>
                     <th>Fecha Nacimiento</th>
                     <th>Estado</th>
-                    <th>Acciones <font size=2><a href="Panel.php?modulo=Crear"> <i class="fa fa-cart-plus" aria-hidden="true"></i></a></font></th>
+                    <th>Funciones <font size=2></font></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -136,10 +140,10 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administrador
                               }
                               ?>
                        <td>
-                          <a href="Panel.php?modulo=EditarAdmin&Idadmin= <?php echo $row['Idadmin'] ?> " style="margin: 8px "> <i class="fas fa-edit"></i></a>
-                          <a href="Panel.php?modulo=Administradores&IdBorrar= <?php echo $row['Idadmin'] ?> " class="text-danger borrar"> <i class="fas fa-trash"></i></a>
-                          <a href="Panel.php?modulo=Administradores&IdEstado1= <?php echo $row['Idadmin'] ?> " class="btn btn-md" style="color:green;"> <i class="fa fa-check" aria-hidden="true"></i></a>
-                          <a href="Panel.php?modulo=Administradores&IdEstado2= <?php echo $row['Idadmin'] ?> " class="btn btn-md" style="color:red;"> <i class="fa fa-times" aria-hidden="true"></i></a>
+                          <a href="Panel.php?modulo=EditarAdmin&Idadmin= <?php echo $row['Idadmin'] ?> " style="margin: 8px "><i class="fas fa-user-edit" title="Editar Usuario"></i></a>                    
+                          <a href="Panel.php?modulo=Administradores&IdEstado1= <?php echo $row['Idadmin'] ?> " class="btn btn-md" style="color:green;"><i class="fas fa-user-plus" aria-hidden="true" title="Activo"></i> </a>
+                          <a href="Panel.php?modulo=Administradores&IdEstado2= <?php echo $row['Idadmin'] ?> " class="btn btn-md" style="color:red;"><i class="fas fa-user-minus" aria-hidden="true" title="Inactivo"></i> </a>
+                          <a href="Panel.php?modulo=Administradores&IdBorrar= <?php echo $row['Idadmin'] ?> " class="text-danger borrar"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
                       </td>
                     </tr>
                   <?php
