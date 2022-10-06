@@ -1,4 +1,13 @@
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/Boton.css">
+  <link rel="stylesheet" href="Css/Fondo.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+</head>
 
 <?php
 include_once "Basedata.php";
@@ -59,9 +68,8 @@ $row = mysqli_fetch_assoc($res);
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1><strong>Editar Productos</strong></h1>
+          <h1><strong style="color: white;">Editar Productos</strong></h1>
         </div>
-
       </div>
     </div><!-- /.container-fluid -->
   </section>
@@ -97,19 +105,20 @@ $row = mysqli_fetch_assoc($res);
                   <label>descripcion</label>
                   <input type="text" name="descripcion" class="form-control" value="<?php echo $row['descripcion'] ?>">
                 </div>
-                <div class="photo">
+                <div class="photo" style="width:1545px">
                   <label>Imagen(es)</label>
                   <input type="text" name="imagenname" class="form-control" value="<?php echo $row['imagen'] ?>">
                   <br>
-                  
-                  <input type="file" name="imagen" accept="image/png, image/jpg, image/jpeg, image/pjpeg">
+                  <input type="file" class="form-control" name="imagen" accept="image/png, image/jpg, image/jpeg, image/pjpeg">
                 </div>
                 
               <hr>
               <div class="for-group">
+                <center>
                 <br>
                 <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
-                <button type="submit" class="btn btn-primary" name="guardar">guardar</button>
+                <button type="submit" class="glow-on-hover" name="guardar">guardar</button>
+                </center>
               </div>
               </form>
             </div>
