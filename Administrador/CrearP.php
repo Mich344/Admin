@@ -9,10 +9,10 @@
 </head>
 
 <?php
-if (isset($_REQUEST['guardar'])) {
   include_once "Basedata.php";
   // Llamar la base de datos desde el include_once.
   $con = mysqli_connect($host, $user, $pasword, $db);
+if (isset($_REQUEST['guardar'])) {
   $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre'] ?? '');
   $precio = mysqli_real_escape_string($con, $_REQUEST['precio'] ?? '');
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad'] ?? '');
@@ -39,7 +39,6 @@ if (isset($_REQUEST['guardar'])) {
   //resultados
   $res = mysqli_query($con, $query);
   if ($res) {
-
     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=Producto ' . $nombre . '  creado correctamente" />';
   } else {
 ?>
@@ -97,6 +96,25 @@ if (isset($_REQUEST['guardar'])) {
                 <div class="photo" style="width:450px">
                   <label>Imagen(es)</label>
                   <input id="imagen" class="form-control" type="file" name="imagen" multiple="multiple" required="" accept="image/png, image/jpg, image/jpeg, image/pjpeg">
+                </div>
+                <div class="for-group">
+                  <?php 
+                  $queryp = "SELECT Idproveedor, nombreproveedor, apellidoproveedor FROM proveedores WHERE estadoproveedor = 1;";
+                  $resp = mysqli_query($con,$queryp);
+                  $rowp = mysqli_num_rows($resp);                
+                  ?>
+                  <label>Proveedor</label>
+                  <select name="proveedor" id="proveedor" class="form-select" aria-label="Default select example">
+                  <?php
+                  if ($rowp > 0) {
+                    while ($proveedor = mysqli_fetch_array($resp)) {
+                      ?>
+                      <option value="<?php echo $proveedor['Idproveedor'] ?>"><?php echo $proveedor['nombreproveedor'] . " " . $proveedor['apellidoproveedor'] ?></option>
+                      <?php
+                    }
+                  }
+                  ?>
+                  </select>
                 </div>
                 <center>
                   <div class="for-group">
