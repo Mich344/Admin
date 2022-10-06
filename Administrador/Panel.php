@@ -11,7 +11,7 @@ if (isset($_REQUEST['sesion']) && $_REQUEST['sesion'] == "cerrar") {
   header("location: login.php");
 }
 // Si un usuario entra al panel sin un usuario existente re-direccionar al login.php //
-if (isset($_SESSION['Id']) == false) {
+if (isset($_SESSION['Idadmin']) == false) {
   header("location: login.php");
 }
 $modulo = $_REQUEST['modulo'] ?? '';
@@ -74,7 +74,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
         <i class="fa fa-home" aria-hidden="true"></i>
         
         <!-- Editar el usuario de ADMIN desde su  caratula llamando la siguiente funcion. -->
-        <a class="nav-link" title="Editar perfil" href="Panel.php?modulo=EditarU&Id= <?php echo $_SESSION['Id'] ?>">
+        <a class="nav-link" title="Editar perfil" href="Panel.php?modulo=EditarU&Id= <?php echo $_SESSION['Idadmin'] ?>">
           <i class="far fa-user"></i>
 
         </a>
@@ -103,7 +103,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
             <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block"><?php echo $_SESSION['Nombre']; ?></a>
+            <a href="#" class="d-block"><?php echo $_SESSION['nombreadmin']; ?></a>
           </div>
         </div>
 
