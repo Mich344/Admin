@@ -192,7 +192,7 @@ $row = mysqli_fetch_assoc($res);
                   <center>
                     <div class="for-group">
                       <br>
-                      <button class="glow-on-hover" type="submit" name="guardar">Crear Usuario</button>
+                      <button class="glow-on-hover" type="submit" name="guardar">Editar Usuario</button>
                     </div>
                   </center>
                   <a href="Panel.php?modulo=Proveedores"><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
