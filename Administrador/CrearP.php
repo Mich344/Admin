@@ -18,6 +18,7 @@ if (isset($_REQUEST['guardar'])) {
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad'] ?? '');
   $talla = mysqli_real_escape_string($con, $_REQUEST['talla'] ?? '');
   $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion'] ?? '');
+  $proveedor = mysqli_real_escape_string($con, $_REQUEST['proveedor'] ?? '');
   // EN CASO DE QUE NO RECIBA RESPUESTA ALGUNA EL CAMPO DE TALLA 
   $restalla = mysqli_real_escape_string($con, $_REQUEST['talla'] ?? '');
   if (empty($restalla)) {
@@ -35,7 +36,7 @@ if (isset($_REQUEST['guardar'])) {
   $ruta = $destino . $name_image;
   move_uploaded_file($_FILES['imagen']['tmp_name'], $destino . $name_image);
 
-  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen, estado) VALUES ('" . $nombre . "' , '" . $precio . "' , '" . $cantidad . "' , '" . $talla . "' , '" . $descripcion . "' ,'" . $name_image . "' , '1');";
+  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen, proveedor, estado) VALUES ('" . $nombre . "' , '" . $precio . "' , '" . $cantidad . "' , '" . $talla . "' , '" . $descripcion . "' ,'"  . $name_image . "' , '" . $proveedor. "', '1');";
   //resultados
   $res = mysqli_query($con, $query);
   if ($res) {
@@ -104,12 +105,12 @@ if (isset($_REQUEST['guardar'])) {
                   $rowp = mysqli_num_rows($resp);                
                   ?>
                   <label>Proveedor</label>
-                  <select name="proveedor" id="proveedor" class="form-select" aria-label="Default select example">
+                  <select name="proveedor" id="proveedor" class="form-select" aria-label="Default select example" required>
                   <?php
                   if ($rowp > 0) {
                     while ($proveedor = mysqli_fetch_array($resp)) {
                       ?>
-                      <option value="<?php echo $proveedor['Idproveedor'] ?>"><?php echo $proveedor['nombreproveedor'] . " " . $proveedor['apellidoproveedor'] ?></option>
+                      <option value="<?php echo $proveedor['nombreproveedor'] . " " . $proveedor['apellidoproveedor'] ?>"><?php echo $proveedor['nombreproveedor'] . " " . $proveedor['apellidoproveedor'] ?></option>
                       <?php
                     }
                   }
