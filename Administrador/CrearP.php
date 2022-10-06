@@ -75,7 +75,7 @@ if (isset($_REQUEST['guardar'])) {
               <form action="Panel.php?modulo=CrearP" method="post" enctype="multipart/form-data">
                 <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombre" class="form-control" required="" pattern="[a-zA-Z]+">
+                  <input type="text" name="nombre" class="form-control" required="" pattern="[a-zA-Z]+" minlength="2">
                 </div>
                 <div class="for-group">
                   <label>Precio</label>
@@ -84,7 +84,7 @@ if (isset($_REQUEST['guardar'])) {
                 </div>
                 <div class="for-group">
                   <label>Cantidad</label>
-                  <input type="number" name="cantidad" class="form-control" required="">
+                  <input type="number" name="cantidad" class="form-control" required=""  pattern="[0-9]+" maxlength="8" minlength="4">
                 </div>
                 <div class="for-group">
                   <label>Talla</label>
@@ -92,7 +92,7 @@ if (isset($_REQUEST['guardar'])) {
                 </div>
                 <div class="for-group">
                   <label>Descripción</label>
-                  <input type="text" name="descripcion" class="form-control" required="">
+                  <input type="text" name="descripcion" class="form-control" required="" pattern="[a-zA-Z]+" maxlength="2000" minlength="10">
                 </div>
                 <div class="photo" style="width:450px">
                   <label>Imagen(es)</label>
