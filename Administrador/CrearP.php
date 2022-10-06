@@ -106,6 +106,7 @@ if (isset($_REQUEST['guardar'])) {
                   ?>
                   <label>Proveedor</label>
                   <select name="proveedor" id="proveedor" class="form-select" aria-label="Default select example" required>
+                    <option disabled selected>Seleccione un proveedor</option>
                   <?php
                   if ($rowp > 0) {
                     while ($proveedor = mysqli_fetch_array($resp)) {
