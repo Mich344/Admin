@@ -63,7 +63,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administrador
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-lg-12">
-          <h1><strong style="color:white;">Administradores</strong></h1> 
+          <h1><strong style="color:white;"> Tabla Administradores</strong></h1> 
           <div>
             <hr>
             <a href="Panel.php?modulo=Crear" type="button" class="btn btn-success">Crear Usuarios</a>
