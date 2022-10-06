@@ -143,7 +143,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
-                  <a href="Panel.php?modulo=Administradores" class="nav-link <?php echo ($modulo == "Administradores" || $modulo == "EditarAdmin") || $modulo == "Crear" ? "active" : " "; ?>">
+                  <a href="Panel.php?modulo=Administradores" class="nav-link <?php echo ($modulo == "Administradores" || $modulo == "Crear") ? "active" : " "; ?>">
                   <i class="fa fa-id-card" aria-hidden="true"></i>
                     <p>Administradores</p>
                   </a>
@@ -251,9 +251,6 @@ $modulo = $_REQUEST['modulo'] ?? '';
     }
     if($modulo == "Administradores"){
       include_once "Administradores.php";
-    }
-    if($modulo == "EditarAdmin"){
-      include_once "EditarAdmin.php";
     }
     if($modulo == "Crear"){
       include_once "CrearAdmin.php";
