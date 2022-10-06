@@ -1,30 +1,6 @@
 <?php
 include_once "Basedata.php";
 $con = mysqli_connect($host, $user, $pasword, $db);
-if(isset($_REQUEST['IdBorrar'])){
-$Id = mysqli_real_escape_string($con, $_REQUEST['IdBorrar']??''); 
-$query = "DELETE from administradores where Idadmin= '".$Id."';";
-$res = mysqli_query($con, $query);
-if ($res){
-  ?>
-
-<div class="alert alert-warning float-right" role="alert">
-     <?php
-     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=El Administrador ha sido borrado con exito" />';
-    ?>
-     </div>
-<?php
-  }
-else {
-     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=No se pudo borrar el Administrador ' .  mysqli_error ($con) . ' " />';
-  }
-}
-?>
-<!-- ACTUALIZAR  -->
-<?php
-
-include_once "Basedata.php";
-$con = mysqli_connect($host, $user, $pasword, $db);
 if(isset($_REQUEST['IdEstado1'])){
 $Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado1']??''); 
 $query = "UPDATE administradores SET estadoadmin = '1' WHERE Idadmin = '".$Id."';";
@@ -81,7 +57,14 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administrador
             <!-- /.card-header -->
             <div class="card-body">
              <!--  <?php //var_dump($_SERVER) ?> -->
-              <table  class="table table-bordered table-hover">
+             <div class="container">
+              <form >
+                <input type="search" data-table="table_id" class="form-control me-2 light-table-filter" placeholder="Buscador" required="">
+              </form>
+             </div>
+             <br>
+              <table  class="table table-bordered table-hover table_id">
+                
                 <thead>
                   <tr>
                     <th>Id</th>                
@@ -139,11 +122,9 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administrador
                               <?php
                               }
                               ?>
-                       <td>
-                          <a href="Panel.php?modulo=EditarAdmin&Idadmin= <?php echo $row['Idadmin'] ?> " style="margin: 8px "><i class="fas fa-user-edit" title="Editar Usuario"></i></a>                    
+                       <td>             
                           <a href="Panel.php?modulo=Administradores&IdEstado1= <?php echo $row['Idadmin'] ?> " class="btn btn-md" style="color:green;"><i class="fas fa-user-plus" aria-hidden="true" title="Activo"></i> </a>
                           <a href="Panel.php?modulo=Administradores&IdEstado2= <?php echo $row['Idadmin'] ?> " class="btn btn-md" style="color:red;"><i class="fas fa-user-minus" aria-hidden="true" title="Inactivo"></i> </a>
-                          <a href="Panel.php?modulo=Administradores&IdBorrar= <?php echo $row['Idadmin'] ?> " class="text-danger borrar"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
                       </td>
                     </tr>
                   <?php
@@ -166,3 +147,4 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administrador
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+  <script src="Js/Buscador.js"></script>

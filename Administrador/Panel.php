@@ -74,7 +74,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
         <i class="fa fa-home" aria-hidden="true"></i>
         
         <!-- Editar el usuario de ADMIN desde su  caratula llamando la siguiente funcion. -->
-        <a class="nav-link" title="Editar perfil" href="Panel.php?modulo=EditarU&Id= <?php echo $_SESSION['Idadmin'] ?>">
+        <a class="nav-link" title="Editar perfil" href="Panel.php?modulo=Editaradmin&Idadmin= <?php echo $_SESSION['Idadmin'] ?>">
           <i class="far fa-user"></i>
 
         </a>
@@ -143,7 +143,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <!-- Al dar a un clic de usuario o ventas se active -->
-                  <a href="Panel.php?modulo=Administradores" class="nav-link <?php echo ($modulo == "Administradores" || $modulo == "Crear") ? "active" : " "; ?>">
+                  <a href="Panel.php?modulo=Administradores" class="nav-link <?php echo ($modulo == "Administradores" || $modulo == "Crear" || $modulo == "Editaradmin") ? "active" : " "; ?>">
                   <i class="fa fa-id-card" aria-hidden="true"></i>
                     <p>Administradores</p>
                   </a>
@@ -254,6 +254,9 @@ $modulo = $_REQUEST['modulo'] ?? '';
     }
     if($modulo == "Crear"){
       include_once "CrearAdmin.php";
+    }
+    if($modulo == "Editaradmin"){
+      include_once "Editaradmin.php";
     }
     if($modulo == "Empleados"){
       include_once "Empleados.php";

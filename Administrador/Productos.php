@@ -81,7 +81,13 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
             <!-- /.card-header -->
             <div class="card-body">
              <!--  <?php //var_dump($_SERVER) ?> -->
-              <table id="tablaProductos" class="table table-bordered table-hover">
+             <div class="container">
+              <form >
+                <input type="search" data-table="table_id" class="form-control me-2 light-table-filter" placeholder="Buscador" required="">
+              </form>
+             </div>
+             <br>
+              <table  class="table table-bordered table-hover table_id">
                 <thead>
                   <tr>
                     <th>Id</th>                
@@ -164,3 +170,5 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+<script src="Js/Buscador.js"></script>

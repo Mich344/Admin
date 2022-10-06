@@ -18,7 +18,7 @@ if (isset($_REQUEST['guardar'])) {
   $email = mysqli_real_escape_string($con, $_REQUEST['email'] ?? '');
   $pasword = mysqli_real_escape_string($con, $_REQUEST['pasword'] ?? '');
   $ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudad'] ?? '');
-  $depar = mysqli_real_escape_string($con, $_REQUEST['depar'] ?? '');
+  $depar = mysqli_real_escape_string($con, $_REQUEST['departamento'] ?? '');
   $direccion = mysqli_real_escape_string($con, $_REQUEST['direccion'] ?? '');
   $telefono = mysqli_real_escape_string($con, $_REQUEST['telefono'] ?? '');
   $tip_doc = mysqli_real_escape_string($con, $_REQUEST['tip_doc'] ?? '');

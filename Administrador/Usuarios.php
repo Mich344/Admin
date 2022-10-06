@@ -47,7 +47,7 @@ $con = mysqli_connect($host, $user, $pasword, $db);
 
 if(isset($_REQUEST['IdEstado2'])){
 $Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado2']??''); 
-$query = "UPDATE usuarios SET estado = '0' WHERE Id = '".$Id."';";
+$query = "UPDATE usuario SET estado = '0' WHERE Id = '".$Id."';";
 $res = mysqli_query($con, $query);
 if ($res){
   echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mensaje=El Usuarios ha sido cambiado de estado con exito" />';
@@ -63,7 +63,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mens
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1><strong style="color:white;">Usuarios</strong></h1>
+          <h1><strong style="color:white;">Tabla Usuarios</strong></h1>
           <div>
             <hr>
             <a href="Panel.php?modulo=CrearU" type="button" class="btn btn-success">Crear Usuarios</a>
@@ -81,7 +81,13 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mens
             <!-- /.card-header -->
             <div class="card-body">
              <!--  <?php //var_dump($_SERVER) ?> -->
-              <table  class="table table-bordered table-hover">
+             <div class="container">
+              <form >
+                <input type="search" data-table="table_id" class="form-control me-2 light-table-filter" placeholder="Buscador" required="">
+              </form>
+             </div>
+             <br>
+              <table  class="table table-bordered table-hover table_id">
                 <thead>
                   <tr>
                     <th>Id</th>                
@@ -103,7 +109,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mens
                 <?php
                   include_once "Basedata.php";
                     $con = mysqli_connect($host, $user, $pasword, $db);
-                    $query = "SELECT Id , nombre, apellido, email, ciudad, departamento, direccion, telefono, tip_doc, num_doc, fech_nac, estado  FROM usuario;";
+                    $query = "SELECT Id, nombre, apellido, email, ciudad, departamento, direccion, telefono, tip_doc, num_doc, fech_nac, estado  FROM usuario;";
                     $res = mysqli_query($con, $query);
                     
                     while ($row = mysqli_fetch_assoc($res)){
@@ -121,6 +127,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mens
                       <td><?php echo $row['num_doc'] ?></td>
                       <td><?php echo $row['fech_nac'] ?></td>
                      <?php 
+                     
                          if (isset($_REQUEST['guardar'])){
                           include_once "Basedata.php";
                           // Llamar la base de datos desde el include_once.
@@ -169,3 +176,4 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mens
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+<script src="Js/Buscador.js"></script>
