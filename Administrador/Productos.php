@@ -100,7 +100,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                 <?php
                   include_once "Basedata.php";
                     $con = mysqli_connect($host, $user, $pasword, $db);
-                    $query = "SELECT Id, nombre, precio, cantidad, talla, descripcion, imagen, estado FROM productos;";
+                    $query = "SELECT Id, nombre, precio, cantidad, talla, descripcion, imagen, proveedor, estado FROM productos;";
                     $res = mysqli_query($con, $query);
                     
                     while ($row = mysqli_fetch_assoc($res)){
