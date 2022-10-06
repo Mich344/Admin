@@ -75,7 +75,7 @@ if (isset($_REQUEST['guardar'])) {
               <form action="Panel.php?modulo=CrearP" method="post" enctype="multipart/form-data">
                 <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombre" class="form-control" required="" pattern="[a-zA-Z]+" minlength="2">
+                  <input type="text" name="nombre" class="form-control" required="" pattern="[a-zA-Z]+" minlength="3">
                 </div>
                 <div class="for-group">
                   <label>Precio</label>
