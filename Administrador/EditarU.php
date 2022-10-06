@@ -30,7 +30,7 @@ if (isset($_REQUEST['guardar'])) {
   //Restultados 
   $res = mysqli_query($con, $query);
   if ($res) {
-    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios=s&mensaje= ' . $nombre . ' Editado correctamente" />';
+    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mensaje= ' . $nombre . ' Editado correctamente" />';
   } else {
 ?>
     <div class="alert alert-danger" role="alert">
@@ -198,7 +198,7 @@ $row = mysqli_fetch_assoc($res);
                   <center>
                     <div class="for-group">
                       <br>
-                      <button class="glow-on-hover" type="submit" name="guardar">Crear Usuario</button>
+                      <button class="glow-on-hover" type="submit" name="guardar">Editar Usuario</button>
                     </div>
                   </center>
                   <a href="Panel.php?modulo=Usuarios"><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
