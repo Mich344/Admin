@@ -87,7 +87,7 @@ $row = mysqli_fetch_assoc($res);
 
                 <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombre" class="form-control" value="<?php echo $row['nombre'] ?>" pattern="[a-zA-Z]+" minlength="3">
+                  <input type="text" name="nombre" class="form-control" value="<?php echo $row['nombre'] ?>" pattern="[a-zA-Z]+" minlength="5">
                 </div>
                 <div class="for-group">
                   <label>Precio</label>
