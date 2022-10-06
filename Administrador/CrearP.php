@@ -75,7 +75,7 @@ if (isset($_REQUEST['guardar'])) {
               <form action="Panel.php?modulo=CrearP" method="post" enctype="multipart/form-data">
                 <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombre" class="form-control" required="" pattern="[a-zA-Z]+" minlength="5">
+                  <input type="text" name="nombre" class="form-control" required="" pattern="[a-z A-Z]+" minlength="5">
                 </div>
                 <div class="for-group">
                   <label>Precio</label>
@@ -106,7 +106,7 @@ if (isset($_REQUEST['guardar'])) {
                   ?>
                   <label>Proveedor</label>
                   <select name="proveedor" id="proveedor" class="form-select" aria-label="Default select example" required>
-                    <option disabled selected>Seleccione un proveedor</option>
+                    <option value="" disabled selected>Seleccione un proveedor</option>
                   <?php
                   if ($rowp > 0) {
                     while ($proveedor = mysqli_fetch_array($resp)) {
