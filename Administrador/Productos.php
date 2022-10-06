@@ -90,7 +90,8 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                     <th>Cantidad</th>
                     <th>Talla</th>
                     <th>Descripción</th>
-                    <th>Imagen(es)</th>
+                    <th>Imagen</th>
+                    <th>Proveedor</th>
                     <th>Estado</th>
                     <th>Funciones<font size=2></font></th>
                   </tr>
@@ -106,12 +107,13 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                   ?>
                   <tr>
                      <td><?php echo $row['Id']?></td>
-                      <td><?php echo $row['nombre'] ?></td> 
-                      <td><?php echo $row['precio'] ?></td> 
-                      <td><?php echo $row['cantidad'] ?></td>
-                      <td><?php echo $row['talla'] ?></td>
-                      <td><?php echo $row['descripcion'] ?></td>
-                      <td> <center><?php echo "<img width='80' height='80' src='/Admin/Administrador/upload/".$row['imagen']."'>"?></center> </td>
+                     <td><?php echo $row['nombre'] ?></td> 
+                     <td><?php echo $row['precio'] ?></td> 
+                     <td><?php echo $row['cantidad'] ?></td>
+                     <td><?php echo $row['talla'] ?></td>
+                     <td><?php echo $row['descripcion'] ?></td>
+                     <td> <center><?php echo "<img width='80' height='80' src='/Admin/Administrador/upload/".$row['imagen']."'>"?></center> </td>
+                     <td><?php echo $row['proveedor'] ?></td>
                      <?php 
                          if (isset($_REQUEST['guardar'])){
                           include_once "Basedata.php";
