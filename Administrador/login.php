@@ -33,24 +33,24 @@
         <p class="login-box-msg"><b>Ingresar sesion</b></p>
 
         <?php
-        if (isset($_REQUEST['login'])) {
+        if (isset($_REQUEST['Ingresar'])) {
           session_start();
-          $email = $_REQUEST['email'] ?? '';
-          $passwordd = $_REQUEST['pasword'] ?? '';
+          $email = $_REQUEST['emailadmin'] ?? '';
+          $passwordd = $_REQUEST['paswordadmin'] ?? '';
 
           include_once "Basedata.php";
 
           $con = mysqli_connect($host, $user, $pasword, $db);
 
-          $query = "SELECT Id, Email, Nombre  from usuario where email= '" . $email . "'  and pasword= '" . $passwordd . "' ";
+          $query = "SELECT Idadmin, emailadmin, nombreadmin  from administradores where emailadmin= '" . $email . "'  and paswordadmin= '" . $passwordd . "' ";
 
           $res = mysqli_query($con, $query);
           //  $paswordd = md5 ($passwordd);   Metodo opcional contraseña encriptada para evitar hackeos.
           $row = mysqli_fetch_assoc($res);
           if ($row) {
-            $_SESSION['Id'] = $row['Id'];
-            $_SESSION['Email'] = $row['Email'];
-            $_SESSION['Nombre'] = $row['Nombre'];
+            $_SESSION['Idadmin'] = $row['Idadmin'];
+            $_SESSION['emailadmin'] = $row['emailadmin'];
+            $_SESSION['nombreadmin'] = $row['nombreadmin'];
             header("location: Panel.php");
           } else {
         ?>
@@ -62,7 +62,7 @@
         ?>
        <form method="post">
           <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Correo" name="email">
+            <input type="email" class="form-control" placeholder="Correo" name="emailadmin">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -70,7 +70,7 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Contraseña" name="pasword">
+            <input type="password" class="form-control" placeholder="Contraseña" name="paswordadmin">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -80,7 +80,7 @@
           <div class="row">
 
             <!-- ingresar comienzo -->
-            <input type="submit" class="btn btn-secondary btn-lg btn-block btn btn-dark" name="login" value="Ingresar">
+            <input type="submit" class="btn btn-secondary btn-lg btn-block btn btn-dark" name="Ingresar" value="Ingresar">
       </form>               
     </div>
     <center><button type="button" class="btn btn-outline-info"><b>Contacta con un administrador</b></button></center>
