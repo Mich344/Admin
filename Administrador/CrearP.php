@@ -84,7 +84,7 @@ if (isset($_REQUEST['guardar'])) {
                 </div>
                 <div class="for-group">
                   <label>Cantidad</label>
-                  <input type="number" name="cantidad" class="form-control" required=""  pattern="[0-9]+" maxlength="8" minlength="4">
+                  <input type="number" name="cantidad" class="form-control" required=""  pattern="[0-9]+" maxlength="8" minlength="1">
                 </div>
                 <div class="for-group">
                   <label>Talla</label>
@@ -92,7 +92,7 @@ if (isset($_REQUEST['guardar'])) {
                 </div>
                 <div class="for-group">
                   <label>Descripción</label>
-                  <input type="text" name="descripcion" class="form-control" required="" pattern="[a-zA-Z]+" maxlength="2000" minlength="10">
+                  <input type="text" name="descripcion" class="form-control" required="" maxlength="2000" minlength="10">
                 </div>
                 <div class="photo" style="width:450px">
                   <label>Imagen(es)</label>
