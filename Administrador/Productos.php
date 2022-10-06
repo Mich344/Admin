@@ -68,7 +68,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
       </div>
       <div>
             <br>
-            <a href="Panel.php?modulo=CrearP" type="button" class="btn btn-success">Crear Usuarios</a>
+            <a href="Panel.php?modulo=CrearP" type="button" class="btn btn-success">Crear Producto</a>
           </div> 
     </div><!-- /.container-fluid -->
   </section>
