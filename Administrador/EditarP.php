@@ -87,7 +87,7 @@ $row = mysqli_fetch_assoc($res);
 
                 <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombre" class="form-control" value="<?php echo $row['nombre'] ?>">
+                  <input type="text" name="nombre" class="form-control" value="<?php echo $row['nombre'] ?>" pattern="[a-zA-Z]+" minlength="4">
                 </div>
                 <div class="for-group">
                   <label>Precio</label>
@@ -95,7 +95,7 @@ $row = mysqli_fetch_assoc($res);
                 </div>
                 <div class="for-group">
                   <label>Cantidad</label>
-                  <input type="number" name="cantidad" class="form-control" value="<?php echo $row['cantidad'] ?>">
+                  <input type="number" name="cantidad" class="form-control" value="<?php echo $row['cantidad'] ?>"  pattern="[0-9]+" maxlength="8" minlength="1">
                 </div>
                 <div class="for-group">
                   <label>talla</label>
@@ -103,11 +103,11 @@ $row = mysqli_fetch_assoc($res);
                 </div>
                 <div class="for-group">
                   <label>descripcion</label>
-                  <input type="text" name="descripcion" class="form-control" value="<?php echo $row['descripcion'] ?>">
+                  <input type="text" name="descripcion" class="form-control" value="<?php echo $row['descripcion'] ?>" maxlength="2000" minlength="9">
                 </div>
                 <div class="photo" style="width:1545px">
                   <label>Imagen(es)</label>
-                  <input type="text" name="imagenname" class="form-control" value="<?php echo $row['imagen'] ?>">
+                  <input type="text" name="imagenname" class="form-control" value="<?php echo $row['imagen'] ?>" readonly>
                   <br>
                   <input type="file" class="form-control" name="imagen" accept="image/png, image/jpg, image/jpeg, image/pjpeg">
                 </div>
