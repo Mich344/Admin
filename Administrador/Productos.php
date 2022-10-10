@@ -140,11 +140,11 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                               }
                               ?>
                        <td>
-                          <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "><i class="fas fa-user-edit" title="Editar Usuario"></i></a>
+                          <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "><i class="fas fa-pencil-alt" title="Editar Usuario"></i></a>
 
-                          <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:green;"><i class="fas fa-user-plus" aria-hidden="true" title="Activo"></i></a>
+                          <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:green;"><i class="fas fa-check" aria-hidden="true" title="Activo"></i></a>
                           
-                          <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:red;"><i class="fas fa-user-minus" aria-hidden="true" title="Inactivo"></i></a>
+                          <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:red;"><i class="fas fa-minus" aria-hidden="true" title="Inactivo"></i></a>
 
                           <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
 
