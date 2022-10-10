@@ -76,62 +76,24 @@ $row = mysqli_fetch_assoc($res);
 
                 <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombreproveedor" class="form-control" pattern="[a-zA-Z]+" required="" value="<?php echo $row['nombreproveedor'] ?>">
+                  <input type="text" name="nombreproveedor" class="form-control" pattern="[a-z A-Z]+" required="" value="<?php echo $row['nombreproveedor'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Apellido</label>
-                  <input type="text" name="apellidoproveedor" class="form-control" pattern="[a-zA-Z]+" required="" value="<?php echo $row['apellidoproveedor'] ?>">
+                  <input type="text" name="apellidoproveedor" class="form-control" pattern="[a-z A-Z]+" required="" value="<?php echo $row['apellidoproveedor'] ?>">
                 </div>
                 <div class="for-group">
-                  <label>Email</label>
-                  <input type="email" name="emailproveedor" class="form-control" required="" value="<?php echo $row['emailproveedor'] ?>">
+                  <label>Correo</label>
+                  <input type="email" name="emailproveedor" readonly class="form-control" required="" value="<?php echo $row['emailproveedor'] ?>">
                 </div>
                 <div class="for-group">
-                  <label>Password</label>
+                  <label>Contraseña</label>
                   <input type="password" name="paswordproveedor" class="form-control" minlength="5" maxlength="20" required="" value="<?php echo $row['paswordproveedor'] ?>">
-                </div>
-                <div class="for-group">
-                  <label>Ciudad</label>
-                  <select class="form-control" name="ciudadproveedor" required="" value="<?php echo $row['ciudadproveedor'] ?>">
-                    <option value="">-</option>
-                    <option value="Arauca">Arauca</option>
-                    <option value="Armenia">Armenia</option>
-                    <option value="Barranquilla">Barranquilla</option>
-                    <option value="Bogotá">Bogotá</option>
-                    <option value="Bucaramanga">Bucaramanga</option>
-                    <option value="Cali">Cali</option>
-                    <option value="Cartagena">Cartagena</option>
-                    <option value="Cúcuta">Cúcuta</option>
-                    <option value="Florencia">Florencia</option>
-                    <option value="Ibagué">Ibagué</option>
-                    <option value="Leticia">Leticia</option>
-                    <option value="Manizales">Manizales</option>
-                    <option value="Medellín">Medellín</option>
-                    <option value="Mitú">Mitú</option>
-                    <option value="Mocoa">Mocoa</option>
-                    <option value="Montería">Montería</option>
-                    <option value="Neiva">Neiva</option>
-                    <option value="Pasto">Pasto</option>
-                    <option value="Pereira">Pereira</option>
-                    <option value="Popayán">Popayán</option>
-                    <option value="Puerto Carreño">Puerto Carreño</option>
-                    <option value="Puerto Inírida">Puerto Inírida</option>
-                    <option value="Quibdó">Quibdó</option>
-                    <option value="Riohacha">Riohacha</option>
-                    <option value="San Andrés">San Andrés</option>
-                    <option value="San José del Guaviare">San José del Guaviare</option>
-                    <option value="Santa Marta">Santa Marta</option>
-                    <option value="Sincelejo">Sincelejo</option>
-                    <option value="Tunja">Tunja</option>
-                    <option value="Valledupar">Valledupar</option>
-                    <option value="Villavicencio">Villavicencio</option>
-                    <option value="Yopal">Yopal</option>
-                  </select>
                 </div>
                 <div class="for-group">
                   <label>Departamento</label>
                   <select type="text" name="deparproveedor" class="form-control" value="<?php echo $row['deparproveedor'] ?>">
-                    <option value="">-</option>
+                    <option value="<?php echo $row['deparproveedor'] ?>"><?php echo $row['deparproveedor'] ?></option>
                     <option value="Amazonas">Amazonas</option>
                     <option value="Antioquia">Antioquia</option>
                     <option value="Arauca">Arauca</option>
@@ -167,24 +129,62 @@ $row = mysqli_fetch_assoc($res);
                   </select>
                 </div>
                 <div class="for-group">
+                  <label>Ciudad</label>
+                  <select class="form-control" name="ciudadproveedor" required="" value="<?php echo $row['ciudadproveedor'] ?>">
+                    <option value="<?php echo $row['ciudadproveedor'] ?>"><?php echo $row['ciudadproveedor'] ?></option>
+                    <option value="Arauca">Arauca</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Barranquilla">Barranquilla</option>
+                    <option value="Bogotá">Bogotá</option>
+                    <option value="Bucaramanga">Bucaramanga</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Cartagena">Cartagena</option>
+                    <option value="Cúcuta">Cúcuta</option>
+                    <option value="Florencia">Florencia</option>
+                    <option value="Ibagué">Ibagué</option>
+                    <option value="Leticia">Leticia</option>
+                    <option value="Manizales">Manizales</option>
+                    <option value="Medellín">Medellín</option>
+                    <option value="Mitú">Mitú</option>
+                    <option value="Mocoa">Mocoa</option>
+                    <option value="Montería">Montería</option>
+                    <option value="Neiva">Neiva</option>
+                    <option value="Pasto">Pasto</option>
+                    <option value="Pereira">Pereira</option>
+                    <option value="Popayán">Popayán</option>
+                    <option value="Puerto Carreño">Puerto Carreño</option>
+                    <option value="Puerto Inírida">Puerto Inírida</option>
+                    <option value="Quibdó">Quibdó</option>
+                    <option value="Riohacha">Riohacha</option>
+                    <option value="San Andrés">San Andrés</option>
+                    <option value="San José del Guaviare">San José del Guaviare</option>
+                    <option value="Santa Marta">Santa Marta</option>
+                    <option value="Sincelejo">Sincelejo</option>
+                    <option value="Tunja">Tunja</option>
+                    <option value="Valledupar">Valledupar</option>
+                    <option value="Villavicencio">Villavicencio</option>
+                    <option value="Yopal">Yopal</option>
+                  </select>
+                </div>
+                <div class="for-group">
                   <label>Direccion</label>
-                  <input type="text" name="direccionproveedor" class="form-control" value="<?php echo $row['direccionproveedor'] ?>">
+                  <input type="text" name="direccionproveedor" required="" class="form-control" value="<?php echo $row['direccionproveedor'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Telefono</label>
-                  <input type="tel" name="telefonoproveedor" class="form-control" value="<?php echo $row['telefonoproveedor'] ?>">
+                  <input type="tel" name="telefonoproveedor" required="" class="form-control" pattern="[0-9]+" value="<?php echo $row['telefonoproveedor'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Tipo Documento</label>
-                  <input type="text" name="tip_docproveedor" class="form-control" value="<?php echo $row['tip_docproveedor'] ?>">
+                  <input type="text" readonly name="tip_docproveedor" class="form-control" value="<?php echo $row['tip_docproveedor'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Numero Documento</label>
-                  <input type="text" name="num_docproveedor" class="form-control" value="<?php echo $row['num_docproveedor'] ?>">
+                  <input type="text" readonly name="num_docproveedor" class="form-control" value="<?php echo $row['num_docproveedor'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Fecha Nacimiento</label>
-                  <input type="date" name="fech_nacproveedor" class="form-control" value="<?php echo $row['fech_nacproveedor'] ?>">
+                  <input type="date" readonly name="fech_nacproveedor" class="form-control" value="<?php echo $row['fech_nacproveedor'] ?>">
                 </div>
                 <div class="for-group">
                   <br>
@@ -192,7 +192,7 @@ $row = mysqli_fetch_assoc($res);
                   <center>
                     <div class="for-group">
                       <br>
-                      <button class="glow-on-hover" type="submit" name="guardar">Editar Usuario</button>
+                      <button class="glow-on-hover" type="submit" name="guardar">Guardar</button>
                     </div>
                   </center>
                   <a href="Panel.php?modulo=Proveedores"><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>

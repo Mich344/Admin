@@ -1,3 +1,14 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/Boton.css">
+  <link rel="stylesheet" href="Css/Fondo.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+</head>
+
+
 <?php
 include_once "Basedata.php";
 $con = mysqli_connect($host, $user, $pasword, $db);
@@ -15,9 +26,12 @@ if (isset($_REQUEST['guardar'])) {
   $num_doc = mysqli_real_escape_string($con, $_REQUEST['num_docadmin'] ?? '');
   $fech_nac = mysqli_real_escape_string($con, $_REQUEST['fech_nacadmin'] ?? '');
 
-  $salt = "asdasdasddacaca";
+  /*$salt = "asdasdasddacaca";
   $pasword = $_POST['paswordadmin'] . $salt;
-  $pasword = sha1($_POST['paswordadmin']). $salt;
+  $pasword = sha1($_POST['paswordadmin']). $salt;*/
+
+  $pasword = "kasumi123";
+  $sha1= sha1($pasword);
 
   $query = "INSERT INTO administradores (nombreadmin, apellidoadmin, emailadmin,paswordadmin, ciudadadmin, deparadmin, direccionadmin, telefonoadmin, tip_docadmin, num_docadmin, fech_nacadmin, estadoadmin) VALUES ('" . $nombre . "' , '" . $apellido . "' , '" . $email . "' , '" . $pasword . "' , '" . $ciudad . "' , '" . $depar . "' ,'" . $direccion . "' , '" . $telefono . "' , '" . $tip_doc . "' ,  '" . $num_doc . "' ,  '" . $fech_nac . "', '1');";
   //Restultados 
@@ -27,7 +41,7 @@ if (isset($_REQUEST['guardar'])) {
   } else {
 ?>
     <div class="alert alert-danger" role="alert">
-      Error al editar producto <?php echo mysqli_error($con) ?>
+      Error al editar usuario <?php echo mysqli_error($con) ?>
     </div>
 <?php
   }
@@ -35,17 +49,8 @@ if (isset($_REQUEST['guardar'])) {
 ?>
 <?php
 
-
-
-
 ?>
 <div class="content-wrapper">
-
-  <style>
-    .content-wrapper {
-      background-color: black;
-    }
-  </style>
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">
@@ -70,11 +75,11 @@ if (isset($_REQUEST['guardar'])) {
               <form action="Panel.php?modulo=Crear" method="post">
 
                 <div class="for-group">
-                  <label>Nombres</label>
+                  <label>Nombre</label>
                   <input type="text" name="nombreadmin" class="form-control" pattern="[a-z A-Z]+" required="">
                 </div>
                 <div class="for-group">
-                  <label>Apellidos</label>
+                  <label>Apellido</label>
                   <input type="text" name="apellidoadmin" class="form-control" pattern="[a-z A-Z]+" required="">
                 </div>
                 <div class="for-group">
@@ -86,44 +91,6 @@ if (isset($_REQUEST['guardar'])) {
                   <input type="password" name="paswordadmin" class="form-control" minlength="5" maxlength="20" required="">
                 </div>
                 <div class="for-group">
-                  <label>Ciudad</label>
-                  <select class="form-control" name="ciudadadmin" required="">
-                    <option value="">-</option>
-                    <option value="Arauca">Arauca</option>
-                    <option value="Armenia">Armenia</option>
-                    <option value="Barranquilla">Barranquilla</option>
-                    <option value="Bogotá">Bogotá</option>
-                    <option value="Bucaramanga">Bucaramanga</option>
-                    <option value="Cali">Cali</option>
-                    <option value="Cartagena">Cartagena</option>
-                    <option value="Cúcuta">Cúcuta</option>
-                    <option value="Florencia">Florencia</option>
-                    <option value="Ibagué">Ibagué</option>
-                    <option value="Leticia">Leticia</option>
-                    <option value="Manizales">Manizales</option>
-                    <option value="Medellín">Medellín</option>
-                    <option value="Mitú">Mitú</option>
-                    <option value="Mocoa">Mocoa</option>
-                    <option value="Montería">Montería</option>
-                    <option value="Neiva">Neiva</option>
-                    <option value="Pasto">Pasto</option>
-                    <option value="Pereira">Pereira</option>
-                    <option value="Popayán">Popayán</option>
-                    <option value="Puerto Carreño">Puerto Carreño</option>
-                    <option value="Puerto Inírida">Puerto Inírida</option>
-                    <option value="Quibdó">Quibdó</option>
-                    <option value="Riohacha">Riohacha</option>
-                    <option value="San Andrés">San Andrés</option>
-                    <option value="San José del Guaviare">San José del Guaviare</option>
-                    <option value="Santa Marta">Santa Marta</option>
-                    <option value="Sincelejo">Sincelejo</option>
-                    <option value="Tunja">Tunja</option>
-                    <option value="Valledupar">Valledupar</option>
-                    <option value="Villavicencio">Villavicencio</option>
-                    <option value="Yopal">Yopal</option>
-                  </select>
-
-                  <div class="for-group">
                     <label>Departamento</label>
                     <select class="form-control" name="deparadmin" required="">
                       <option value="">-</option>
@@ -161,10 +128,47 @@ if (isset($_REQUEST['guardar'])) {
                       <option value="Vichada">Vichada</option>
                     </select>
                   </div>
+                <div class="for-group">
+                  <label>Ciudad</label>
+                  <select class="form-control" name="ciudadadmin" required="">
+                    <option value="">-</option>
+                    <option value="Arauca">Arauca</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Barranquilla">Barranquilla</option>
+                    <option value="Bogotá">Bogotá</option>
+                    <option value="Bucaramanga">Bucaramanga</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Cartagena">Cartagena</option>
+                    <option value="Cúcuta">Cúcuta</option>
+                    <option value="Florencia">Florencia</option>
+                    <option value="Ibagué">Ibagué</option>
+                    <option value="Leticia">Leticia</option>
+                    <option value="Manizales">Manizales</option>
+                    <option value="Medellín">Medellín</option>
+                    <option value="Mitú">Mitú</option>
+                    <option value="Mocoa">Mocoa</option>
+                    <option value="Montería">Montería</option>
+                    <option value="Neiva">Neiva</option>
+                    <option value="Pasto">Pasto</option>
+                    <option value="Pereira">Pereira</option>
+                    <option value="Popayán">Popayán</option>
+                    <option value="Puerto Carreño">Puerto Carreño</option>
+                    <option value="Puerto Inírida">Puerto Inírida</option>
+                    <option value="Quibdó">Quibdó</option>
+                    <option value="Riohacha">Riohacha</option>
+                    <option value="San Andrés">San Andrés</option>
+                    <option value="San José del Guaviare">San José del Guaviare</option>
+                    <option value="Santa Marta">Santa Marta</option>
+                    <option value="Sincelejo">Sincelejo</option>
+                    <option value="Tunja">Tunja</option>
+                    <option value="Valledupar">Valledupar</option>
+                    <option value="Villavicencio">Villavicencio</option>
+                    <option value="Yopal">Yopal</option>
+                  </select>
                 </div>
                 <div class="for-group">
                   <label>Direccion</label>
-                  <input type="text" name="direccionadmin" class="form-control" required="" minlength="6">
+                  <input type="text" name="direccionadmin" class="form-control" required="" minlength="10">
                 </div>
                 <div class="for-group">
                   <label>Telefono</label>
@@ -190,83 +194,12 @@ if (isset($_REQUEST['guardar'])) {
                 <center>
                   <div class="for-group">
                     <br>
-                    <button class="glow-on-hover" type="submit" name="guardar">Crear Usuario</button>
+                    <button class="glow-on-hover" type="submit" name="guardar">Guardar </button>
                   </div>
                 </center>
                 <a href="Panel.php?modulo=Administradores"><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
-                <style>
-                  .glow-on-hover {
-                    width: 220px;
-                    height: 50px;
-                    border: none;
-                    outline: none;
-                    color: #fff;
-                    background: #111;
-                    cursor: pointer;
-                    position: relative;
-                    z-index: 0;
-                    border-radius: 10px;
-                  }
-
-                  .glow-on-hover:before {
-                    content: '';
-                    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-                    position: absolute;
-                    top: -2px;
-                    left: -2px;
-                    background-size: 400%;
-                    z-index: -1;
-                    filter: blur(5px);
-                    width: calc(100% + 4px);
-                    height: calc(100% + 4px);
-                    animation: glowing 20s linear infinite;
-                    opacity: 0;
-                    transition: opacity .3s ease-in-out;
-                    border-radius: 10px;
-                  }
-
-                  .glow-on-hover:active {
-                    color: #000
-                  }
-
-                  .glow-on-hover:active:after {
-                    background: transparent;
-                  }
-
-                  .glow-on-hover:hover:before {
-                    opacity: 1;
-                  }
-
-                  .glow-on-hover:after {
-                    z-index: -1;
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    background: #111;
-                    left: 0;
-                    top: 0;
-                    border-radius: 10px;
-                  }
-
-                  @keyframes glowing {
-                    0% {
-                      background-position: 0 0;
-                    }
-
-                    50% {
-                      background-position: 400% 0;
-                    }
-
-                    100% {
-                      background-position: 0 0;
-                    }
-                  }
-                </style>
               </form>
             </div>
-            <!-- LA CANTIDAD (EN EL FRONT) NO PUEDE SER MAYOR A LA CANTIDAD QUE HAY DE PORDUCTOS. ES DECIR NO SE PUEDE ESCOGER MAYOR CANTIDAD CIERTO PRODUCTO-->
-
           </div>
           <!-- /.col -->
         </div>

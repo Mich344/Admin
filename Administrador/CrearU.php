@@ -34,7 +34,7 @@ if (isset($_REQUEST['guardar'])) {
   } else {
 ?>
     <div class="alert alert-danger" role="alert">
-      Error al editar  <?php echo mysqli_error($con) ?>
+      Error al editar usuario <?php echo mysqli_error($con) ?>
     </div>
 <?php
   }
@@ -64,12 +64,12 @@ if (isset($_REQUEST['guardar'])) {
               <form action="Panel.php?modulo=CrearU" method="post">
 
                 <div class="for-group">
-                  <label>Nombres</label>
-                  <input type="text" name="nombre" class="form-control" pattern="[a-zA-Z]+" required="">
+                  <label>Nombre</label>
+                  <input type="text" name="nombre" class="form-control" pattern="[a-z A-Z]+" required="">
                 </div>
                 <div class="for-group">
-                  <label>Apellidos</label>
-                  <input type="text" name="apellido" class="form-control" pattern="[a-zA-Z]+" required="">
+                  <label>Apellido</label>
+                  <input type="text" name="apellido" class="form-control" pattern="[a-z A-Z]+" required="">
                 </div>
                 <div class="for-group">
                   <label>Correo</label>
@@ -184,14 +184,12 @@ if (isset($_REQUEST['guardar'])) {
                 <center>
                   <div class="for-group">
                     <br>
-                    <button class="glow-on-hover" type="submit" name="guardar">Crear Usuario</button>
+                    <button class="glow-on-hover" type="submit" name="guardar">Guardar</button>
                   </div>
                 </center>
                 <a href="Panel.php?modulo=Usuarios" ><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
               </form>
             </div>
-            <!-- LA CANTIDAD (EN EL FRONT) NO PUEDE SER MAYOR A LA CANTIDAD QUE HAY DE PORDUCTOS. ES DECIR NO SE PUEDE ESCOGER MAYOR CANTIDAD CIERTO PRODUCTO-->
-
           </div>
           <!-- /.col -->
         </div>

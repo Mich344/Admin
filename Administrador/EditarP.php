@@ -117,7 +117,7 @@ $row = mysqli_fetch_assoc($res);
                 <center>
                 <br>
                 <input type="hidden" name="Id" value="<?php echo $row['Id'] ?>">
-                <button type="submit" class="glow-on-hover" name="guardar">guardar</button>
+                <button type="submit" class="glow-on-hover" name="guardar">Guardar</button>
                 </center>
               </div>
               </form>
