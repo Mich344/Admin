@@ -37,6 +37,9 @@
           session_start();
           $email = $_REQUEST['emailadmin'] ?? '';
           $passwordd = $_REQUEST['paswordadmin'] ?? '';
+          $salt = "asdasdasddacaca";
+          $pasword = $_POST['paswordadmin'].$salt;
+          $pasword = sha1($_POST['paswordadmin']);
 
           include_once "Basedata.php";
 

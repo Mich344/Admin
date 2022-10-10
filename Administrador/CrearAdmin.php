@@ -14,14 +14,16 @@ if (isset($_REQUEST['guardar'])) {
   $tip_doc = mysqli_real_escape_string($con, $_REQUEST['tip_docadmin'] ?? '');
   $num_doc = mysqli_real_escape_string($con, $_REQUEST['num_docadmin'] ?? '');
   $fech_nac = mysqli_real_escape_string($con, $_REQUEST['fech_nacadmin'] ?? '');
-  
- 
+
+  $salt = "asdasdasddacaca";
+  $pasword = $_POST['paswordadmin'] . $salt;
+  $pasword = sha1($_POST['paswordadmin']). $salt;
 
   $query = "INSERT INTO administradores (nombreadmin, apellidoadmin, emailadmin,paswordadmin, ciudadadmin, deparadmin, direccionadmin, telefonoadmin, tip_docadmin, num_docadmin, fech_nacadmin, estadoadmin) VALUES ('" . $nombre . "' , '" . $apellido . "' , '" . $email . "' , '" . $pasword . "' , '" . $ciudad . "' , '" . $depar . "' ,'" . $direccion . "' , '" . $telefono . "' , '" . $tip_doc . "' ,  '" . $num_doc . "' ,  '" . $fech_nac . "', '1');";
   //Restultados 
   $res = mysqli_query($con, $query);
   if ($res) {
-    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje= ' . $nombre . ' Creado correctamente" />';
+    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje= El administrador ' . $nombre . ' Fue creado correctamente" />';
   } else {
 ?>
     <div class="alert alert-danger" role="alert">
@@ -30,6 +32,12 @@ if (isset($_REQUEST['guardar'])) {
 <?php
   }
 }
+?>
+<?php
+
+
+
+
 ?>
 <div class="content-wrapper">
 
@@ -63,11 +71,11 @@ if (isset($_REQUEST['guardar'])) {
 
                 <div class="for-group">
                   <label>Nombres</label>
-                  <input type="text" name="nombreadmin" class="form-control" pattern="[a-zA-Z]+" required="">
+                  <input type="text" name="nombreadmin" class="form-control" pattern="[a-z A-Z]+" required="">
                 </div>
                 <div class="for-group">
                   <label>Apellidos</label>
-                  <input type="text" name="apellidoadmin" class="form-control" pattern="[a-zA-Z]+" required="">
+                  <input type="text" name="apellidoadmin" class="form-control" pattern="[a-z A-Z]+" required="">
                 </div>
                 <div class="for-group">
                   <label>Correo</label>
@@ -114,7 +122,7 @@ if (isset($_REQUEST['guardar'])) {
                     <option value="Villavicencio">Villavicencio</option>
                     <option value="Yopal">Yopal</option>
                   </select>
-                
+
                   <div class="for-group">
                     <label>Departamento</label>
                     <select class="form-control" name="deparadmin" required="">
@@ -185,7 +193,7 @@ if (isset($_REQUEST['guardar'])) {
                     <button class="glow-on-hover" type="submit" name="guardar">Crear Usuario</button>
                   </div>
                 </center>
-                <a href="Panel.php?modulo=Administradores" ><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
+                <a href="Panel.php?modulo=Administradores"><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
                 <style>
                   .glow-on-hover {
                     width: 220px;

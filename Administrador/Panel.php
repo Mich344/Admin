@@ -91,8 +91,8 @@ $modulo = $_REQUEST['modulo'] ?? '';
       <!-- Brand Logo -->
       <a href="#" class="brand-link">
         <!--poner logo-->
-        <img src="../images/1.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light" style="color:red"><b>Sports</b></span><b style="color:white">Wearline</b>
+        <img src="../dist/img/logo.jpg" alt="Sports Wearline" class="brand-image img-circle elevation-1" style="opacity: .8" >
+        <span class="brand-text font-weight-light"></span><b style="color:red">Sports</b><b style="color:white">Wearline</b>
       </a>
 
       <!-- Sidebar -->
@@ -100,7 +100,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="../dist/img/fondo.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
             <a href="#" class="d-block"><?php echo $_SESSION['nombreadmin']; ?></a>
@@ -354,7 +354,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
     });
   </script>
   <footer class="main-footer" style="background:radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)">
-    <strong>SportsWearline &copy; 2015-2022 <a href="index1.php" target="_blank" style="color:white">Tienda Virtual Aqui.</a></strong>
+    <strong>SportsWearline &copy; 2015-2022 <a href="../index1.php" target="_blank" style="color:white">Tienda Virtual Aqui.</a></strong>
     <div class="float-right d-none d-sm-inline-block">
       <b style="color:red">SportsWearline</b>
     </div>

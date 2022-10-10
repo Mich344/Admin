@@ -76,15 +76,15 @@ $row = mysqli_fetch_assoc($res);
 
                 <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombreadmin" class="form-control" pattern="[a-zA-Z]+" required="" value="<?php echo $row['nombreadmin'] ?>">
+                  <input type="text" name="nombreadmin" class="form-control" pattern="[a-z A-Z]+" required="" value="<?php echo $row['nombreadmin'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Apellido</label>
-                  <input type="text" name="apellidoadmin" class="form-control" pattern="[a-zA-Z]+" required="" value="<?php echo $row['apellidoadmin'] ?>">
+                  <input type="text" name="apellidoadmin" class="form-control" pattern="[a-z A-Z]+" required="" value="<?php echo $row['apellidoadmin'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Email</label>
-                  <input type="email" name="emailadmin" class="form-control" required="" value="<?php echo $row['emailadmin'] ?>">
+                  <input type="email" name="emailadmin" class="form-control" required="" readonly value="<?php echo $row['emailadmin'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Password</label>
@@ -176,7 +176,7 @@ $row = mysqli_fetch_assoc($res);
                 </div>
                 <div class="for-group">
                   <label>Tipo Documento</label>
-                  <select type="text" name="tip_docadmin" class="form-control" value="<?php echo $row['tip_docadmin'] ?>">
+                  <select type="text" name="tip_docadmin" class="form-control" disabled value="<?php echo $row['tip_docadmin'] ?>">
                   <label>Tipo Documento</label>
                     <option value="">-</option>
                     <option value="Cedula Ciudadania">Cedula De Ciudadania</option>
@@ -186,11 +186,11 @@ $row = mysqli_fetch_assoc($res);
                 </div>
                 <div class="for-group">
                   <label>Numero Documento</label>
-                  <input type="text" name="num_docadmin" class="form-control" value="<?php echo $row['num_docadmin'] ?>">
+                  <input type="text" name="num_docadmin" readonly class="form-control" value="<?php echo $row['num_docadmin'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Fecha Nacimiento</label>
-                  <input type="date" name="fech_nacadmin" class="form-control" value="<?php echo $row['fech_nacadmin'] ?>">
+                  <input type="date" name="fech_nacadmin" readonly class="form-control" value="<?php echo $row['fech_nacadmin'] ?>">
                 </div>
                 <div class="for-group">
                   <br>
@@ -201,7 +201,7 @@ $row = mysqli_fetch_assoc($res);
                       <button class="glow-on-hover" type="submit" name="guardar">Editar Usuario</button>
                     </div>
                   </center>
-                  <a href="Panel.php?modulo=Administradores"><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
+                  <a href="Panel.php?modulo=Estadisticas"><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
                 </div>
               </form>
             </div>

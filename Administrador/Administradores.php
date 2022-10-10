@@ -6,12 +6,12 @@ $Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado1']??'');
 $query = "UPDATE administradores SET estadoadmin = '1' WHERE Idadmin = '".$Id."';";
 $res = mysqli_query($con, $query);
 if ($res){
-echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=El Administrador ha sido cambiado de estado con exito" />';
+echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=El Administrador  ha sido cambiado de estado con exito" />';
   }
 else {
 ?>
      <?php
-     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=No se pudo cambiar de estado del Administrador ' .  mysqli_error ($con) . ' " />';
+     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=No se pudo cambiar de estado del Administrador' . $nombre . ' ' .  mysqli_error ($con) . ' " />';
     ?>
     <?php
   }
@@ -26,7 +26,7 @@ $Id = mysqli_real_escape_string($con, $_REQUEST['IdEstado2']??'');
 $query = "UPDATE administradores SET estadoadmin = '0' WHERE Idadmin = '".$Id."';";
 $res = mysqli_query($con, $query);
 if ($res){
-  echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=El Administrador ha sido cambiado de estado con exito" />';
+  echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=El Administrador  ha sido cambiado de estado con exito" />';
   }
 else {
 echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administradores&mensaje=No se pudo cambiar de estado del Administrador ' .  mysqli_error ($con) . ' " />';

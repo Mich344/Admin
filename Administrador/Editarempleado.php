@@ -76,15 +76,15 @@ $row = mysqli_fetch_assoc($res);
 
                 <div class="for-group">
                   <label>Nombre</label>
-                  <input type="text" name="nombreempleado" class="form-control" pattern="[a-zA-Z]+" required="" value="<?php echo $row['nombreempleado'] ?>">
+                  <input type="text" name="nombreempleado" class="form-control" pattern="[a-z A-Z]+" required="" value="<?php echo $row['nombreempleado'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Apellido</label>
-                  <input type="text" name="apellidoempleado" class="form-control" pattern="[a-zA-Z]+" required="" value="<?php echo $row['apellidoempleado'] ?>">
+                  <input type="text" name="apellidoempleado" class="form-control" pattern="[a-z A-Z]+" required="" value="<?php echo $row['apellidoempleado'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Email</label>
-                  <input type="email" name="emailempleado" class="form-control" required="" value="<?php echo $row['emailempleado'] ?>">
+                  <input type="email" readonly name="emailempleado" class="form-control" required="" value="<?php echo $row['emailempleado'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Password</label>
@@ -176,7 +176,7 @@ $row = mysqli_fetch_assoc($res);
                 </div>
                 <div class="for-group">
                   <label>Tipo Documento</label>
-                  <select type="text" name="tip_docempleado" class="form-control" value="<?php echo $row['tip_docempleado'] ?>">
+                  <select type="text" disabled name="tip_docempleado" class="form-control" value="<?php echo $row['tip_docempleado'] ?>">
                   <label>Tipo Documento</label>
                     <option value="">-</option>
                     <option value="Cedula Ciudadania">Cedula De Ciudadania</option>
@@ -186,11 +186,11 @@ $row = mysqli_fetch_assoc($res);
                 </div>
                 <div class="for-group">
                   <label>Numero Documento</label>
-                  <input type="text" name="num_docempleado" class="form-control" value="<?php echo $row['num_docempleado'] ?>">
+                  <input type="text" readonly name="num_docempleado" class="form-control" value="<?php echo $row['num_docempleado'] ?>">
                 </div>
                 <div class="for-group">
                   <label>Fecha Nacimiento</label>
-                  <input type="date" name="fech_nacempleado" class="form-control" value="<?php echo $row['fech_nacempleado'] ?>">
+                  <input type="date" readonly name="fech_nacempleado" class="form-control" value="<?php echo $row['fech_nacempleado'] ?>">
                 </div>
                 <div class="for-group">
                   <br>
