@@ -101,25 +101,25 @@ balls.forEach((el, i, ra) => {
                                 <div class="form-group row">
                                     <label for="usuario" class="col-2">Nombre</label>
                                     <div class="col-8">
-                                        <input type="text" class="form-control" value="AGREGAR">
+                                        <input type="text" class="form-control" value="">
                                     </div>
                                 </div>
                                  <div class="form-group row">
                                     <label for="tel" class="col-2">Apellidos</label>
                                     <div class="col-8">
-                                        <input type="text" class="form-control" value="AGREGAR">
+                                        <input type="text" class="form-control" value="">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="email" class="col-2"> Email </label>
                                     <div class="col-8">
-                                        <input type="email" class="form-control" value="AGREGAR">
+                                        <input type="email" class="form-control" value="">
                                     </div>
                                 </div>
                                 <div class="form-group text-center">
                                     <button class="btn btn-info">Actualizar</button>
                                     <button class="btn btn-danger">Cancelar</button>
-                                    <button class="btn btn-success">Salir de esta pagina</button>
+                                    
                                 </div>
                             </div>
                         </div>
