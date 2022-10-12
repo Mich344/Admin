@@ -15,47 +15,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
-<?php
-include_once "Administrador/Basedata.php";
-$con = mysqli_connect($host, $user, $pasword, $db);
-if (isset($_REQUEST['guardar'])) {
-  $Id = mysqli_real_escape_string($con, $_REQUEST['Id'] ?? '');
-  $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre'] ?? '');
-  $apellido = mysqli_real_escape_string($con, $_REQUEST['apellido'] ?? '');
-  $email = mysqli_real_escape_string($con, $_REQUEST['email'] ?? '');
-  $pasword = mysqli_real_escape_string($con, $_REQUEST['pasword'] ?? '');
-  $ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudad'] ?? '');
-  $depar = mysqli_real_escape_string($con, $_REQUEST['depar'] ?? '');
-  $direccion = mysqli_real_escape_string($con, $_REQUEST['direccion'] ?? '');
-  $telefono = mysqli_real_escape_string($con, $_REQUEST['telefono'] ?? '');
-  $tip_doc = mysqli_real_escape_string($con, $_REQUEST['tip_doc'] ?? '');
-  $num_doc = mysqli_real_escape_string($con, $_REQUEST['num_doc'] ?? '');
-  $fech_nac = mysqli_real_escape_string($con, $_REQUEST['fech_nac'] ?? '');
-
-  $query = "UPDATE usuario SET nombre = '" . $nombre . "' ,apellido = '" . $apellido . "' ,email = '" . $email . "' ,pasword = '" . $pasword . "' ,ciudad = '" . $ciudad . "' ,departamento = '" . $depar . "' ,direccion = '" . $direccion . "' ,telefono = '" . $telefono . "' ,tip_doc = '" . $tip_doc . "' ,num_doc = '" . $num_doc . "' ,fech_nac = '" . $fech_nac . "' WHERE Id = '" . $Id . "';";
-  //Restultados 
-  $res = mysqli_query($con, $query);
-  if ($res) {
-    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mensaje= ' . $nombre . ' Editado correctamente" />';
-  } else {
-?>
-    <div class="alert alert-danger" role="alert">
-      Error al editar producto <?php echo mysqli_error($con) ?>
-    </div>
-<?php
-  }
-}
-// Leer los usuarios 
-// ((mysqli_real_escape_string)) Significado llama consultas preparadas 
-$Id = mysqli_real_escape_string($con, $_REQUEST['Id'] ?? '');
-// Seleccionar los datos //
-$query = "SELECT Id, nombre, apellido, email, pasword, ciudad, departamento, direccion, telefono, tip_doc, num_doc, fech_nac from usuario WHERE  Id = '" . $Id . "';";
-// Pasar la conexion $con, $query y almacenar en la variable $res. //
-$res = mysqli_query($con, $query);
-// (mysqli_fetch_assoc) Entregar un registro con el almacenamiento de la variable $res
-$row = mysqli_fetch_assoc($res);
-
-?>
 <body>
 
 
@@ -159,7 +118,6 @@ $row = mysqli_fetch_assoc($res);
                                 <div class="form-group text-center">
                                     <button class="btn btn-info">Actualizar</button>
                                     <button class="btn btn-danger">Cancelar</button>
-
                                 </div>
                             </div>
                         </div>
@@ -201,13 +159,13 @@ $row = mysqli_fetch_assoc($res);
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
-                            <div class="form-group row">
+
+                            <!-- <div class="form-group row">
                                 <label for="ciudad" class="col-4">Ciudad</label>
                                 <div class="col-8">
-                                    <!-- SE SUPONE QUE AQUI DEBE DE HABER UNA LISTA DE LAS CIUDADES -->
                                     <input type="ciudad" class="form-control">
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="form-group row">
                                 <label for="telefono" class="col-4">Telefono</label>
                                 <div class="col-8">
@@ -219,6 +177,30 @@ $row = mysqli_fetch_assoc($res);
                                 <div class="col-8">
                                     <input type="text" class="form-control">
                                 </div>
+                                <br>
+                                <br>
+
+                                <div class="btn-group dropleft">
+                                    <button type="button" id="CIUDADESBOTON" class="btn btn-secondary btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Ciudades
+                                        <style>
+                                            CIUDADESBOTON {
+                                                height: 50px;
+                                                width: 500px;
+                                            }
+                                        </style>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" type="button">Cali</button>
+                                        <button class="dropdown-item" type="button">Medellin</button>
+                                        <button class="dropdown-item" type="button">Florencia</button>
+                                    </div>
+                                </div>
+
+
+<!--                             SEPARACIÓN DE TRABAJO DE BOTONES PARA EL DROPDOWN 
+ -->
+
                             </div>
                             <div class="form-group text-center">
                                 <button class="btn btn-info">Actualizar</button>
