@@ -285,7 +285,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 	      <div class="new-info">
 		<?php 
-		include_once "../Basedata.php";
+		include_once "../Administrador/Basedata.php";
 		/*CONECTA LA BASE DE DATOS (BASEDATA) CON EL LOCALHOST, USUARIO, CONTRASEÑA Y DB*/
 		$con = mysqli_connect($host, $user, $pasword, $db);
 		/* UTILIZA UN REQUERIMIENTO DONDE SE VA A SELECCIONAR TODOS LOS PRODUCTOS CON SU ID, NOMBRE, PRECIO Y CANTIDAD DE LA TABLA PRODUCTOS  */
