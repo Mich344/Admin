@@ -1,25 +1,3 @@
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<title>Sportswearline - Producto </title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Modern Shoppe Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--//for-mobile-apps -->
-<!--Custom Theme files -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!--//Custom Theme files -->
-<!--js-->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
-<!--//js-->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -58,8 +36,6 @@ $(window).load(function() {
 <script src="js/simpleCart.min.js"></script>
 <!--cart-->
 <!--web-fonts-->
-<!--libreria iconos redes sociales-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link href='//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'><link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Fascinate' rel='stylesheet' type='text/css'>
@@ -68,6 +44,8 @@ $(window).load(function() {
 <link href="css/animate.min.css" rel="stylesheet"> 
 <script src="js/wow.min.js"></script>
 <script>
+<!--libreria iconos redes sociales-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
  new WOW().init();
 </script>
 <!--//animation-effect-->
@@ -118,11 +96,9 @@ $(window).load(function() {
 				<div class="nav navbar-nav logo wow zoomIn animated" data-wow-delay=".7s">
 					<h1><a href="index1.php" style="color: #B2051F">SPORTS<b>WEARLINE</b><span class="tag"><strong> Vístete bien, hoy tienes una cita con el deporte ¡Marca tú estilo!</strong></span></a></h1>
 				</div>
-
 				<div class="nav navbar-nav navbar-right header-two-right">
 					<div class="header-right my-account">
 						<a href="contact.php"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> CONTÁCTANOS</a>
-
 					</div>
 					<div class="header-right cart">
 						<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
@@ -174,12 +150,9 @@ $(window).load(function() {
 											</ul>
 										</div>
 										
-
 									<div class="col-sm-3 menu-grids">
 										<div class="ok">
-
 												</div>	
-
 										</div>	
 										<div class="clearfix"> </div>
 									</div>	
@@ -210,7 +183,6 @@ $(window).load(function() {
 											</ul>
 										</div>
 										<div class="col-sm-3 menu-grids new-add2">
-
 												<div class="lll">
 												</div>	
 										</div>
@@ -231,11 +203,8 @@ $(window).load(function() {
 											</ul>
 										</div>
 										<div class="col-sm-8 menu-grids">
-
 												<div class="imag">
-
 												</div>	
-
 										</div>	
 										<div class="clearfix"> </div>
 									</div>	
@@ -248,7 +217,6 @@ $(window).load(function() {
 										<div class="col-sm-4 menu-grids">
 											<ul class="multi-column-dropdown">
 												<h4>Accesorios</h4>
-
 												<li><a class="list" href="productos/cuerdas.php"><b>Cuerdas</b></a></li>
 												<li><a class="list" href="productos/mancuernas.php"><b>Mancuernas</b></a></li>
 												<li><a class="list" href="productos/botellas.php"><b>Botellas</b></a></li>
@@ -256,11 +224,8 @@ $(window).load(function() {
 											</ul>
 										</div>
 										<div class="col-sm-8 menu-grids">
-
 												<div class="new-add">
-
 												</div>	
-
 										</div>	
 										<div class="clearfix"> </div>
 									</div>	
@@ -289,7 +254,6 @@ $(window).load(function() {
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
 				<li><a href="index1.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Inicio</a></li>
-
 			</ol>
 		</div>
 	</div>
@@ -314,13 +278,28 @@ $(window).load(function() {
 					<div class="flexslider">
 						<ul class="slides">
 							<li data-thumb="images/s1.jpg">
-								<div class="thumb-image"><?php $rowproducto['Id'] ?><?php echo "<img src='/Admin/upload/".$rowproducto['imagen']."' data-imagezoom='true' class='img-responsive' alt=''>"?> </div>
+								<div class="thumb-image"><?php echo $rowproducto['Id'] ?>"><?php echo "<img src='upload/".$rowproducto['imagen']."' data-imagezoom='true' class='img-responsive' alt=''>"?> </div>
 							</li> 
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-6 single-top-left simpleCart_shelfItem wow fadeInRight animated" data-wow-delay=".5s">
 					<h3><?php echo $rowproducto['nombre'] ?></h3>
+					<div class="single-rating">
+						<span class="starRating">
+							<input id="rating5" type="radio" name="rating" value="5" checked>
+							<label for="rating5">5</label>
+							<input id="rating4" type="radio" name="rating" value="4">
+							<label for="rating4">4</label>
+							<input id="rating3" type="radio" name="rating" value="3">
+							<label for="rating3">3</label>
+							<input id="rating2" type="radio" name="rating" value="2">
+							<label for="rating2">2</label>
+							<input id="rating1" type="radio" name="rating" value="1">
+							<label for="rating1">1</label>
+						</span>
+						
+					</div>
 					<h6 class="item_price"><?php echo $rowproducto['precio'] ?></h6>			
 					<p><?php  echo $rowproducto['descripcion'] ?></p>
 					
@@ -330,8 +309,7 @@ $(window).load(function() {
 					</ul>
 					<div class="clearfix"> </div>
 					<div class="quantity">
-						<p class="qty"> cantidad: </p>  <input min="1" type="number" value="1" max="<?php echo $rowproducto['cantidad'] ?>" class="item_quantity">
-						
+						<p class="qty"> cantidad:  </p><input min="1" type="number" value="1" max="<?php echo $rowproducto['cantidad'] ?>" class="item_quantity">
 					</div>
 					<div class="btn_form">
 						<a href="#" class="add-cart item_add">ADD TO CART</a>	
@@ -346,7 +324,7 @@ $(window).load(function() {
 						<div class="panel-heading" role="tab" id="headingOne">
 							<h4 class="panel-title">
 								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-								  Description.
+								  Description
 								</a>
 							</h4>
 						</div>
@@ -360,15 +338,14 @@ $(window).load(function() {
 						<div class="panel-heading" role="tab" id="headingFour">
 							<h4 class="panel-title">
 								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-									Ayuda.
+									help
 								</a>
 							</h4>
 						</div>
 						<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 							<div class="panel-body">
 								Para cualquier duda puedes contactarnos a nuestro correo o a nuestro número. Dirigete al siguiente link para que puedas accerder a ellos <a href="products.php"> este link 
-							
-							</div>		
+							</div>
 						</div>
 					</div>
 				</div>
@@ -401,12 +378,7 @@ $(window).load(function() {
 				</div>
 				<div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".9s">
 					<h2 style="color:#B2051F"><strong>Disfruta comprando tus productos favoritos </strong></h2>
-					<p style="color:white;"><strong>Dejanos tu sugerencia en un comentario</stron>
-					</p>
-					<form>
-						<input type="text" placeholder="Escribenos tu opinion aqui" required="">
-						<input style="color:black" type="submit" value="Enviar">
-					</form>
+					
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -442,8 +414,3 @@ $(window).load(function() {
     <script src="js/bootstrap.js"></script>
 </body>
 </html>
-
-
-
-
-
