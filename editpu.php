@@ -15,9 +15,44 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
+<?php
+include_once "Administrador/Basedata.php";
+$con = mysqli_connect($host, $user, $pasword, $db);
+if (isset($_REQUEST['guardar'])) {
+  $Id = mysqli_real_escape_string($con, $_REQUEST['Id'] ?? '');
+  $nombre = mysqli_real_escape_string($con, $_REQUEST['nombre'] ?? '');
+  $apellido = mysqli_real_escape_string($con, $_REQUEST['apellido'] ?? '');
+  $email = mysqli_real_escape_string($con, $_REQUEST['email'] ?? '');
+  $pasword = mysqli_real_escape_string($con, $_REQUEST['pasword'] ?? '');
+  $ciudad = mysqli_real_escape_string($con, $_REQUEST['ciudad'] ?? '');
+  $direccion = mysqli_real_escape_string($con, $_REQUEST['direccion'] ?? '');
+  $telefono = mysqli_real_escape_string($con, $_REQUEST['telefono'] ?? '');
+
+
+  $query = "UPDATE usuario SET nombre = '" . $nombre . "' ,apellido = '" . $apellido . "' ,email = '" . $email . "' ,pasword = '" . $pasword . "' ,ciudad = '" . $ciudad . "' ,direccion = '" . $direccion . "' ,telefono = '" . $telefono .  "' WHERE Id = '" . $Id . "';";
+  //Restultados 
+  $res = mysqli_query($con, $query);
+  if ($res) {
+    echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Usuarios&mensaje= ' . $nombre . ' Editado correctamente" />';
+  } else {
+?>
+    <div class="alert alert-danger" role="alert">
+      Error al editar producto <?php echo mysqli_error($con) ?>
+    </div>
+<?php
+  }
+}
+// Leer los usuarios 
+// ((mysqli_real_escape_string)) Significado llama consultas preparadas 
+$Id = mysqli_real_escape_string($con, $_REQUEST['Id'] ?? '');
+// Seleccionar los datos //
+$query = "SELECT Id, nombre, apellido, email, pasword, ciudad, direccion, telefono from usuario WHERE  Id = '" . $Id . "';";
+// Pasar la conexion $con, $query y almacenar en la variable $res. //
+$res = mysqli_query($con, $query);
+// (mysqli_fetch_assoc) Entregar un registro con el almacenamiento de la variable $res
+$row = mysqli_fetch_assoc($res);
+?>
 <body>
-
-
     <script>
         // Some random colors
         const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
@@ -80,11 +115,11 @@
             <div class="col-md-8 offset-md-2">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
+                        <a class="nav-link active" id="perfil-tab" data-toggle="tab" href="#perfil" role="tab" aria-controls="home" aria-selected="true">Datos Usuario</a>
                     </li>
                     <li class="nav-item">
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link active" id="perfil-tab" data-toggle="tab" href="#perfil" role="tab" aria-controls="home" aria-selected="true">Datos Usuario</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -94,11 +129,13 @@
                             <div class="col-4">
                                 <img class="img-thumbnail" src="https://cdn2.iconfinder.com/data/icons/website-icons/512/User_Avatar-512.png" alt="">
                             </div>
-                            <div class="col-8">
+                            <div class="card-body">
+              <form action="Panel.php?modulo=EditarU" method="post">
+              <div class="col-8">
                                 <div class="form-group row">
                                     <label for="usuario" class="col-2">Nombre</label>
                                     <div class="col-8">
-                                        <input type="text" class="form-control" value="">
+                                     <input type="text" name="nombre" class="form-control" pattern="[a-z A-Z]+" required="" value="<?php echo $row['nombre'] ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -108,7 +145,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="email" class="col-2"> Correo </label>
+                                    <label for="email" class="col-2"> Email </label>
                                     <div class="col-8">
                                         <input type="email" readonly class="form-control" value="">
                                     </div>
@@ -122,7 +159,7 @@
                         </div>
                         <div class="col-8">
                             <div class="form-group row">
-                                <label for="usuario" class="col-2">Contraseña</label>
+                                <label for="usuario" class="col-2">Contrseña</label>
                                 <div class="col-8">
                                     <input type="text" class="form-control" value="">
                                 </div>
@@ -168,10 +205,10 @@
                                     <input type="text" class="form-control">
                                 </div> -->
 
-                <div class="for-group row">
-                    <center> <label>Ciudad</label> </center>
-                    <select class="form-control" name="ciudadproveedor" required="" value="<?php echo $row['ciudadproveedor'] ?>">
-                        <option value="<?php echo $row['ciudadproveedor'] ?>"><?php echo $row['ciudadproveedor'] ?></option>
+                <div class="for-group">
+                  <label>Ciudad</label>
+                  <select class="form-control" name="ciudad" required="" value="<?php echo $row['ciudad'] ?>">
+                    <option value="<?php echo $row['ciudad'] ?>"><?php echo $row['ciudad'] ?></option>
                         <option value="Arauca">Arauca</option>
                         <option value="Armenia">Armenia</option>
                         <option value="Barranquilla">Barranquilla</option>
@@ -206,12 +243,21 @@
                         <option value="Yopal">Yopal</option>
                     </select>
                 </div>
+
+
+
+
+              </form>
+                            </div>
+                            
+
+                           
                 <br>
                 <br>
                 <!--SEPARACIÓN DE TRABAJO DE BOTONES PARA EL DROPDOWN -->
                 <div class="form-group text-center">
                     <button class="btn btn-info">Actualizar</button>
-                   <a href="index1.php"> <button class="btn btn-danger" href="index1.php">Cancelar</button> </a>
+                    <a href="index1.php"> <button class="btn btn-danger" href="index1.php">Cancelar</button> </a>
                 </div>
             </div>
         </div>
