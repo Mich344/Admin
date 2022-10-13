@@ -144,7 +144,7 @@
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <img class="img-thumbnail" src="https://png.pngtree.com/element_our/20190528/ourlarge/pngtree-color-creative-transport-cargo-elements-image_1171095.jpg" alt="">
+                        <img class="img-thumbnail" src="imagenes/envio.jpg" alt="">
                     </div>
                     <div class="col-8">
                         <div class="form-group row">
