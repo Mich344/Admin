@@ -83,10 +83,8 @@
                         <a class="nav-link active" id="perfil-tab" data-toggle="tab" href="#perfil" role="tab" aria-controls="home" aria-selected="true">Datos Usuario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contraseña-tab" data-toggle="tab" href="#cambiocontra" role="tab" aria-controls="profile" aria-selected="false">Cambiar contraseña</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="envio-tab" data-toggle="tab" href="#datosenvio" role="tab" aria-controls="profile" aria-selected="false">Datos de envio</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -115,122 +113,108 @@
                                         <input type="email" readonly class="form-control" value="">
                                     </div>
                                 </div>
-                                <div class="form-group text-center">
-                                    <button class="btn btn-info">Actualizar</button>
-                                    <button class="btn btn-danger">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="img-thumbnail" src="https://ciberprotector.com/wp-content/uploads/2019/05/gestor-contrasen%CC%83as-ciberprotector.png" alt="">
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group row">
+                                <label for="usuario" class="col-2">Contrseña</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="tel" class="col-2">Cambiar Contraseña</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-2"> Confirmar Contraseña </label>
+                                <div class="col-8">
+                                    <input type="email" class="form-control" value="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="cambiocontra" role="tabpanel" aria-labelledby="contraseña-tab">
-                        <div class="col-md-6 offset-md-3">
-                            <h3 class="text-center">Cambiar contraseña</h3>
-                            <div class="form-group row">
-                                <label for="contraseña" class="col-4">Contraseña actual</label>
-                                <div class="col-8">
-                                    <input type="password" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="contraseña" class="col-4">Nueva contraseña</label>
-                                <div class="col-8">
-                                    <input type="password" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="contraseña" class="col-4">Confirmar contraseña</label>
-                                <div class="col-8">
-                                    <input type="password" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group text-center">
-                                <button class="btn btn-info">Actualizar</button>
-                                <button class="btn btn-danger">Cancelar</button>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img class="img-thumbnail" src="https://png.pngtree.com/element_our/20190528/ourlarge/pngtree-color-creative-transport-cargo-elements-image_1171095.jpg" alt="">
+                    </div>
+                    <div class="col-8">
+                        <div class="form-group row">
+                            <label for="usuario" class="col-2">Direccion</label>
+                            <div class="col-8">
+                                <input type="text" class="form-control" value="">
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="datosenvio" role="tabpanel" aria-labelledby="envio-tab">
-                        <div class="col-md-6 offset-md-3">
-                            <h3 class="text-center">Datos de envio</h3>
-                            <div class="form-group row">
-                                <label for="direccion" class="col-4">Direccion</label>
-                                <div class="col-8">
-                                    <input type="text" class="form-control">
-                                </div>
+                        <div class="form-group row">
+                            <label for="tel" class="col-2">Telefono</label>
+                            <div class="col-8">
+                                <input type="text" class="form-control" value="">
                             </div>
+                        </div>
 
-                            <!-- <div class="form-group row">
-                                <label for="ciudad" class="col-4">Ciudad</label>
-                                <div class="col-8">
-                                    <input type="ciudad" class="form-control">
-                                </div>
-                            </div> -->
-                            <div class="form-group row">
-                                <label for="telefono" class="col-4">Telefono</label>
-                                <div class="col-8">
-                                    <input type="tel" class="form-control">
-                                </div>
-                            </div>
-                            <!-- <div class="form-group row">
+                    </div>
+                </div>
+                <!-- <div class="form-group row">
                                 <label for="contraseña" class="col-4">Barrio</label>
                                 <div class="col-8">
                                     <input type="text" class="form-control">
                                 </div> -->
 
-                            <div class="for-group">
-                                <center> <label>Ciudad</label> </center>
-                                <select class="form-control" name="ciudadproveedor" required="" value="<?php echo $row['ciudadproveedor'] ?>">
-                                    <option value="<?php echo $row['ciudadproveedor'] ?>"><?php echo $row['ciudadproveedor'] ?></option>
-                                    <option value="Arauca">Arauca</option>
-                                    <option value="Armenia">Armenia</option>
-                                    <option value="Barranquilla">Barranquilla</option>
-                                    <option value="Bogotá">Bogotá</option>
-                                    <option value="Bucaramanga">Bucaramanga</option>
-                                    <option value="Cali">Cali</option>
-                                    <option value="Cartagena">Cartagena</option>
-                                    <option value="Cúcuta">Cúcuta</option>
-                                    <option value="Florencia">Florencia</option>
-                                    <option value="Ibagué">Ibagué</option>
-                                    <option value="Leticia">Leticia</option>
-                                    <option value="Manizales">Manizales</option>
-                                    <option value="Medellín">Medellín</option>
-                                    <option value="Mitú">Mitú</option>
-                                    <option value="Mocoa">Mocoa</option>
-                                    <option value="Montería">Montería</option>
-                                    <option value="Neiva">Neiva</option>
-                                    <option value="Pasto">Pasto</option>
-                                    <option value="Pereira">Pereira</option>
-                                    <option value="Popayán">Popayán</option>
-                                    <option value="Puerto Carreño">Puerto Carreño</option>
-                                    <option value="Puerto Inírida">Puerto Inírida</option>
-                                    <option value="Quibdó">Quibdó</option>
-                                    <option value="Riohacha">Riohacha</option>
-                                    <option value="San Andrés">San Andrés</option>
-                                    <option value="San José del Guaviare">San José del Guaviare</option>
-                                    <option value="Santa Marta">Santa Marta</option>
-                                    <option value="Sincelejo">Sincelejo</option>
-                                    <option value="Tunja">Tunja</option>
-                                    <option value="Valledupar">Valledupar</option>
-                                    <option value="Villavicencio">Villavicencio</option>
-                                    <option value="Yopal">Yopal</option>
-                                </select>
-                            </div>
-                            <br>
-                            <br>
-                            <!--SEPARACIÓN DE TRABAJO DE BOTONES PARA EL DROPDOWN -->
-
-                        </div>
-                        <div class="form-group text-center">
-                            <button class="btn btn-info">Actualizar</button>
-                            <button class="btn btn-danger">Cancelar</button>
-                        </div>
-                    </div>
+                <div class="for-group">
+                    <center> <label>Ciudad</label> </center>
+                    <select class="form-control" name="ciudadproveedor" required="" value="<?php echo $row['ciudadproveedor'] ?>">
+                        <option value="<?php echo $row['ciudadproveedor'] ?>"><?php echo $row['ciudadproveedor'] ?></option>
+                        <option value="Arauca">Arauca</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Barranquilla">Barranquilla</option>
+                        <option value="Bogotá">Bogotá</option>
+                        <option value="Bucaramanga">Bucaramanga</option>
+                        <option value="Cali">Cali</option>
+                        <option value="Cartagena">Cartagena</option>
+                        <option value="Cúcuta">Cúcuta</option>
+                        <option value="Florencia">Florencia</option>
+                        <option value="Ibagué">Ibagué</option>
+                        <option value="Leticia">Leticia</option>
+                        <option value="Manizales">Manizales</option>
+                        <option value="Medellín">Medellín</option>
+                        <option value="Mitú">Mitú</option>
+                        <option value="Mocoa">Mocoa</option>
+                        <option value="Montería">Montería</option>
+                        <option value="Neiva">Neiva</option>
+                        <option value="Pasto">Pasto</option>
+                        <option value="Pereira">Pereira</option>
+                        <option value="Popayán">Popayán</option>
+                        <option value="Puerto Carreño">Puerto Carreño</option>
+                        <option value="Puerto Inírida">Puerto Inírida</option>
+                        <option value="Quibdó">Quibdó</option>
+                        <option value="Riohacha">Riohacha</option>
+                        <option value="San Andrés">San Andrés</option>
+                        <option value="San José del Guaviare">San José del Guaviare</option>
+                        <option value="Santa Marta">Santa Marta</option>
+                        <option value="Sincelejo">Sincelejo</option>
+                        <option value="Tunja">Tunja</option>
+                        <option value="Valledupar">Valledupar</option>
+                        <option value="Villavicencio">Villavicencio</option>
+                        <option value="Yopal">Yopal</option>
+                    </select>
+                </div>
+                <br>
+                <br>
+                <!--SEPARACIÓN DE TRABAJO DE BOTONES PARA EL DROPDOWN -->
+                <div class="form-group text-center">
+                    <button class="btn btn-info">Actualizar</button>
+                    <button class="btn btn-danger">Cancelar</button>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
 </body>
 
 </html>
