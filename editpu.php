@@ -172,34 +172,53 @@
                                     <input type="tel" class="form-control">
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <!-- <div class="form-group row">
                                 <label for="contraseña" class="col-4">Barrio</label>
                                 <div class="col-8">
                                     <input type="text" class="form-control">
-                                </div>
-                                <br>
-                                <br>
-
-                                <div class="btn-group dropleft">
-                                    <button type="button" id="CIUDADESBOTON" class="btn btn-secondary btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Ciudades
-                                        <style>
-                                            CIUDADESBOTON {
-                                                height: 50px;
-                                                width: 500px;
-                                            }
-                                        </style>
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <button class="dropdown-item" type="button">Cali</button>
-                                        <button class="dropdown-item" type="button">Medellin</button>
-                                        <button class="dropdown-item" type="button">Florencia</button>
-                                    </div>
-                                </div>
-
-
-<!--                             SEPARACIÓN DE TRABAJO DE BOTONES PARA EL DROPDOWN 
- -->
+                                </div> -->
+                                
+                  <div class="for-group">
+                  <center> <label>Ciudad</label> </center>
+                  <select class="form-control" name="ciudadproveedor" required="" value="<?php echo $row['ciudadproveedor'] ?>">
+                    <option value="<?php echo $row['ciudadproveedor'] ?>"><?php echo $row['ciudadproveedor'] ?></option>
+                    <option value="Arauca">Arauca</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Barranquilla">Barranquilla</option>
+                    <option value="Bogotá">Bogotá</option>
+                    <option value="Bucaramanga">Bucaramanga</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Cartagena">Cartagena</option>
+                    <option value="Cúcuta">Cúcuta</option>
+                    <option value="Florencia">Florencia</option>
+                    <option value="Ibagué">Ibagué</option>
+                    <option value="Leticia">Leticia</option>
+                    <option value="Manizales">Manizales</option>
+                    <option value="Medellín">Medellín</option>
+                    <option value="Mitú">Mitú</option>
+                    <option value="Mocoa">Mocoa</option>
+                    <option value="Montería">Montería</option>
+                    <option value="Neiva">Neiva</option>
+                    <option value="Pasto">Pasto</option>
+                    <option value="Pereira">Pereira</option>
+                    <option value="Popayán">Popayán</option>
+                    <option value="Puerto Carreño">Puerto Carreño</option>
+                    <option value="Puerto Inírida">Puerto Inírida</option>
+                    <option value="Quibdó">Quibdó</option>
+                    <option value="Riohacha">Riohacha</option>
+                    <option value="San Andrés">San Andrés</option>
+                    <option value="San José del Guaviare">San José del Guaviare</option>
+                    <option value="Santa Marta">Santa Marta</option>
+                    <option value="Sincelejo">Sincelejo</option>
+                    <option value="Tunja">Tunja</option>
+                    <option value="Valledupar">Valledupar</option>
+                    <option value="Villavicencio">Villavicencio</option>
+                    <option value="Yopal">Yopal</option>
+                  </select>
+                </div>
+                <br>
+                <br>
+                <!--SEPARACIÓN DE TRABAJO DE BOTONES PARA EL DROPDOWN -->
 
                             </div>
                             <div class="form-group text-center">
