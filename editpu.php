@@ -144,7 +144,7 @@
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <img class="img-thumbnail" src="imagenes/envio.jpg" alt="">
+                        <img class="img-thumbnail" src="/imagenes/envio.jpg" alt="">
                     </div>
                     <div class="col-8">
                         <div class="form-group row">
