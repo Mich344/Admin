@@ -118,7 +118,7 @@
                     </div>
                     <div class="row">
                         <div class="col-4">
-                            <img class="img-thumbnail" src="https://ciberprotector.com/wp-content/uploads/2019/05/gestor-contrasen%CC%83as-ciberprotector.png" alt="">
+                            <img class="img-thumbnail" src="./images/contraseña.png" alt="">
                         </div>
                         <div class="col-8">
                             <div class="form-group row">
