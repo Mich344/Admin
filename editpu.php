@@ -80,11 +80,11 @@
             <div class="col-md-8 offset-md-2">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="perfil-tab" data-toggle="tab" href="#perfil" role="tab" aria-controls="home" aria-selected="true">Datos Usuario</a>
                     </li>
                     <li class="nav-item">
                     </li>
                     <li class="nav-item">
+                    <a class="nav-link active" id="perfil-tab" data-toggle="tab" href="#perfil" role="tab" aria-controls="home" aria-selected="true">Datos Usuario</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -108,7 +108,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="email" class="col-2"> Email </label>
+                                    <label for="email" class="col-2"> Correo </label>
                                     <div class="col-8">
                                         <input type="email" readonly class="form-control" value="">
                                     </div>
@@ -122,7 +122,7 @@
                         </div>
                         <div class="col-8">
                             <div class="form-group row">
-                                <label for="usuario" class="col-2">Contrseña</label>
+                                <label for="usuario" class="col-2">Contraseña</label>
                                 <div class="col-8">
                                     <input type="text" class="form-control" value="">
                                 </div>
@@ -168,7 +168,7 @@
                                     <input type="text" class="form-control">
                                 </div> -->
 
-                <div class="for-group">
+                <div class="for-group row">
                     <center> <label>Ciudad</label> </center>
                     <select class="form-control" name="ciudadproveedor" required="" value="<?php echo $row['ciudadproveedor'] ?>">
                         <option value="<?php echo $row['ciudadproveedor'] ?>"><?php echo $row['ciudadproveedor'] ?></option>
@@ -211,7 +211,7 @@
                 <!--SEPARACIÓN DE TRABAJO DE BOTONES PARA EL DROPDOWN -->
                 <div class="form-group text-center">
                     <button class="btn btn-info">Actualizar</button>
-                    <button class="btn btn-danger">Cancelar</button>
+                   <a href="index1.php"> <button class="btn btn-danger" href="index1.php">Cancelar</button> </a>
                 </div>
             </div>
         </div>
